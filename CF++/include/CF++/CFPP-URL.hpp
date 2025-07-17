@@ -94,19 +94,19 @@ namespace CF
             URL & operator = ( const std::string & value );
             URL & operator = ( const char * value );
             
-            bool operator == ( const URL & value ) const;
-            bool operator == ( CFTypeRef value ) const;
-            bool operator == ( CFURLRef value ) const;
-            bool operator == ( CFStringRef value ) const;
+            bool operator == ( const URL & value )         const;
+            bool operator == ( CFTypeRef value )           const;
+            bool operator == ( CFURLRef value )            const;
+            bool operator == ( CFStringRef value )         const;
             bool operator == ( const std::string & value ) const;
-            bool operator == ( const char * value ) const;
+            bool operator == ( const char * value )        const;
             
-            bool operator != ( const URL & value ) const;
-            bool operator != ( CFTypeRef value ) const;
-            bool operator != ( CFURLRef value ) const;
-            bool operator != ( CFStringRef value ) const;
+            bool operator != ( const URL & value )         const;
+            bool operator != ( CFTypeRef value )           const;
+            bool operator != ( CFURLRef value )            const;
+            bool operator != ( CFStringRef value )         const;
             bool operator != ( const std::string & value ) const;
-            bool operator != ( const char * value ) const;
+            bool operator != ( const char * value )        const;
             
             URL & operator /= ( CFStringRef value );
             URL & operator /= ( const std::string & value );
@@ -116,25 +116,25 @@ namespace CF
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             String GetFileSystemPath( PathStyle style = PathStylePOSIX ) const;
-            String GetFragment() const;
-            String GetHostName() const;
-            String GetLastPathComponent() const;
-            String GetNetLocation() const;
-            String GetPassword() const;
-            String GetPath() const;
-            String GetPathExtension() const;
-            String GetQueryString() const;
-            String GetResourceSpecifier() const;
-            String GetScheme() const;
-            String GetStrictPath() const;
-            String GetUserName() const;
-            Number GetPortNumber() const;
-            URL    GetBaseURL() const;
-            bool   HasDirectoryPath() const;
+            String GetFragment()                                         const;
+            String GetHostName()                                         const;
+            String GetLastPathComponent()                                const;
+            String GetNetLocation()                                      const;
+            String GetPassword()                                         const;
+            String GetPath()                                             const;
+            String GetPathExtension()                                    const;
+            String GetQueryString()                                      const;
+            String GetResourceSpecifier()                                const;
+            String GetScheme()                                           const;
+            String GetStrictPath()                                       const;
+            String GetUserName()                                         const;
+            Number GetPortNumber()                                       const;
+            URL    GetBaseURL()                                          const;
+            bool   HasDirectoryPath()                                    const;
             
             void AppendPathComponent( CFStringRef component, bool isDirectory = false );
             void AppendPathComponent( const std::string & component, bool isDirectory = false );

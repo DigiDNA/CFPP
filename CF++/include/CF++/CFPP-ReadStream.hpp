@@ -56,7 +56,7 @@ namespace CF
             ReadStream & operator = ( CFReadStreamRef value );
             ReadStream & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             bool Open();
@@ -65,9 +65,9 @@ namespace CF
             bool Open( const URL & url );
             void Close();
             
-            bool           HasBytesAvailable() const;
-            CFStreamStatus GetStatus() const;
-            Error          GetError() const;
+            bool           HasBytesAvailable()                const;
+            CFStreamStatus GetStatus()                        const;
+            Error          GetError()                         const;
             AutoPointer    GetProperty( const String & name ) const;
             
             CFIndex            Read( Data::Byte * buffer, CFIndex length );
@@ -144,7 +144,7 @@ namespace CF
             #endif
             
             Iterator begin( CFIndex bytesToRead = 0 ) const;
-            Iterator end() const;
+            Iterator end()                            const;
             
         private:
             

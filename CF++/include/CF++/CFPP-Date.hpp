@@ -57,30 +57,30 @@ namespace CF
             Date & operator = ( std::nullptr_t );
             Date & operator = ( CFAbsoluteTime value );
             
-            bool operator == ( const Date & value ) const;
-            bool operator == ( CFTypeRef value ) const;
-            bool operator == ( CFDateRef value ) const;
+            bool operator == ( const Date & value )   const;
+            bool operator == ( CFTypeRef value )      const;
+            bool operator == ( CFDateRef value )      const;
             bool operator == ( CFAbsoluteTime value ) const;
             
-            bool operator != ( const Date & value ) const;
-            bool operator != ( CFTypeRef value ) const;
-            bool operator != ( CFDateRef value ) const;
+            bool operator != ( const Date & value )   const;
+            bool operator != ( CFTypeRef value )      const;
+            bool operator != ( CFDateRef value )      const;
             bool operator != ( CFAbsoluteTime value ) const;
             
-            bool operator >= ( const Date & value ) const;
-            bool operator >= ( CFDateRef value ) const;
+            bool operator >= ( const Date & value )   const;
+            bool operator >= ( CFDateRef value )      const;
             bool operator >= ( CFAbsoluteTime value ) const;
             
-            bool operator <= ( const Date & value ) const;
-            bool operator <= ( CFDateRef value ) const;
+            bool operator <= ( const Date & value )   const;
+            bool operator <= ( CFDateRef value )      const;
             bool operator <= ( CFAbsoluteTime value ) const;
             
-            bool operator > ( const Date & value ) const;
-            bool operator > ( CFDateRef value ) const;
+            bool operator > ( const Date & value )   const;
+            bool operator > ( CFDateRef value )      const;
             bool operator > ( CFAbsoluteTime value ) const;
             
-            bool operator < ( const Date & value ) const;
-            bool operator < ( CFDateRef value ) const;
+            bool operator < ( const Date & value )   const;
+            bool operator < ( CFDateRef value )      const;
             bool operator < ( CFAbsoluteTime value ) const;
             
             Date & operator += ( const Date & value );
@@ -106,7 +106,7 @@ namespace CF
             
             operator CFAbsoluteTime () const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             CFAbsoluteTime GetValue() const;

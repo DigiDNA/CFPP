@@ -56,7 +56,7 @@ namespace CF
             WriteStream & operator = ( CFWriteStreamRef value );
             WriteStream & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             bool Open();
@@ -65,9 +65,9 @@ namespace CF
             bool Open( const URL & url );
             void Close();
             
-            bool           CanAcceptBytes() const;
-            CFStreamStatus GetStatus() const;
-            Error          GetError() const;
+            bool           CanAcceptBytes()                   const;
+            CFStreamStatus GetStatus()                        const;
+            Error          GetError()                         const;
             AutoPointer    GetProperty( const String & name ) const;
             
             CFIndex Write( const Data::Byte * buffer, CFIndex length );

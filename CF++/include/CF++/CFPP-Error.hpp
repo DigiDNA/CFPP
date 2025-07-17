@@ -61,14 +61,14 @@ namespace CF
             Error & operator = ( CFErrorRef value );
             Error & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
-            String     GetDomain() const;
-            Number     GetCode() const;
-            Dictionary GetUserInfo() const;
-            String     GetDescription() const;
-            String     GetFailureReason() const;
+            String     GetDomain()             const;
+            Number     GetCode()               const;
+            Dictionary GetUserInfo()           const;
+            String     GetDescription()        const;
+            String     GetFailureReason()      const;
             String     GetRecoverySuggestion() const;
             
             friend void swap( Error & v1, Error & v2 ) noexcept;

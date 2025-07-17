@@ -51,12 +51,13 @@ namespace CF
             
             Pair & operator = ( Pair value );
             
-            CFTypeRef GetKey() const;
-            CFTypeRef GetValue() const;
-            CFTypeID  GetKeyTypeID() const;
+            CFTypeRef GetKey()         const;
+            CFTypeRef GetValue()       const;
+            CFTypeID  GetKeyTypeID()   const;
             CFTypeID  GetValueTypeID() const;
-            void      SetKey( CFTypeRef key );
-            void      SetValue( CFTypeRef value );
+            
+            void SetKey( CFTypeRef key );
+            void SetValue( CFTypeRef value );
             
             friend void swap( Pair & v1, Pair & v2 ) noexcept;
             

@@ -68,10 +68,10 @@ namespace CF
             
             CFTypeRef operator [] ( int index ) const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
-            CFIndex   GetCount() const;
+            CFIndex   GetCount()                       const;
             bool      ContainsValue( CFTypeRef value ) const;
             CFTypeRef GetValueAtIndex( CFIndex index ) const;
             
@@ -126,7 +126,7 @@ namespace CF
                     
                     operator CFTypeRef () const;
                     
-                    CFTypeID  GetTypeID() const;
+                    CFTypeID  GetTypeID()   const;
                     CFTypeRef GetCFObject() const;
                     
                     friend void swap( Iterator & v1, Iterator & v2 ) noexcept;
@@ -143,7 +143,7 @@ namespace CF
             };
             
             Iterator begin() const;
-            Iterator end() const;
+            Iterator end()   const;
             
         protected:
             

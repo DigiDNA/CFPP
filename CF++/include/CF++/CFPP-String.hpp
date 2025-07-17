@@ -62,19 +62,19 @@ namespace CF
             String & operator = ( char * value );
             String & operator = ( const char * value );
             
-            bool operator == ( const String & value ) const;
-            bool operator == ( CFTypeRef value ) const;
-            bool operator == ( CFStringRef value ) const;
+            bool operator == ( const String & value )      const;
+            bool operator == ( CFTypeRef value )           const;
+            bool operator == ( CFStringRef value )         const;
             bool operator == ( const std::string & value ) const;
-            bool operator == ( char * value ) const;
-            bool operator == ( const char * value ) const;
+            bool operator == ( char * value )              const;
+            bool operator == ( const char * value )        const;
             
-            bool operator != ( const String & value ) const;
-            bool operator != ( CFTypeRef value ) const;
-            bool operator != ( CFStringRef value ) const;
+            bool operator != ( const String & value )      const;
+            bool operator != ( CFTypeRef value )           const;
+            bool operator != ( CFStringRef value )         const;
             bool operator != ( const std::string & value ) const;
-            bool operator != ( char * value ) const;
-            bool operator != ( const char * value ) const;
+            bool operator != ( char * value )              const;
+            bool operator != ( const char * value )        const;
             
             String & operator += ( const String & value );
             String & operator += ( CFStringRef value );
@@ -86,21 +86,22 @@ namespace CF
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
-            bool HasPrefix( const String & value ) const;
-            bool HasPrefix( CFStringRef value ) const;
+            bool HasPrefix( const String & value )      const;
+            bool HasPrefix( CFStringRef value )         const;
             bool HasPrefix( const std::string & value ) const;
-            bool HasSuffix( const String & value ) const;
-            bool HasSuffix( CFStringRef value ) const;
+            bool HasSuffix( const String & value )      const;
+            bool HasSuffix( CFStringRef value )         const;
             bool HasSuffix( const std::string & value ) const;
             
             CFIndex GetLength() const;
             
-            std::string  GetValue( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
+            std::string  GetValue( CFStringEncoding encoding = kCFStringEncodingUTF8 )        const;
             const char * GetCStringValue( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
-            void         SetValue( const std::string & value, CFStringEncoding encoding = kCFStringEncodingUTF8 );
+            
+            void SetValue( const std::string & value, CFStringEncoding encoding = kCFStringEncodingUTF8 );
             
             friend void swap( String & v1, String & v2 ) noexcept;
             
@@ -160,7 +161,7 @@ namespace CF
             };
             
             Iterator begin( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
-            Iterator end( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
+            Iterator end(   CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
             
         private:
             

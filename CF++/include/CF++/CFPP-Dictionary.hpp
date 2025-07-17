@@ -60,21 +60,21 @@ namespace CF
             Dictionary & operator += ( const Pair & pair );
             Dictionary & operator << ( const Pair & pair );
             
-            CFTypeRef operator [] ( CFTypeRef key ) const;
-            CFTypeRef operator [] ( const char * key ) const;
+            CFTypeRef operator [] ( CFTypeRef key )      const;
+            CFTypeRef operator [] ( const char * key )   const;
             CFTypeRef operator [] ( const String & key ) const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
-            bool      ContainsKey( CFTypeRef key ) const;
-            bool      ContainsKey( const char * key ) const;
+            bool      ContainsKey( CFTypeRef key )      const;
+            bool      ContainsKey( const char * key )   const;
             bool      ContainsKey( const String & key ) const;
-            bool      ContainsValue( CFTypeRef value ) const;
-            CFIndex   GetCount() const;
-            CFTypeRef GetValue( CFTypeRef key ) const;
-            CFTypeRef GetValue( const char * key ) const;
-            CFTypeRef GetValue( const String & key ) const;
+            bool      ContainsValue( CFTypeRef value )  const;
+            CFIndex   GetCount()                        const;
+            CFTypeRef GetValue( CFTypeRef key )         const;
+            CFTypeRef GetValue( const char * key )      const;
+            CFTypeRef GetValue( const String & key )    const;
             
             void RemoveAllValues();
             void AddValue( CFTypeRef key, CFTypeRef value );
@@ -144,7 +144,7 @@ namespace CF
                     
                     CF::Pair operator * () const;
                     
-                    CFTypeRef GetKey() const;
+                    CFTypeRef GetKey()   const;
                     CFTypeRef GetValue() const;
                     
                     friend void swap( Iterator & v1, Iterator & v2 ) noexcept;
@@ -162,7 +162,7 @@ namespace CF
             };
             
             Iterator begin() const;
-            Iterator end() const;
+            Iterator end()   const;
             
         private:
             

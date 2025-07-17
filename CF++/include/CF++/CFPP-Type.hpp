@@ -70,24 +70,25 @@ namespace CF
             operator CFReadStreamRef        () const;
             operator CFWriteStreamRef       () const;
             
-            std::string Description() const;
-            CFHashCode  Hash() const;
-            void        Show() const;
+            std::string Description()    const;
+            CFHashCode  Hash()           const;
+            void        Show()           const;
             CFIndex     GetRetainCount() const;
             
-            bool IsValid() const;
+            bool IsValid()                                        const;
             bool IsValidPropertyList( PropertyListFormat format ) const;
-            bool IsBoolean() const;
-            bool IsNumber() const;
-            bool IsDate() const;
-            bool IsString() const;
-            bool IsURL() const;
-            bool IsData() const;
-            bool IsArray() const;
-            bool IsDictionary() const;
-            bool IsUUID() const;
-            bool IsError() const;
-            bool IsReadStream() const;
+            
+            bool IsBoolean()     const;
+            bool IsNumber()      const;
+            bool IsDate()        const;
+            bool IsString()      const;
+            bool IsURL()         const;
+            bool IsData()        const;
+            bool IsArray()       const;
+            bool IsDictionary()  const;
+            bool IsUUID()        const;
+            bool IsError()       const;
+            bool IsReadStream()  const;
             bool IsWriteStream() const;
             
             friend std::ostream & operator << ( std::ostream & os, const Type & obj );

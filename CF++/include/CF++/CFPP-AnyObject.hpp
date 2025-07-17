@@ -53,7 +53,7 @@ namespace CF
             AnyObject & operator = ( CFTypeRef value );
             AnyObject & operator = ( std::nullptr_t );
                         
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             template< typename T >

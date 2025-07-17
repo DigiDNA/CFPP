@@ -49,7 +49,7 @@ namespace CF
             Null & operator = ( Null value );
             Null & operator = ( CFTypeRef value );
                         
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             friend void swap( Null & v1, Null & v2 ) noexcept;

@@ -81,13 +81,13 @@ namespace CF
             Data & operator += ( const Data & value );
             Data & operator += ( const std::string & value );
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
-            CFIndex      GetLength() const;
-            const Byte * GetBytePtr() const;
-            Byte       * GetMutableBytePtr() const;
-            void         GetBytes( CFRange range, Byte * bytes ) const;
+            CFIndex      GetLength()                                                       const;
+            const Byte * GetBytePtr()                                                      const;
+            Byte       * GetMutableBytePtr()                                               const;
+            void         GetBytes( CFRange range, Byte * bytes )                           const;
             CFRange      Find( const Data & data, CFRange range, CFDataSearchFlags flags ) const;
             
             void         SetLength( CFIndex length );
@@ -154,7 +154,7 @@ namespace CF
             };
             
             Iterator begin() const;
-            Iterator end() const;
+            Iterator end()   const;
             
         private:
             

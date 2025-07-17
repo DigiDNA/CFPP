@@ -57,21 +57,21 @@ namespace CF
             UUID & operator = ( const std::string & value );
             UUID & operator = ( const Data & value );
             
-            bool operator == ( const UUID & value ) const;
-            bool operator == ( CFTypeRef value ) const;
-            bool operator == ( CFUUIDRef value ) const;
+            bool operator == ( const UUID & value )        const;
+            bool operator == ( CFTypeRef value )           const;
+            bool operator == ( CFUUIDRef value )           const;
             bool operator == ( const std::string & value ) const;
-            bool operator == ( const Data & value ) const;
+            bool operator == ( const Data & value )        const;
             
-            bool operator != ( const UUID & value ) const;
-            bool operator != ( CFTypeRef value ) const;
-            bool operator != ( CFUUIDRef value ) const;
+            bool operator != ( const UUID & value )        const;
+            bool operator != ( CFTypeRef value )           const;
+            bool operator != ( CFUUIDRef value )           const;
             bool operator != ( const std::string & value ) const;
-            bool operator != ( const Data & value ) const;
+            bool operator != ( const Data & value )        const;
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             String GetString() const;

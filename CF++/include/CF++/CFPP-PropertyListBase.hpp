@@ -40,7 +40,7 @@ namespace CF
         public:
             
             bool ToPropertyList( const std::string & path, PropertyListFormat format = PropertyListFormatXML ) const;
-            Data ToPropertyList( PropertyListFormat format = PropertyListFormatXML ) const;
+            Data ToPropertyList( PropertyListFormat format = PropertyListFormatXML )                           const;
     };
 }
 

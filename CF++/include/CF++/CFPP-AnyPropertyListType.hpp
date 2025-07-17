@@ -59,7 +59,7 @@ namespace CF
             
             bool IsValidPropertyList() const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             PropertyListFormat GetFormat() const;

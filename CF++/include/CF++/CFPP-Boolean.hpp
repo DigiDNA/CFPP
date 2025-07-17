@@ -58,18 +58,18 @@ namespace CF
             Boolean & operator = ( bool value );
             
             bool operator == ( const Boolean & value ) const;
-            bool operator == ( bool value ) const;
-            bool operator == ( CFTypeRef value ) const;
-            bool operator == ( CFBooleanRef value ) const;
+            bool operator == ( bool value )            const;
+            bool operator == ( CFTypeRef value )       const;
+            bool operator == ( CFBooleanRef value )    const;
             
             bool operator != ( const Boolean & value ) const;
-            bool operator != ( bool value ) const;
-            bool operator != ( CFTypeRef value ) const;
-            bool operator != ( CFBooleanRef value ) const;
+            bool operator != ( bool value )            const;
+            bool operator != ( CFTypeRef value )       const;
+            bool operator != ( CFBooleanRef value )    const;
             
             operator bool () const;
             
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             bool GetValue() const;

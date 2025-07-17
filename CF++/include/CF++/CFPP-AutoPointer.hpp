@@ -49,7 +49,7 @@ namespace CF
             AutoPointer & operator = ( AutoPointer value );
             AutoPointer & operator = ( CFTypeRef value );
                         
-            CFTypeID  GetTypeID() const override;
+            CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
             
             template< typename T >
