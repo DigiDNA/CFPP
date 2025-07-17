@@ -59,18 +59,20 @@ namespace CF
             CFTypeID  GetTypeID() const override;
             CFTypeRef GetCFObject() const override;
             
-            bool               Open() const;
-            bool               Open( const std::string & path );
-            bool               Open( const char * path );
-            bool               Open( const URL & url );
-            void               Close() const;
-            bool               HasBytesAvailable() const;
-            CFStreamStatus     GetStatus() const;
-            Error              GetError() const;
-            CFIndex            Read( Data::Byte * buffer, CFIndex length ) const;
-            Data               Read( CFIndex length = 0 ) const;
-            const Data::Byte * GetBuffer( CFIndex maxBytesToRead, CFIndex * numBytesRead ) const;
-            AutoPointer        GetProperty( const String & name );
+            bool Open();
+            bool Open( const std::string & path );
+            bool Open( const char * path );
+            bool Open( const URL & url );
+            void Close();
+            
+            bool           HasBytesAvailable() const;
+            CFStreamStatus GetStatus() const;
+            Error          GetError() const;
+            AutoPointer    GetProperty( const String & name ) const;
+            
+            CFIndex            Read( Data::Byte * buffer, CFIndex length );
+            Data               Read( CFIndex length = 0 );
+            const Data::Byte * GetBuffer( CFIndex maxBytesToRead, CFIndex * numBytesRead );
             bool               SetProperty( const String & name, CFTypeRef value );
             bool               SetClient( CFOptionFlags events, CFReadStreamClientCallBack callback, CFStreamClientContext * context );
             void               ScheduleWithRunLoop( CFRunLoopRef runLoop, CF::String mode );

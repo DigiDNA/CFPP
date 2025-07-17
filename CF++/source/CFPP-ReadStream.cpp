@@ -146,7 +146,7 @@ namespace CF
         return this->_cfObject;
     }
     
-    bool ReadStream::Open() const
+    bool ReadStream::Open()
     {
         if( this->_cfObject == nullptr )
         {
@@ -180,7 +180,7 @@ namespace CF
         return this->Open();
     }
     
-    void ReadStream::Close() const
+    void ReadStream::Close()
     {
         if( this->_cfObject == nullptr )
         {
@@ -224,7 +224,7 @@ namespace CF
         return e.As< CFErrorRef >();
     }
         
-    CFIndex ReadStream::Read( Data::Byte * buffer, CFIndex length ) const
+    CFIndex ReadStream::Read( Data::Byte * buffer, CFIndex length )
     {
         if( this->_cfObject == nullptr )
         {
@@ -239,7 +239,7 @@ namespace CF
         return CFReadStreamRead( this->_cfObject, buffer, length );
     }
     
-    Data ReadStream::Read( CFIndex length ) const
+    Data ReadStream::Read( CFIndex length )
     {
         Data                          data;
         std::shared_ptr< Data::Byte > bytes;
@@ -293,7 +293,7 @@ namespace CF
         return data;
     }
     
-    const Data::Byte * ReadStream::GetBuffer( CFIndex maxBytesToRead, CFIndex * numBytesRead ) const
+    const Data::Byte * ReadStream::GetBuffer( CFIndex maxBytesToRead, CFIndex * numBytesRead )
     {
         if( this->_cfObject == nullptr )
         {
@@ -303,7 +303,7 @@ namespace CF
         return CFReadStreamGetBuffer( this->_cfObject, maxBytesToRead, numBytesRead );
     }
     
-    AutoPointer ReadStream::GetProperty( const String & name )
+    AutoPointer ReadStream::GetProperty( const String & name ) const
     {
         if( this->_cfObject == nullptr )
         {

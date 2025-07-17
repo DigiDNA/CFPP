@@ -73,14 +73,15 @@ namespace CF
             
             CFIndex   GetCount() const;
             bool      ContainsValue( CFTypeRef value ) const;
-            void      RemoveAllValues() const;
             CFTypeRef GetValueAtIndex( CFIndex index ) const;
-            void      SetValueAtIndex( CFTypeRef value, CFIndex index ) const;
-            void      InsertValueAtIndex( CFTypeRef value, CFIndex index ) const;
-            void      AppendValue( CFTypeRef value ) const;
-            void      RemoveValueAtIndex( CFIndex index ) const;
-            void      AppendArray( CFArrayRef array ) const;
-            void      ExchangeValuesAtIndices( CFIndex index1, CFIndex index2 ) const;
+            
+            void RemoveAllValues();
+            void SetValueAtIndex( CFTypeRef value, CFIndex index );
+            void InsertValueAtIndex( CFTypeRef value, CFIndex index );
+            void AppendValue( CFTypeRef value );
+            void RemoveValueAtIndex( CFIndex index );
+            void AppendArray( CFArrayRef array );
+            void ExchangeValuesAtIndices( CFIndex index1, CFIndex index2 );
                         
             friend void swap( Array & v1, Array & v2 ) noexcept;
             

@@ -135,14 +135,15 @@ namespace CF
             Number GetPortNumber() const;
             URL    GetBaseURL() const;
             bool   HasDirectoryPath() const;
-            void   AppendPathComponent( CFStringRef component, bool isDirectory = false );
-            void   AppendPathComponent( const std::string & component, bool isDirectory = false );
-            void   AppendPathComponent( const char * component, bool isDirectory = false );
-            void   AppendPathExtension( CFStringRef extension );
-            void   AppendPathExtension( const std::string & extension );
-            void   AppendPathExtension( const char * extension );
-            void   DeleteLastPathComponent();
-            void   DeletePathExtension();
+            
+            void AppendPathComponent( CFStringRef component, bool isDirectory = false );
+            void AppendPathComponent( const std::string & component, bool isDirectory = false );
+            void AppendPathComponent( const char * component, bool isDirectory = false );
+            void AppendPathExtension( CFStringRef extension );
+            void AppendPathExtension( const std::string & extension );
+            void AppendPathExtension( const char * extension );
+            void DeleteLastPathComponent();
+            void DeletePathExtension();
             
             friend void swap( URL & v1, URL & v2 ) noexcept;
             

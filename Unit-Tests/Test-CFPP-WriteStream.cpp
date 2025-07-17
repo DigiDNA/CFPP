@@ -668,7 +668,7 @@ TEST( CFPP_WriteStream, SetClient )
         
         std::thread t
         (
-            [ s1, s2, s3, rl ] ()
+            [ s1, s2, s3, rl ] () mutable
             {
                 std::this_thread::sleep_for( std::chrono::milliseconds( 10 ) );
                 

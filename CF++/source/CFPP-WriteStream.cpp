@@ -146,7 +146,7 @@ namespace CF
         return this->_cfObject;
     }
     
-    bool WriteStream::Open() const
+    bool WriteStream::Open()
     {
         if( this->_cfObject == nullptr )
         {
@@ -180,7 +180,7 @@ namespace CF
         return this->Open();
     }
     
-    void WriteStream::Close() const
+    void WriteStream::Close()
     {
         if( this->_cfObject == nullptr )
         {
@@ -224,7 +224,7 @@ namespace CF
         return e.As< CFErrorRef >();
     }
     
-    CFIndex WriteStream::Write( const Data::Byte * buffer, CFIndex length ) const
+    CFIndex WriteStream::Write( const Data::Byte * buffer, CFIndex length )
     {
         if( this->_cfObject == nullptr )
         {
@@ -239,12 +239,12 @@ namespace CF
         return CFWriteStreamWrite( this->_cfObject, buffer, length );
     }
     
-    CFIndex WriteStream::Write( const Data & data ) const
+    CFIndex WriteStream::Write( const Data & data )
     {
         return this->Write( data.GetBytePtr(), data.GetLength() );
     }
     
-    bool WriteStream::WriteAll( const Data::Byte * buffer, CFIndex length ) const
+    bool WriteStream::WriteAll( const Data::Byte * buffer, CFIndex length )
     {
         CFIndex written;
         
@@ -285,12 +285,12 @@ namespace CF
         }
     }
     
-    bool WriteStream::WriteAll( const Data & data ) const
+    bool WriteStream::WriteAll( const Data & data )
     {
         return this->WriteAll( data.GetBytePtr(), data.GetLength() );
     }
     
-    AutoPointer WriteStream::GetProperty( const String & name )
+    AutoPointer WriteStream::GetProperty( const String & name ) const
     {
         if( this->_cfObject == nullptr )
         {

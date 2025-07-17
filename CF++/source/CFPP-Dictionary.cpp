@@ -354,7 +354,7 @@ namespace CF
         return ( CFDictionaryContainsValue( this->_cfObject, value ) ) ? true : false;
     }
     
-    void Dictionary::RemoveAllValues() const
+    void Dictionary::RemoveAllValues()
     {
         if( this->_cfObject == nullptr )
         {
@@ -389,7 +389,7 @@ namespace CF
         return this->GetValue( key.GetCFObject() );
     }
     
-    void Dictionary::AddValue( CFTypeRef key, CFTypeRef value ) const
+    void Dictionary::AddValue( CFTypeRef key, CFTypeRef value )
     {
         if( this->_cfObject == nullptr || key == nullptr || value == nullptr )
         {
@@ -399,17 +399,17 @@ namespace CF
         CFDictionaryAddValue( this->_cfObject, key, value );
     }
     
-    void Dictionary::AddValue( const char * key, CFTypeRef value ) const
+    void Dictionary::AddValue( const char * key, CFTypeRef value )
     {
         this->AddValue( String( key ), value );
     }
     
-    void Dictionary::AddValue( const String & key, CFTypeRef value ) const
+    void Dictionary::AddValue( const String & key, CFTypeRef value )
     {
         this->AddValue( key.GetCFObject(), value );
     }
     
-    void Dictionary::RemoveValue( CFTypeRef key ) const
+    void Dictionary::RemoveValue( CFTypeRef key )
     {
         if( this->_cfObject == nullptr || key == nullptr )
         {
@@ -419,17 +419,17 @@ namespace CF
         CFDictionaryRemoveValue( this->_cfObject, key );
     }
     
-    void Dictionary::RemoveValue( const char * key ) const
+    void Dictionary::RemoveValue( const char * key )
     {
         this->RemoveValue( String( key ) );
     }
     
-    void Dictionary::RemoveValue( const String & key ) const
+    void Dictionary::RemoveValue( const String & key )
     {
         this->RemoveValue( key.GetCFObject() );
     }
     
-    void Dictionary::ReplaceValue( CFTypeRef key, CFTypeRef value ) const
+    void Dictionary::ReplaceValue( CFTypeRef key, CFTypeRef value )
     {
         if( this->_cfObject == nullptr || key == nullptr || value == nullptr )
         {
@@ -439,17 +439,17 @@ namespace CF
         CFDictionaryReplaceValue( this->_cfObject, key, value );
     }
     
-    void Dictionary::ReplaceValue( const char * key, CFTypeRef value ) const
+    void Dictionary::ReplaceValue( const char * key, CFTypeRef value )
     {
         this->ReplaceValue( String( key ), value );
     }
     
-    void Dictionary::ReplaceValue( const String & key, CFTypeRef value ) const
+    void Dictionary::ReplaceValue( const String & key, CFTypeRef value )
     {
         this->ReplaceValue( key.GetCFObject(), value );
     }
     
-    void Dictionary::SetValue( CFTypeRef key, CFTypeRef value ) const
+    void Dictionary::SetValue( CFTypeRef key, CFTypeRef value )
     {
         if( this->_cfObject == nullptr || key == nullptr || value == nullptr )
         {
@@ -459,57 +459,57 @@ namespace CF
         CFDictionarySetValue( this->_cfObject, key, value );
     }
     
-    void Dictionary::SetValue( const char * key, CFTypeRef value ) const
+    void Dictionary::SetValue( const char * key, CFTypeRef value )
     {
         this->SetValue( String( key ), value );
     }
     
-    void Dictionary::SetValue( const String & key, CFTypeRef value ) const
+    void Dictionary::SetValue( const String & key, CFTypeRef value )
     {
         this->SetValue( key.GetCFObject(), value );
     }
     
-    void Dictionary::AddValue( CFTypeRef key, const char * value ) const
+    void Dictionary::AddValue( CFTypeRef key, const char * value )
     {
         this->AddValue( key, String( value ) );
     }
     
-    void Dictionary::AddValue( const char * key, const char * value ) const
+    void Dictionary::AddValue( const char * key, const char * value )
     {
         this->AddValue( key, String( value ) );
     }
     
-    void Dictionary::AddValue( const String & key, const char * value ) const
+    void Dictionary::AddValue( const String & key, const char * value )
     {
         this->AddValue( key, String( value ) );
     }
     
-    void Dictionary::ReplaceValue( CFTypeRef key, const char * value ) const
+    void Dictionary::ReplaceValue( CFTypeRef key, const char * value )
     {
         this->ReplaceValue( key, String( value ) );
     }
     
-    void Dictionary::ReplaceValue( const char * key, const char * value ) const
+    void Dictionary::ReplaceValue( const char * key, const char * value )
     {
         this->ReplaceValue( key, String( value ) );
     }
     
-    void Dictionary::ReplaceValue( const String & key, const char * value ) const
+    void Dictionary::ReplaceValue( const String & key, const char * value )
     {
         this->ReplaceValue( key, String( value ) );
     }
     
-    void Dictionary::SetValue( CFTypeRef key, const char * value ) const
+    void Dictionary::SetValue( CFTypeRef key, const char * value )
     {
         this->SetValue( key, String( value ) );
     }
     
-    void Dictionary::SetValue( const char * key, const char * value ) const
+    void Dictionary::SetValue( const char * key, const char * value )
     {
         this->SetValue( key, String( value ) );
     }
     
-    void Dictionary::SetValue( const String & key, const char * value ) const
+    void Dictionary::SetValue( const String & key, const char * value )
     {
         this->SetValue( key, String( value ) );
     }

@@ -71,36 +71,37 @@ namespace CF
             bool      ContainsKey( const char * key ) const;
             bool      ContainsKey( const String & key ) const;
             bool      ContainsValue( CFTypeRef value ) const;
-            void      RemoveAllValues() const;
             CFIndex   GetCount() const;
             CFTypeRef GetValue( CFTypeRef key ) const;
             CFTypeRef GetValue( const char * key ) const;
             CFTypeRef GetValue( const String & key ) const;
-            void      AddValue( CFTypeRef key, CFTypeRef value ) const;
-            void      AddValue( const char * key, CFTypeRef value ) const;
-            void      AddValue( const String & key, CFTypeRef value ) const;
-            void      RemoveValue( CFTypeRef key ) const;
-            void      RemoveValue( const char * key ) const;
-            void      RemoveValue( const String & key ) const;
-            void      ReplaceValue( CFTypeRef key, CFTypeRef value ) const;
-            void      ReplaceValue( const char * key, CFTypeRef value ) const;
-            void      ReplaceValue( const String & key, CFTypeRef value ) const;
-            void      SetValue( CFTypeRef key, CFTypeRef value ) const;
-            void      SetValue( const char * key, CFTypeRef value ) const;
-            void      SetValue( const String & key, CFTypeRef value ) const;
+            
+            void RemoveAllValues();
+            void AddValue( CFTypeRef key, CFTypeRef value );
+            void AddValue( const char * key, CFTypeRef value );
+            void AddValue( const String & key, CFTypeRef value );
+            void RemoveValue( CFTypeRef key );
+            void RemoveValue( const char * key );
+            void RemoveValue( const String & key );
+            void ReplaceValue( CFTypeRef key, CFTypeRef value );
+            void ReplaceValue( const char * key, CFTypeRef value );
+            void ReplaceValue( const String & key, CFTypeRef value );
+            void SetValue( CFTypeRef key, CFTypeRef value );
+            void SetValue( const char * key, CFTypeRef value );
+            void SetValue( const String & key, CFTypeRef value );
             
             /*
              * To avoid implicit conversion from const char * to CFTypeRef - const void *
              */
-            void AddValue( CFTypeRef key, const char * value ) const;
-            void AddValue( const char * key, const char * value ) const;
-            void AddValue( const String & key, const char * value ) const;
-            void ReplaceValue( CFTypeRef key, const char * value ) const;
-            void ReplaceValue( const char * key, const char * value ) const;
-            void ReplaceValue( const String & key, const char * value ) const;
-            void SetValue( CFTypeRef key, const char * value ) const;
-            void SetValue( const char * key, const char * value ) const;
-            void SetValue( const String & key, const char * value ) const;
+            void AddValue( CFTypeRef key, const char * value );
+            void AddValue( const char * key, const char * value );
+            void AddValue( const String & key, const char * value );
+            void ReplaceValue( CFTypeRef key, const char * value );
+            void ReplaceValue( const char * key, const char * value );
+            void ReplaceValue( const String & key, const char * value );
+            void SetValue( CFTypeRef key, const char * value );
+            void SetValue( const char * key, const char * value );
+            void SetValue( const String & key, const char * value );
             
             friend void swap( Dictionary & v1, Dictionary & v2 ) noexcept;
             

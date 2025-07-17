@@ -59,23 +59,25 @@ namespace CF
             CFTypeID  GetTypeID() const override;
             CFTypeRef GetCFObject() const override;
             
-            bool               Open() const;
-            bool               Open( const std::string & path );
-            bool               Open( const char * path );
-            bool               Open( const URL & url );
-            void               Close() const;
-            bool               CanAcceptBytes() const;
-            CFStreamStatus     GetStatus() const;
-            Error              GetError() const;
-            CFIndex            Write( const Data::Byte * buffer, CFIndex length ) const;
-            CFIndex            Write( const Data & data ) const;
-            bool               WriteAll( const Data::Byte * buffer, CFIndex length ) const;
-            bool               WriteAll( const Data & data ) const;
-            AutoPointer        GetProperty( const String & name );
-            bool               SetProperty( const String & name, CFTypeRef value );
-            bool               SetClient( CFOptionFlags events, CFWriteStreamClientCallBack callback, CFStreamClientContext * context );
-            void               ScheduleWithRunLoop( CFRunLoopRef runLoop, CF::String mode );
-            void               UnscheduleFromRunLoop( CFRunLoopRef runLoop, CF::String mode );
+            bool Open();
+            bool Open( const std::string & path );
+            bool Open( const char * path );
+            bool Open( const URL & url );
+            void Close();
+            
+            bool           CanAcceptBytes() const;
+            CFStreamStatus GetStatus() const;
+            Error          GetError() const;
+            AutoPointer    GetProperty( const String & name ) const;
+            
+            CFIndex Write( const Data::Byte * buffer, CFIndex length );
+            CFIndex Write( const Data & data );
+            bool    WriteAll( const Data::Byte * buffer, CFIndex length );
+            bool    WriteAll( const Data & data );
+            bool    SetProperty( const String & name, CFTypeRef value );
+            bool    SetClient( CFOptionFlags events, CFWriteStreamClientCallBack callback, CFStreamClientContext * context );
+            void    ScheduleWithRunLoop( CFRunLoopRef runLoop, CF::String mode );
+            void    UnscheduleFromRunLoop( CFRunLoopRef runLoop, CF::String mode );
             
             friend void swap( WriteStream & v1, WriteStream & v2 ) noexcept;
             

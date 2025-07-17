@@ -85,15 +85,16 @@ namespace CF
             CFTypeRef GetCFObject() const override;
             
             CFIndex      GetLength() const;
-            void         SetLength( CFIndex length ) const;
-            void         IncreaseLength( CFIndex extraLength ) const;
             const Byte * GetBytePtr() const;
             Byte       * GetMutableBytePtr() const;
             void         GetBytes( CFRange range, Byte * bytes ) const;
-            void         AppendBytes( const Byte * bytes, CFIndex length ) const;
-            void         ReplaceBytes( CFRange range, const Byte * newBytes, CFIndex newLength ) const;
-            void         DeleteBytes( CFRange range ) const;
             CFRange      Find( const Data & data, CFRange range, CFDataSearchFlags flags ) const;
+            
+            void         SetLength( CFIndex length );
+            void         IncreaseLength( CFIndex extraLength );
+            void         AppendBytes( const Byte * bytes, CFIndex length );
+            void         ReplaceBytes( CFRange range, const Byte * newBytes, CFIndex newLength );
+            void         DeleteBytes( CFRange range );
             
             friend void swap( Data & v1, Data & v2 ) noexcept;
             

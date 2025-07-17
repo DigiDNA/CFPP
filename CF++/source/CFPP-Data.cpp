@@ -268,7 +268,7 @@ namespace CF
         return CFDataGetLength( this->_cfObject );
     }
     
-    void Data::SetLength( CFIndex length ) const
+    void Data::SetLength( CFIndex length )
     {
         if( this->_cfObject == nullptr )
         {
@@ -278,7 +278,7 @@ namespace CF
         CFDataSetLength( this->_cfObject, length );
     }
     
-    void Data::IncreaseLength( CFIndex extraLength ) const
+    void Data::IncreaseLength( CFIndex extraLength )
     {
         if( this->_cfObject == nullptr )
         {
@@ -318,7 +318,7 @@ namespace CF
         CFDataGetBytes( this->_cfObject, range, bytes );
     }
     
-    void Data::AppendBytes( const Byte * bytes, CFIndex length ) const
+    void Data::AppendBytes( const Byte * bytes, CFIndex length )
     {
         if( this->_cfObject == nullptr || bytes == nullptr )
         {
@@ -328,7 +328,7 @@ namespace CF
         CFDataAppendBytes( this->_cfObject, bytes, length );
     }
     
-    void Data::ReplaceBytes( CFRange range, const Byte * newBytes, CFIndex newLength ) const
+    void Data::ReplaceBytes( CFRange range, const Byte * newBytes, CFIndex newLength )
     {
         if( this->_cfObject == nullptr || newBytes == nullptr )
         {
@@ -338,7 +338,7 @@ namespace CF
         CFDataReplaceBytes( this->_cfObject, range, newBytes, newLength );
     }
     
-    void Data::DeleteBytes( CFRange range ) const
+    void Data::DeleteBytes( CFRange range )
     {
         if( this->_cfObject == nullptr )
         {

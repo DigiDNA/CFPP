@@ -335,7 +335,7 @@ namespace CF
         ) ) ? true : false;
     }
     
-    void Array::RemoveAllValues() const
+    void Array::RemoveAllValues()
     {
         if( this->_cfObject != nullptr )
         {
@@ -353,7 +353,7 @@ namespace CF
         return CFArrayGetValueAtIndex( this->_cfObject, index );
     }
     
-    void Array::SetValueAtIndex( CFTypeRef value, CFIndex index ) const
+    void Array::SetValueAtIndex( CFTypeRef value, CFIndex index )
     {
         if( this->_cfObject == nullptr || index > this->GetCount() || value == nullptr )
         {
@@ -363,7 +363,7 @@ namespace CF
         CFArraySetValueAtIndex( this->_cfObject, index, value );
     }
     
-    void Array::InsertValueAtIndex( CFTypeRef value, CFIndex index ) const
+    void Array::InsertValueAtIndex( CFTypeRef value, CFIndex index )
     {
         if( this->_cfObject == nullptr || index > this->GetCount() || value == nullptr )
         {
@@ -373,7 +373,7 @@ namespace CF
         CFArrayInsertValueAtIndex( this->_cfObject, index, value );
     }
     
-    void Array::AppendValue( CFTypeRef value ) const
+    void Array::AppendValue( CFTypeRef value )
     {
         if( this->_cfObject == nullptr || value == nullptr )
         {
@@ -383,7 +383,7 @@ namespace CF
         CFArrayAppendValue( this->_cfObject, value );
     }
     
-    void Array::RemoveValueAtIndex( CFIndex index ) const
+    void Array::RemoveValueAtIndex( CFIndex index )
     {
         if( this->_cfObject == nullptr || index >= this->GetCount() )
         {
@@ -393,7 +393,7 @@ namespace CF
         CFArrayRemoveValueAtIndex( this->_cfObject, index );
     }
     
-    void Array::AppendArray( CFArrayRef array ) const
+    void Array::AppendArray( CFArrayRef array )
     {
         if( array == nullptr || CFGetTypeID( array ) != this->GetTypeID() )
         {
@@ -411,7 +411,7 @@ namespace CF
         }
     }
     
-    void Array::ExchangeValuesAtIndices( CFIndex index1, CFIndex index2 ) const
+    void Array::ExchangeValuesAtIndices( CFIndex index1, CFIndex index2 )
     {
         if( this->_cfObject == nullptr || index1 >= this->GetCount() || index2 >= this->GetCount() )
         {
