@@ -469,6 +469,51 @@ namespace CF
         this->SetValue( key.GetCFObject(), value );
     }
     
+    void Dictionary::AddValue( CFTypeRef key, const char * value ) const
+    {
+        this->AddValue( key, String( value ) );
+    }
+    
+    void Dictionary::AddValue( const char * key, const char * value ) const
+    {
+        this->AddValue( key, String( value ) );
+    }
+    
+    void Dictionary::AddValue( const String & key, const char * value ) const
+    {
+        this->AddValue( key, String( value ) );
+    }
+    
+    void Dictionary::ReplaceValue( CFTypeRef key, const char * value ) const
+    {
+        this->ReplaceValue( key, String( value ) );
+    }
+    
+    void Dictionary::ReplaceValue( const char * key, const char * value ) const
+    {
+        this->ReplaceValue( key, String( value ) );
+    }
+    
+    void Dictionary::ReplaceValue( const String & key, const char * value ) const
+    {
+        this->ReplaceValue( key, String( value ) );
+    }
+    
+    void Dictionary::SetValue( CFTypeRef key, const char * value ) const
+    {
+        this->SetValue( key, String( value ) );
+    }
+    
+    void Dictionary::SetValue( const char * key, const char * value ) const
+    {
+        this->SetValue( key, String( value ) );
+    }
+    
+    void Dictionary::SetValue( const String & key, const char * value ) const
+    {
+        this->SetValue( key, String( value ) );
+    }
+    
     Dictionary::Iterator Dictionary::begin( void ) const
     {
         return Iterator( this->_cfObject, this->GetCount() );

@@ -89,6 +89,19 @@ namespace CF
             void      SetValue( const char * key, CFTypeRef value ) const;
             void      SetValue( const String & key, CFTypeRef value ) const;
             
+            /*
+             * To avoid implicit conversion from const char * to CFTypeRef - const void *
+             */
+            void AddValue( CFTypeRef key, const char * value ) const;
+            void AddValue( const char * key, const char * value ) const;
+            void AddValue( const String & key, const char * value ) const;
+            void ReplaceValue( CFTypeRef key, const char * value ) const;
+            void ReplaceValue( const char * key, const char * value ) const;
+            void ReplaceValue( const String & key, const char * value ) const;
+            void SetValue( CFTypeRef key, const char * value ) const;
+            void SetValue( const char * key, const char * value ) const;
+            void SetValue( const String & key, const char * value ) const;
+            
             friend void swap( Dictionary & v1, Dictionary & v2 ) noexcept;
             
             #if __cplusplus >= 201703L
