@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFDateRef wrapper
  */
 
-#ifndef CFPP_DATE_H
-#define CFPP_DATE_H
+#ifndef CFPP_DATE_HPP
+#define CFPP_DATE_HPP
 
 namespace CF
 {
@@ -120,4 +120,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_DATE_H */
+#endif /* CFPP_DATE_HPP */

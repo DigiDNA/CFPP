@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFDictionaryRef wrapper
  */
 
-#ifndef CFPP_DICTIONARY_H
-#define CFPP_DICTIONARY_H
+#ifndef CFPP_DICTIONARY_HPP
+#define CFPP_DICTIONARY_HPP
 
 #include <map>
 
@@ -169,4 +169,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_DICTIONARY_H */
+#endif /* CFPP_DICTIONARY_HPP */

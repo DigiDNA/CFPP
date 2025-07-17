@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFUUIDRef wrapper
  */
 
-#ifndef CFPP_UUID_H
-#define CFPP_UUID_H
+#ifndef CFPP_UUID_HPP
+#define CFPP_UUID_HPP
 
 namespace CF
 {
@@ -86,4 +86,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_UUID_H */
+#endif /* CFPP_UUID_HPP */

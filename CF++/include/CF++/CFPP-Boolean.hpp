@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFBooleanRef wrapper
  */
 
-#ifndef CFPP_BOOLEAN_H
-#define CFPP_BOOLEAN_H
+#ifndef CFPP_BOOLEAN_HPP
+#define CFPP_BOOLEAN_HPP
 
 namespace CF
 {
@@ -83,4 +83,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_BOOLEAN_H */
+#endif /* CFPP_BOOLEAN_HPP */

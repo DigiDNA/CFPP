@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFArrayRef wrapper
  */
 
-#ifndef CFPP_ARRAY_H
-#define CFPP_ARRAY_H
+#ifndef CFPP_ARRAY_HPP
+#define CFPP_ARRAY_HPP
 
 #include <vector>
 
@@ -150,4 +150,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_ARRAY_H */
+#endif /* CFPP_ARRAY_HPP */

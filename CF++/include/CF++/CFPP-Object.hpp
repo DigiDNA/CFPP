@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ generic container for CF types
  */
 
-#ifndef CFPP_OBJECT_H
-#define CFPP_OBJECT_H
+#ifndef CFPP_OBJECT_HPP
+#define CFPP_OBJECT_HPP
 
 namespace CF
 {
@@ -126,4 +126,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_OBJECT_H */
+#endif /* CFPP_OBJECT_HPP */

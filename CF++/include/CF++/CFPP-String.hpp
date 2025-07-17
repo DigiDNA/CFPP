@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFStringRef wrapper
  */
 
-#ifndef CFPP_STRING_H
-#define CFPP_STRING_H
+#ifndef CFPP_STRING_HPP
+#define CFPP_STRING_HPP
 
 namespace CF
 {
@@ -168,4 +168,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_STRING_H */
+#endif /* CFPP_STRING_HPP */

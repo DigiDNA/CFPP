@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFWriteStreamRef wrapper
  */
 
-#ifndef CFPP_WRITE_STREAM_H
-#define CFPP_WRITE_STREAM_H
+#ifndef CFPP_WRITE_STREAM_HPP
+#define CFPP_WRITE_STREAM_HPP
 
 namespace CF
 {
@@ -85,4 +85,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_WRITE_STREAM_H */
+#endif /* CFPP_WRITE_STREAM_HPP */

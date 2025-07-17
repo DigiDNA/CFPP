@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFErrorRef wrapper
  */
 
-#ifndef CFPP_ERROR_H
-#define CFPP_ERROR_H
+#ifndef CFPP_ERROR_HPP
+#define CFPP_ERROR_HPP
 
 namespace CF
 {
@@ -79,4 +79,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_ERROR_H */
+#endif /* CFPP_ERROR_HPP */

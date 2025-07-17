@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFNullRef wrapper
  */
 
-#ifndef CFPP_NULL_H
-#define CFPP_NULL_H
+#ifndef CFPP_NULL_HPP
+#define CFPP_NULL_HPP
 
 #include <vector>
 
@@ -60,4 +60,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_NULL_H */
+#endif /* CFPP_NULL_HPP */

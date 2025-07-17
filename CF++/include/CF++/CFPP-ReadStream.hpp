@@ -28,8 +28,8 @@
  * @abstract    CoreFoundation++ CFReadStreamRef wrapper
  */
 
-#ifndef CFPP_READ_STREAM_H
-#define CFPP_READ_STREAM_H
+#ifndef CFPP_READ_STREAM_HPP
+#define CFPP_READ_STREAM_HPP
 
 namespace CF
 {
@@ -150,4 +150,4 @@ namespace CF
     };
 }
 
-#endif /* CFPP_READ_STREAM_H */
+#endif /* CFPP_READ_STREAM_HPP */
