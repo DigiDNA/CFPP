@@ -51,11 +51,11 @@ namespace CF
             
             ~Array() override;
             
-            Array & operator = ( Array value );
-            Array & operator = ( const AutoPointer & value );
-            Array & operator = ( CFTypeRef value );
-            Array & operator = ( CFArrayRef value );
-            Array & operator = ( std::nullptr_t );
+            Array & operator =( Array value );
+            Array & operator =( const AutoPointer & value );
+            Array & operator =( CFTypeRef value );
+            Array & operator =( CFArrayRef value );
+            Array & operator =( std::nullptr_t );
             
             Array & operator += ( const Array & value );
             Array & operator += ( CFTypeRef value );
@@ -107,7 +107,7 @@ namespace CF
                     
                     virtual ~Iterator();
                     
-                    Iterator & operator = ( Iterator value );
+                    Iterator & operator =( Iterator value );
                     Iterator & operator ++();
                     Iterator   operator ++( int );
                     Iterator & operator --();
@@ -116,13 +116,13 @@ namespace CF
                     Iterator & operator += ( CFIndex value );
                     Iterator & operator -= ( CFIndex value );
                     
-                    Iterator operator + ( CFIndex value );
-                    Iterator operator - ( CFIndex value );
+                    Iterator operator +( CFIndex value );
+                    Iterator operator -( CFIndex value );
                     
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    CFTypeRef operator * () const;
+                    CFTypeRef operator *() const;
                     
                     operator CFTypeRef () const;
                     

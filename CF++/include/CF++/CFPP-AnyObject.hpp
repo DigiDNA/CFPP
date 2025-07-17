@@ -48,10 +48,10 @@ namespace CF
             
             ~AnyObject() override;
             
-            AnyObject & operator = ( AnyObject value );
-            AnyObject & operator = ( const AutoPointer & value );
-            AnyObject & operator = ( CFTypeRef value );
-            AnyObject & operator = ( std::nullptr_t );
+            AnyObject & operator =( AnyObject value );
+            AnyObject & operator =( const AutoPointer & value );
+            AnyObject & operator =( CFTypeRef value );
+            AnyObject & operator =( std::nullptr_t );
                         
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

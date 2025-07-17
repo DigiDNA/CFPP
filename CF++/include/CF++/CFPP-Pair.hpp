@@ -49,7 +49,7 @@ namespace CF
             
             virtual ~Pair();
             
-            Pair & operator = ( Pair value );
+            Pair & operator =( Pair value );
             
             CFTypeRef GetKey()         const;
             CFTypeRef GetValue()       const;

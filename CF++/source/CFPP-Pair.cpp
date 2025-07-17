@@ -120,7 +120,7 @@ namespace CF
         }
     }
     
-    Pair & Pair::operator = ( Pair value )
+    Pair & Pair::operator =( Pair value )
     {
         swap( *( this ), value );
         

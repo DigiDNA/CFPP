@@ -118,39 +118,39 @@ namespace CF
         }
     }
     
-    UUID & UUID::operator = ( UUID value )
+    UUID & UUID::operator =( UUID value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    UUID & UUID::operator = ( const AutoPointer & value )
+    UUID & UUID::operator =( const AutoPointer & value )
     {
         return operator =( UUID( value ) );
     }
     
-    UUID & UUID::operator = ( CFTypeRef value )
+    UUID & UUID::operator =( CFTypeRef value )
     {
         return operator =( UUID( value ) );
     }
     
-    UUID & UUID::operator = ( CFUUIDRef value )
+    UUID & UUID::operator =( CFUUIDRef value )
     {
         return operator =( UUID( value ) );
     }
     
-    UUID & UUID::operator = ( std::nullptr_t )
+    UUID & UUID::operator =( std::nullptr_t )
     {
         return operator =( UUID( nullptr ) );
     }
     
-    UUID & UUID::operator = ( const std::string & value )
+    UUID & UUID::operator =( const std::string & value )
     {
         return operator =( UUID( value ) );
     }
     
-    UUID & UUID::operator = ( const Data & value )
+    UUID & UUID::operator =( const Data & value )
     {
         return operator =( UUID( value ) );
     }

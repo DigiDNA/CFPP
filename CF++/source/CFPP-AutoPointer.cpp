@@ -66,14 +66,14 @@ namespace CF
         }
     }
     
-    AutoPointer & AutoPointer::operator = ( AutoPointer value )
+    AutoPointer & AutoPointer::operator =( AutoPointer value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    AutoPointer & AutoPointer::operator = ( CFTypeRef value )
+    AutoPointer & AutoPointer::operator =( CFTypeRef value )
     {
         return operator =( AutoPointer( value ) );
     }

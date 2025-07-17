@@ -46,8 +46,8 @@ namespace CF
             
             ~AutoPointer() override;
             
-            AutoPointer & operator = ( AutoPointer value );
-            AutoPointer & operator = ( CFTypeRef value );
+            AutoPointer & operator =( AutoPointer value );
+            AutoPointer & operator =( CFTypeRef value );
                         
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

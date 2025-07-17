@@ -110,7 +110,7 @@ namespace CF
         }
     }
     
-    Dictionary::Iterator & Dictionary::Iterator::operator = ( Iterator value )
+    Dictionary::Iterator & Dictionary::Iterator::operator =( Iterator value )
     {
         swap( *( this ), value );
         
@@ -163,7 +163,7 @@ namespace CF
         return *( this );
     }
     
-    Dictionary::Iterator Dictionary::Iterator::operator + ( CFIndex value )
+    Dictionary::Iterator Dictionary::Iterator::operator +( CFIndex value )
     {
         Iterator i;
         
@@ -172,7 +172,7 @@ namespace CF
         return i += value;
     }
     
-    Dictionary::Iterator Dictionary::Iterator::operator - ( CFIndex value )
+    Dictionary::Iterator Dictionary::Iterator::operator -( CFIndex value )
     {
         Iterator i;
         
@@ -206,7 +206,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    CF::Pair Dictionary::Iterator::operator * () const
+    CF::Pair Dictionary::Iterator::operator *() const
     {
         return CF::Pair( this->GetKey(), this->GetValue() );
     }

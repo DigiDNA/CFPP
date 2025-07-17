@@ -128,39 +128,39 @@ namespace CF
         }
     }
           
-    Data & Data::operator = ( Data value )
+    Data & Data::operator =( Data value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Data & Data::operator = ( const AutoPointer & value )
+    Data & Data::operator =( const AutoPointer & value )
     {
         return operator =( Data( value ) );
     }
     
-    Data & Data::operator = ( CFTypeRef value )
+    Data & Data::operator =( CFTypeRef value )
     {
         return operator =( Data( value ) );
     }
     
-    Data & Data::operator = ( CFDataRef value )
+    Data & Data::operator =( CFDataRef value )
     {
         return operator =( Data( value ) );
     }
     
-    Data & Data::operator = ( CFStringRef value )
+    Data & Data::operator =( CFStringRef value )
     {
         return operator =( Data( value ) );
     }
     
-    Data & Data::operator = ( std::nullptr_t )
+    Data & Data::operator =( std::nullptr_t )
     {
         return operator =( Data( nullptr ) );
     }
     
-    Data & Data::operator = ( const std::string & value )
+    Data & Data::operator =( const std::string & value )
     {
         return operator =( Data( value ) );
     }

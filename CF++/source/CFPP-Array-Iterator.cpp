@@ -78,7 +78,7 @@ namespace CF
         }
     }
     
-    Array::Iterator & Array::Iterator::operator = ( Iterator value )
+    Array::Iterator & Array::Iterator::operator =( Iterator value )
     {
         swap( *( this ), value );
         
@@ -131,7 +131,7 @@ namespace CF
         return *( this );
     }
     
-    Array::Iterator Array::Iterator::operator + ( CFIndex value )
+    Array::Iterator Array::Iterator::operator +( CFIndex value )
     {
         Iterator i;
         
@@ -140,7 +140,7 @@ namespace CF
         return i += value;
     }
     
-    Array::Iterator Array::Iterator::operator - ( CFIndex value )
+    Array::Iterator Array::Iterator::operator -( CFIndex value )
     {
         Iterator i;
         
@@ -174,7 +174,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    CFTypeRef Array::Iterator::operator * () const
+    CFTypeRef Array::Iterator::operator *() const
     {
         return this->GetCFObject();
     }

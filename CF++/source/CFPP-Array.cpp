@@ -234,29 +234,29 @@ namespace CF
         }
     }
     
-    Array & Array::operator = ( Array value )
+    Array & Array::operator =( Array value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Array & Array::operator = ( const AutoPointer & value )
+    Array & Array::operator =( const AutoPointer & value )
     {
         return operator =( Array( value ) );
     }
     
-    Array & Array::operator = ( CFTypeRef value )
+    Array & Array::operator =( CFTypeRef value )
     {
         return operator =( Array( value ) );
     }
     
-    Array & Array::operator = ( CFArrayRef value )
+    Array & Array::operator =( CFArrayRef value )
     {
         return operator =( Array( value ) );
     }
     
-    Array & Array::operator = ( std::nullptr_t )
+    Array & Array::operator =( std::nullptr_t )
     {
         return operator =( Array( nullptr ) );
     }

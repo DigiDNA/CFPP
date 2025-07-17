@@ -85,7 +85,7 @@ namespace CF
         }
     }
     
-    Data::Iterator & Data::Iterator::operator = ( Iterator value )
+    Data::Iterator & Data::Iterator::operator =( Iterator value )
     {
         swap( *( this ), value );
         
@@ -138,7 +138,7 @@ namespace CF
         return *( this );
     }
     
-    Data::Iterator Data::Iterator::operator + ( CFIndex value )
+    Data::Iterator Data::Iterator::operator +( CFIndex value )
     {
         Iterator i;
         
@@ -147,7 +147,7 @@ namespace CF
         return i += value;
     }
     
-    Data::Iterator Data::Iterator::operator - ( CFIndex value )
+    Data::Iterator Data::Iterator::operator -( CFIndex value )
     {
         Iterator i;
         
@@ -181,7 +181,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    Data::Byte Data::Iterator::operator * () const
+    Data::Byte Data::Iterator::operator *() const
     {
         if( this->_cfObject == nullptr )
         {

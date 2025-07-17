@@ -62,13 +62,13 @@ namespace CF
             
             ~Data() override;
             
-            Data & operator = ( Data value );
-            Data & operator = ( const AutoPointer & value );
-            Data & operator = ( CFTypeRef value );
-            Data & operator = ( CFDataRef value );
-            Data & operator = ( CFStringRef value );
-            Data & operator = ( std::nullptr_t );
-            Data & operator = ( const std::string & value );
+            Data & operator =( Data value );
+            Data & operator =( const AutoPointer & value );
+            Data & operator =( CFTypeRef value );
+            Data & operator =( CFDataRef value );
+            Data & operator =( CFStringRef value );
+            Data & operator =( std::nullptr_t );
+            Data & operator =( const std::string & value );
             
             operator const Byte * () const;
             operator std::string  () const;
@@ -120,7 +120,7 @@ namespace CF
                     
                     virtual ~Iterator();
                     
-                    Iterator & operator = ( Iterator value );
+                    Iterator & operator =( Iterator value );
                     Iterator & operator ++();
                     Iterator   operator ++( int );
                     Iterator & operator --();
@@ -129,13 +129,13 @@ namespace CF
                     Iterator & operator += ( CFIndex value );
                     Iterator & operator -= ( CFIndex value );
                     
-                    Iterator operator + ( CFIndex value );
-                    Iterator operator - ( CFIndex value );
+                    Iterator operator +( CFIndex value );
+                    Iterator operator -( CFIndex value );
                     
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    Byte operator * () const;
+                    Byte operator *() const;
                     
                     operator Byte () const;
                     

@@ -85,14 +85,14 @@ namespace CF
             
             ~URL() override;
             
-            URL & operator = ( URL value );
-            URL & operator = ( const AutoPointer & value );
-            URL & operator = ( CFTypeRef value );
-            URL & operator = ( CFURLRef value );
-            URL & operator = ( CFStringRef value );
-            URL & operator = ( std::nullptr_t );
-            URL & operator = ( const std::string & value );
-            URL & operator = ( const char * value );
+            URL & operator =( URL value );
+            URL & operator =( const AutoPointer & value );
+            URL & operator =( CFTypeRef value );
+            URL & operator =( CFURLRef value );
+            URL & operator =( CFStringRef value );
+            URL & operator =( std::nullptr_t );
+            URL & operator =( const std::string & value );
+            URL & operator =( const char * value );
             
             bool operator == ( const URL & value )         const;
             bool operator == ( CFTypeRef value )           const;

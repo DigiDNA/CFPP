@@ -258,29 +258,29 @@ namespace CF
         }
     }
     
-    Dictionary & Dictionary::operator = ( Dictionary value )
+    Dictionary & Dictionary::operator =( Dictionary value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Dictionary & Dictionary::operator = ( const AutoPointer & value )
+    Dictionary & Dictionary::operator =( const AutoPointer & value )
     {
         return operator =( Dictionary( value ) );
     }
     
-    Dictionary & Dictionary::operator = ( CFTypeRef value )
+    Dictionary & Dictionary::operator =( CFTypeRef value )
     {
         return operator =( Dictionary( value ) );
     }
     
-    Dictionary & Dictionary::operator = ( CFDictionaryRef value )
+    Dictionary & Dictionary::operator =( CFDictionaryRef value )
     {
         return operator =( Dictionary( value ) );
     }
     
-    Dictionary & Dictionary::operator = ( std::nullptr_t )
+    Dictionary & Dictionary::operator =( std::nullptr_t )
     {
         return operator =( Dictionary( nullptr ) );
     }

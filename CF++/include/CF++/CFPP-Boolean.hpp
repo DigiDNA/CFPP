@@ -50,12 +50,12 @@ namespace CF
             
             ~Boolean() override;
             
-            Boolean & operator = ( Boolean value );
-            Boolean & operator = ( const AutoPointer & value );
-            Boolean & operator = ( CFTypeRef value );
-            Boolean & operator = ( CFBooleanRef value );
-            Boolean & operator = ( std::nullptr_t );
-            Boolean & operator = ( bool value );
+            Boolean & operator =( Boolean value );
+            Boolean & operator =( const AutoPointer & value );
+            Boolean & operator =( CFTypeRef value );
+            Boolean & operator =( CFBooleanRef value );
+            Boolean & operator =( std::nullptr_t );
+            Boolean & operator =( bool value );
             
             bool operator == ( const Boolean & value ) const;
             bool operator == ( bool value )            const;

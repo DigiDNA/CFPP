@@ -50,11 +50,11 @@ namespace CF
             
             ~ReadStream() override;
             
-            ReadStream & operator = ( ReadStream value );
-            ReadStream & operator = ( const AutoPointer & value );
-            ReadStream & operator = ( CFTypeRef value );
-            ReadStream & operator = ( CFReadStreamRef value );
-            ReadStream & operator = ( std::nullptr_t );
+            ReadStream & operator =( ReadStream value );
+            ReadStream & operator =( const AutoPointer & value );
+            ReadStream & operator =( CFTypeRef value );
+            ReadStream & operator =( CFReadStreamRef value );
+            ReadStream & operator =( std::nullptr_t );
             
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
@@ -107,18 +107,18 @@ namespace CF
                     
                     virtual ~Iterator();
                     
-                    Iterator & operator = ( Iterator value );
+                    Iterator & operator =( Iterator value );
                     Iterator & operator ++();
                     Iterator   operator ++( int );
                     
                     Iterator & operator += ( CFIndex value );
                     
-                    Iterator operator + ( CFIndex value );
+                    Iterator operator +( CFIndex value );
                     
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    Data operator * ();
+                    Data operator *();
                     
                     operator Data ();
                     

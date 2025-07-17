@@ -145,24 +145,24 @@ namespace CF
         }
     }
     
-    AnyPropertyListType & AnyPropertyListType::operator = ( AnyPropertyListType value )
+    AnyPropertyListType & AnyPropertyListType::operator =( AnyPropertyListType value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    AnyPropertyListType & AnyPropertyListType::operator = ( const AutoPointer & value )
+    AnyPropertyListType & AnyPropertyListType::operator =( const AutoPointer & value )
     {
         return operator =( AnyPropertyListType( value, this->_format ) );
     }
     
-    AnyPropertyListType & AnyPropertyListType::operator = ( CFTypeRef value )
+    AnyPropertyListType & AnyPropertyListType::operator =( CFTypeRef value )
     {
         return operator =( AnyPropertyListType( value, this->_format ) );
     }
     
-    AnyPropertyListType & AnyPropertyListType::operator = ( std::nullptr_t )
+    AnyPropertyListType & AnyPropertyListType::operator =( std::nullptr_t )
     {
         return operator =( AnyPropertyListType( nullptr, this->_format ) );
     }

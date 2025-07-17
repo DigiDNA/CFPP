@@ -109,29 +109,29 @@ namespace CF
         }
     }
     
-    WriteStream & WriteStream::operator = ( WriteStream value )
+    WriteStream & WriteStream::operator =( WriteStream value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    WriteStream & WriteStream::operator = ( const AutoPointer & value )
+    WriteStream & WriteStream::operator =( const AutoPointer & value )
     {
         return operator =( WriteStream( value ) );
     }
     
-    WriteStream & WriteStream::operator = ( CFTypeRef value )
+    WriteStream & WriteStream::operator =( CFTypeRef value )
     {
         return operator =( WriteStream( value ) );
     }
     
-    WriteStream & WriteStream::operator = ( CFWriteStreamRef value )
+    WriteStream & WriteStream::operator =( CFWriteStreamRef value )
     {
         return operator =( WriteStream( value ) );
     }
     
-    WriteStream & WriteStream::operator = ( std::nullptr_t )
+    WriteStream & WriteStream::operator =( std::nullptr_t )
     {
         return operator =( WriteStream( nullptr ) );
     }

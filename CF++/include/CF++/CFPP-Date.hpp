@@ -50,12 +50,12 @@ namespace CF
             
             ~Date() override;
             
-            Date & operator = ( Date value );
-            Date & operator = ( const AutoPointer & value );
-            Date & operator = ( CFTypeRef value );
-            Date & operator = ( CFDateRef value );
-            Date & operator = ( std::nullptr_t );
-            Date & operator = ( CFAbsoluteTime value );
+            Date & operator =( Date value );
+            Date & operator =( const AutoPointer & value );
+            Date & operator =( CFTypeRef value );
+            Date & operator =( CFDateRef value );
+            Date & operator =( std::nullptr_t );
+            Date & operator =( CFAbsoluteTime value );
             
             bool operator == ( const Date & value )   const;
             bool operator == ( CFTypeRef value )      const;
@@ -75,13 +75,13 @@ namespace CF
             bool operator <= ( CFDateRef value )      const;
             bool operator <= ( CFAbsoluteTime value ) const;
             
-            bool operator > ( const Date & value )   const;
-            bool operator > ( CFDateRef value )      const;
-            bool operator > ( CFAbsoluteTime value ) const;
+            bool operator >( const Date & value )   const;
+            bool operator >( CFDateRef value )      const;
+            bool operator >( CFAbsoluteTime value ) const;
             
-            bool operator < ( const Date & value )   const;
-            bool operator < ( CFDateRef value )      const;
-            bool operator < ( CFAbsoluteTime value ) const;
+            bool operator <( const Date & value )   const;
+            bool operator <( CFDateRef value )      const;
+            bool operator <( CFAbsoluteTime value ) const;
             
             Date & operator += ( const Date & value );
             Date & operator += ( CFDateRef value );
@@ -91,13 +91,13 @@ namespace CF
             Date & operator -= ( CFDateRef value );
             Date & operator -= ( CFAbsoluteTime value );
             
-            Date operator + ( const Date & value );
-            Date operator + ( CFDateRef value );
-            Date operator + ( CFAbsoluteTime value );
+            Date operator +( const Date & value );
+            Date operator +( CFDateRef value );
+            Date operator +( CFAbsoluteTime value );
             
-            Date operator - ( const Date & value );
-            Date operator - ( CFDateRef value );
-            Date operator - ( CFAbsoluteTime value );
+            Date operator -( const Date & value );
+            Date operator -( CFDateRef value );
+            Date operator -( CFAbsoluteTime value );
             
             Date & operator ++ ();
             Date   operator ++ ( int );

@@ -186,34 +186,34 @@ namespace CF
         }
     }
     
-    Boolean & Boolean::operator = ( Boolean value )
+    Boolean & Boolean::operator =( Boolean value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Boolean & Boolean::operator = ( const AutoPointer & value )
+    Boolean & Boolean::operator =( const AutoPointer & value )
     {
         return operator =( Boolean( value ) );
     }
     
-    Boolean & Boolean::operator = ( CFTypeRef value )
+    Boolean & Boolean::operator =( CFTypeRef value )
     {
         return operator =( Boolean( value ) );
     }
     
-    Boolean & Boolean::operator = ( CFBooleanRef value )
+    Boolean & Boolean::operator =( CFBooleanRef value )
     {
         return operator =( Boolean( value ) );
     }
     
-    Boolean & Boolean::operator = ( std::nullptr_t )
+    Boolean & Boolean::operator =( std::nullptr_t )
     {
         return operator =( Boolean( nullptr ) );
     }
     
-    Boolean & Boolean::operator = ( bool value )
+    Boolean & Boolean::operator =( bool value )
     {
         return operator =( Boolean( value ) );
     }

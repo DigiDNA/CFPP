@@ -49,13 +49,13 @@ namespace CF
             
             ~UUID() override;
             
-            UUID & operator = ( UUID value );
-            UUID & operator = ( const AutoPointer & value );
-            UUID & operator = ( CFTypeRef value );
-            UUID & operator = ( CFUUIDRef value );
-            UUID & operator = ( std::nullptr_t );
-            UUID & operator = ( const std::string & value );
-            UUID & operator = ( const Data & value );
+            UUID & operator =( UUID value );
+            UUID & operator =( const AutoPointer & value );
+            UUID & operator =( CFTypeRef value );
+            UUID & operator =( CFUUIDRef value );
+            UUID & operator =( std::nullptr_t );
+            UUID & operator =( const std::string & value );
+            UUID & operator =( const Data & value );
             
             bool operator == ( const UUID & value )        const;
             bool operator == ( CFTypeRef value )           const;

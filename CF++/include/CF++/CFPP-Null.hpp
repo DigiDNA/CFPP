@@ -46,8 +46,8 @@ namespace CF
             
             ~Null() override;
             
-            Null & operator = ( Null value );
-            Null & operator = ( CFTypeRef value );
+            Null & operator =( Null value );
+            Null & operator =( CFTypeRef value );
                         
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

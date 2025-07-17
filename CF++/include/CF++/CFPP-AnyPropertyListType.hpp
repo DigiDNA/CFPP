@@ -52,10 +52,10 @@ namespace CF
             
             ~AnyPropertyListType() override;
             
-            AnyPropertyListType & operator = ( AnyPropertyListType value );
-            AnyPropertyListType & operator = ( const AutoPointer & value );
-            AnyPropertyListType & operator = ( CFTypeRef value );
-            AnyPropertyListType & operator = ( std::nullptr_t value );
+            AnyPropertyListType & operator =( AnyPropertyListType value );
+            AnyPropertyListType & operator =( const AutoPointer & value );
+            AnyPropertyListType & operator =( CFTypeRef value );
+            AnyPropertyListType & operator =( std::nullptr_t value );
             
             bool IsValidPropertyList() const;
             

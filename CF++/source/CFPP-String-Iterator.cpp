@@ -96,7 +96,7 @@ namespace CF
         }
     }
     
-    String::Iterator & String::Iterator::operator = ( Iterator value )
+    String::Iterator & String::Iterator::operator =( Iterator value )
     {
         swap( *( this ), value );
         
@@ -149,7 +149,7 @@ namespace CF
         return *( this );
     }
     
-    String::Iterator String::Iterator::operator + ( CFIndex value )
+    String::Iterator String::Iterator::operator +( CFIndex value )
     {
         Iterator i;
         
@@ -158,7 +158,7 @@ namespace CF
         return i += value;
     }
     
-    String::Iterator String::Iterator::operator - ( CFIndex value )
+    String::Iterator String::Iterator::operator -( CFIndex value )
     {
         Iterator i;
         
@@ -192,7 +192,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    char String::Iterator::operator * () const
+    char String::Iterator::operator *() const
     {
         if( this->_cfObject == nullptr )
         {

@@ -78,24 +78,24 @@ namespace CF
         }
     }
     
-    AnyObject & AnyObject::operator = ( AnyObject value )
+    AnyObject & AnyObject::operator =( AnyObject value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    AnyObject & AnyObject::operator = ( const AutoPointer & value )
+    AnyObject & AnyObject::operator =( const AutoPointer & value )
     {
         return operator =( AnyObject( value ) );
     }
     
-    AnyObject & AnyObject::operator = ( CFTypeRef value )
+    AnyObject & AnyObject::operator =( CFTypeRef value )
     {
         return operator =( AnyObject( value ) );
     }
     
-    AnyObject & AnyObject::operator = ( std::nullptr_t )
+    AnyObject & AnyObject::operator =( std::nullptr_t )
     {
         return operator =( AnyObject( nullptr ) );
     }

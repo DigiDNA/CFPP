@@ -81,19 +81,19 @@ namespace CF
                 }
             }
             
-            Object< _T_ > & operator = ( Object< _T_ > value )
+            Object< _T_ > & operator =( Object< _T_ > value )
             {
                 swap( *( this ), value );
                 
                 return *( this );
             }
             
-            Object< _T_ > & operator = ( const AutoPointer & value )
+            Object< _T_ > & operator =( const AutoPointer & value )
             {
                 return operator =( Object< _T_ >( value ) );
             }
             
-            Object< _T_ > & operator = ( _T_ value )
+            Object< _T_ > & operator =( _T_ value )
             {
                 return operator =( Object< _T_ >( value ) );
             }

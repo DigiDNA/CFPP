@@ -50,11 +50,11 @@ namespace CF
             
             ~WriteStream() override;
             
-            WriteStream & operator = ( WriteStream value );
-            WriteStream & operator = ( const AutoPointer & value );
-            WriteStream & operator = ( CFTypeRef value );
-            WriteStream & operator = ( CFWriteStreamRef value );
-            WriteStream & operator = ( std::nullptr_t );
+            WriteStream & operator =( WriteStream value );
+            WriteStream & operator =( const AutoPointer & value );
+            WriteStream & operator =( CFTypeRef value );
+            WriteStream & operator =( CFWriteStreamRef value );
+            WriteStream & operator =( std::nullptr_t );
             
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

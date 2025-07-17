@@ -53,14 +53,14 @@ namespace CF
             
             ~String() override;
             
-            String & operator = ( String value );
-            String & operator = ( const AutoPointer & value );
-            String & operator = ( CFTypeRef value );
-            String & operator = ( CFStringRef value );
-            String & operator = ( std::nullptr_t );
-            String & operator = ( const std::string & value );
-            String & operator = ( char * value );
-            String & operator = ( const char * value );
+            String & operator =( String value );
+            String & operator =( const AutoPointer & value );
+            String & operator =( CFTypeRef value );
+            String & operator =( CFStringRef value );
+            String & operator =( std::nullptr_t );
+            String & operator =( const std::string & value );
+            String & operator =( char * value );
+            String & operator =( const char * value );
             
             bool operator == ( const String & value )      const;
             bool operator == ( CFTypeRef value )           const;
@@ -127,7 +127,7 @@ namespace CF
                     
                     virtual ~Iterator();
                     
-                    Iterator & operator = ( Iterator value );
+                    Iterator & operator =( Iterator value );
                     Iterator & operator ++();
                     Iterator   operator ++( int );
                     Iterator & operator --();
@@ -136,13 +136,13 @@ namespace CF
                     Iterator & operator += ( CFIndex value );
                     Iterator & operator -= ( CFIndex value );
                     
-                    Iterator operator + ( CFIndex value );
-                    Iterator operator - ( CFIndex value );
+                    Iterator operator +( CFIndex value );
+                    Iterator operator -( CFIndex value );
                     
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    char operator * () const;
+                    char operator *() const;
                     
                     operator char () const;
                     

@@ -191,29 +191,29 @@ namespace CF
     
     }
     
-    Error & Error::operator = ( Error value )
+    Error & Error::operator =( Error value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Error & Error::operator = ( const AutoPointer & value )
+    Error & Error::operator =( const AutoPointer & value )
     {
         return operator =( Error( value ) );
     }
     
-    Error & Error::operator = ( CFTypeRef value )
+    Error & Error::operator =( CFTypeRef value )
     {
         return operator =( Error( value ) );
     }
     
-    Error & Error::operator = ( CFErrorRef value )
+    Error & Error::operator =( CFErrorRef value )
     {
         return operator =( Error( value ) );
     }
     
-    Error & Error::operator = ( std::nullptr_t )
+    Error & Error::operator =( std::nullptr_t )
     {
         return operator =( Error( nullptr ) );
     }

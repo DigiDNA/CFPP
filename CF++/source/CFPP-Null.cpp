@@ -94,14 +94,14 @@ namespace CF
     Null::~Null()
     {}
     
-    Null & Null::operator = ( Null value )
+    Null & Null::operator =( Null value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    Null & Null::operator = ( CFTypeRef value )
+    Null & Null::operator =( CFTypeRef value )
     {
         return operator =( Null( value ) );
     }

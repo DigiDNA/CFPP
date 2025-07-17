@@ -149,44 +149,44 @@ namespace CF
         }
     }
     
-    String & String::operator = ( String value )
+    String & String::operator =( String value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    String & String::operator = ( const AutoPointer & value )
+    String & String::operator =( const AutoPointer & value )
     {
         return operator =( String( value ) );
     }
     
-    String & String::operator = ( CFTypeRef value )
+    String & String::operator =( CFTypeRef value )
     {
         return operator =( String( value ) );
     }
     
-    String & String::operator = ( CFStringRef value )
+    String & String::operator =( CFStringRef value )
     {
         return operator =( String( value ) );
     }
     
-    String & String::operator = ( std::nullptr_t )
+    String & String::operator =( std::nullptr_t )
     {
         return operator =( String( nullptr ) );
     }
     
-    String & String::operator = ( const std::string & value )
+    String & String::operator =( const std::string & value )
     {
         return operator =( String( value ) );
     }
     
-    String & String::operator = ( char * value )
+    String & String::operator =( char * value )
     {
         return operator =( String( value ) );
     }
     
-    String & String::operator = ( const char * value )
+    String & String::operator =( const char * value )
     {
         return operator =( String( value ) );
     }

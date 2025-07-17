@@ -55,11 +55,11 @@ namespace CF
             
             ~Error() override;
             
-            Error & operator = ( Error value );
-            Error & operator = ( const AutoPointer & value );
-            Error & operator = ( CFTypeRef value );
-            Error & operator = ( CFErrorRef value );
-            Error & operator = ( std::nullptr_t );
+            Error & operator =( Error value );
+            Error & operator =( const AutoPointer & value );
+            Error & operator =( CFTypeRef value );
+            Error & operator =( CFErrorRef value );
+            Error & operator =( std::nullptr_t );
             
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

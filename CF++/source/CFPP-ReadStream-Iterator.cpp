@@ -121,7 +121,7 @@ namespace CF
         }
     }
 
-    ReadStream::Iterator & ReadStream::Iterator::operator = ( Iterator value )
+    ReadStream::Iterator & ReadStream::Iterator::operator =( Iterator value )
     {
         swap( *( this ), value );
         
@@ -174,7 +174,7 @@ namespace CF
         return *( this );
     }
 
-    ReadStream::Iterator ReadStream::Iterator::operator + ( CFIndex value )
+    ReadStream::Iterator ReadStream::Iterator::operator +( CFIndex value )
     {
         Iterator i;
         
@@ -218,7 +218,7 @@ namespace CF
         return !( *( this ) == value );
     }
 
-    Data ReadStream::Iterator::operator * ()
+    Data ReadStream::Iterator::operator *()
     {
         return this->_data;
     }

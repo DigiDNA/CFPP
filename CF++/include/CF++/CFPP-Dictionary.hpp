@@ -51,11 +51,11 @@ namespace CF
             
             ~Dictionary() override;
             
-            Dictionary & operator = ( Dictionary value );
-            Dictionary & operator = ( const AutoPointer & value );
-            Dictionary & operator = ( CFTypeRef value );
-            Dictionary & operator = ( CFDictionaryRef value );
-            Dictionary & operator = ( std::nullptr_t );
+            Dictionary & operator =( Dictionary value );
+            Dictionary & operator =( const AutoPointer & value );
+            Dictionary & operator =( CFTypeRef value );
+            Dictionary & operator =( CFDictionaryRef value );
+            Dictionary & operator =( std::nullptr_t );
             
             Dictionary & operator += ( const Pair & pair );
             Dictionary & operator << ( const Pair & pair );
@@ -127,7 +127,7 @@ namespace CF
                     
                     virtual ~Iterator();
                     
-                    Iterator & operator = ( Iterator value );
+                    Iterator & operator =( Iterator value );
                     Iterator & operator ++();
                     Iterator   operator ++( int );
                     Iterator & operator --();
@@ -136,13 +136,13 @@ namespace CF
                     Iterator & operator += ( CFIndex value );
                     Iterator & operator -= ( CFIndex value );
                     
-                    Iterator operator + ( CFIndex value );
-                    Iterator operator - ( CFIndex value );
+                    Iterator operator +( CFIndex value );
+                    Iterator operator -( CFIndex value );
                     
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    CF::Pair operator * () const;
+                    CF::Pair operator *() const;
                     
                     CFTypeRef GetKey()   const;
                     CFTypeRef GetValue() const;

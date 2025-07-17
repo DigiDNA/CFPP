@@ -185,44 +185,44 @@ namespace CF
         }
     }
     
-    URL & URL::operator = ( URL value )
+    URL & URL::operator =( URL value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    URL & URL::operator = ( const AutoPointer & value )
+    URL & URL::operator =( const AutoPointer & value )
     {
         return operator =( URL( value ) );
     }
     
-    URL & URL::operator = ( CFTypeRef value )
+    URL & URL::operator =( CFTypeRef value )
     {
         return operator =( URL( value ) );
     }
     
-    URL & URL::operator = ( CFURLRef value )
+    URL & URL::operator =( CFURLRef value )
     {
         return operator =( URL( value ) );
     }
     
-    URL & URL::operator = ( CFStringRef value )
+    URL & URL::operator =( CFStringRef value )
     {
         return operator =( URL( value ) );
     }
     
-    URL & URL::operator = ( std::nullptr_t )
+    URL & URL::operator =( std::nullptr_t )
     {
         return operator =( URL( nullptr ) );
     }
     
-    URL & URL::operator = ( const std::string & value )
+    URL & URL::operator =( const std::string & value )
     {
         return operator =( URL( value ) );
     }
     
-    URL & URL::operator = ( const char * value )
+    URL & URL::operator =( const char * value )
     {
         return operator =( URL( value ) );
     }

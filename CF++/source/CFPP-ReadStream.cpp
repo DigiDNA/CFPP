@@ -109,29 +109,29 @@ namespace CF
         }
     }
     
-    ReadStream & ReadStream::operator = ( ReadStream value )
+    ReadStream & ReadStream::operator =( ReadStream value )
     {
         swap( *( this ), value );
         
         return *( this );
     }
     
-    ReadStream & ReadStream::operator = ( const AutoPointer & value )
+    ReadStream & ReadStream::operator =( const AutoPointer & value )
     {
         return operator =( ReadStream( value ) );
     }
     
-    ReadStream & ReadStream::operator = ( CFTypeRef value )
+    ReadStream & ReadStream::operator =( CFTypeRef value )
     {
         return operator =( ReadStream( value ) );
     }
     
-    ReadStream & ReadStream::operator = ( CFReadStreamRef value )
+    ReadStream & ReadStream::operator =( CFReadStreamRef value )
     {
         return operator =( ReadStream( value ) );
     }
     
-    ReadStream & ReadStream::operator = ( std::nullptr_t )
+    ReadStream & ReadStream::operator =( std::nullptr_t )
     {
         return operator =( ReadStream( nullptr ) );
     }
