@@ -47,7 +47,7 @@ namespace CF
             UUID( const Data & value );
             UUID( UUID && value ) noexcept;
             
-            virtual ~UUID( void );
+            ~UUID( void ) override;
             
             UUID & operator = ( UUID value );
             UUID & operator = ( const AutoPointer & value );
@@ -71,8 +71,8 @@ namespace CF
             
             operator std::string () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             String GetString( void ) const;
             Data   GetData( void )   const;

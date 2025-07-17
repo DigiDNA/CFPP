@@ -46,15 +46,15 @@ namespace CF
             AnyObject( std::nullptr_t );
             AnyObject( AnyObject && value ) noexcept;
             
-            virtual ~AnyObject( void );
+            ~AnyObject( void ) override;
             
             AnyObject & operator = ( AnyObject value );
             AnyObject & operator = ( const AutoPointer & value );
             AnyObject & operator = ( CFTypeRef value );
             AnyObject & operator = ( std::nullptr_t );
                         
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             template< typename T >
             T As( void ) const

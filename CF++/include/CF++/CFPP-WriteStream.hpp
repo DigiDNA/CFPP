@@ -48,7 +48,7 @@ namespace CF
             WriteStream( std::nullptr_t );
             WriteStream( WriteStream && value ) noexcept;
             
-            virtual ~WriteStream( void );
+            ~WriteStream( void ) override;
             
             WriteStream & operator = ( WriteStream value );
             WriteStream & operator = ( const AutoPointer & value );
@@ -56,8 +56,8 @@ namespace CF
             WriteStream & operator = ( CFWriteStreamRef value );
             WriteStream & operator = ( std::nullptr_t );
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool               Open( void ) const;
             bool               Open( const std::string & path );

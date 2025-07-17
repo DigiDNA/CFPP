@@ -100,7 +100,7 @@ namespace CF
             Number( double value );
             Number( Number && value ) noexcept;
             
-            virtual ~Number( void );
+            ~Number( void ) override;
             
             Number & operator = ( Number value );
             Number & operator = ( const AutoPointer & value );
@@ -478,7 +478,6 @@ namespace CF
             Number operator & ( unsigned int value );
             Number operator & ( unsigned long value );
             Number operator & ( unsigned long long value );
-        
             
             Number operator | ( const Number & value );
             Number operator | ( CFNumberRef value );
@@ -545,8 +544,8 @@ namespace CF
             operator float              () const;
             operator double             () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool IsFloatType( void ) const;
             

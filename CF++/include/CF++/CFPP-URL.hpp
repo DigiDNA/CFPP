@@ -83,7 +83,7 @@ namespace CF
             URL( const char * value, const CF::URL & base );
             URL( URL && value ) noexcept;
             
-            virtual ~URL( void );
+            ~URL( void ) override;
             
             URL & operator = ( URL value );
             URL & operator = ( const AutoPointer & value );
@@ -116,8 +116,8 @@ namespace CF
             
             operator std::string () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             String GetFileSystemPath( PathStyle style = PathStylePOSIX ) const;
             String GetFragment( void ) const;

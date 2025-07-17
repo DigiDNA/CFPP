@@ -60,7 +60,7 @@ namespace CF
             Data( std::initializer_list< Byte > value );
             Data( Data && value ) noexcept;
             
-            virtual ~Data( void );
+            ~Data( void ) override;
             
             Data & operator = ( Data value );
             Data & operator = ( const AutoPointer & value );
@@ -81,8 +81,8 @@ namespace CF
             Data & operator += ( const Data & value );
             Data & operator += ( const std::string & value );
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             CFIndex      GetLength( void ) const;
             void         SetLength( CFIndex length ) const;

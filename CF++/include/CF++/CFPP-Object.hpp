@@ -71,7 +71,7 @@ namespace CF
                 value._cfObject = nullptr;
             }
             
-            virtual ~Object( void )
+            ~Object( void ) override
             {
                 if( this->_cfObject != nullptr )
                 {
@@ -98,7 +98,7 @@ namespace CF
                 return operator =( Object< _T_ >( value ) );
             }
             
-            virtual CFTypeID GetTypeID( void ) const
+            CFTypeID GetTypeID( void ) const override
             {
                 if( this->_cfObject != nullptr )
                 {
@@ -108,7 +108,7 @@ namespace CF
                 return 0;
             }
             
-            virtual CFTypeRef GetCFObject( void ) const
+            CFTypeRef GetCFObject( void ) const override
             {
                 return this->_cfObject;
             }

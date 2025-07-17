@@ -50,7 +50,7 @@ namespace CF
             AnyPropertyListType( std::nullptr_t, PropertyListFormat format );
             AnyPropertyListType( AnyPropertyListType && value ) noexcept;
             
-            virtual ~AnyPropertyListType( void );
+            ~AnyPropertyListType( void ) override;
             
             AnyPropertyListType & operator = ( AnyPropertyListType value );
             AnyPropertyListType & operator = ( const AutoPointer & value );
@@ -59,8 +59,8 @@ namespace CF
             
             bool IsValidPropertyList( void ) const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             PropertyListFormat GetFormat( void ) const;
             

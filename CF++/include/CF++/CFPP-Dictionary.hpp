@@ -49,7 +49,7 @@ namespace CF
             Dictionary( std::initializer_list< Pair > value );
             Dictionary( Dictionary && value ) noexcept;
             
-            virtual ~Dictionary( void );
+            ~Dictionary( void ) override;
             
             Dictionary & operator = ( Dictionary value );
             Dictionary & operator = ( const AutoPointer & value );
@@ -64,8 +64,8 @@ namespace CF
             CFTypeRef operator [] ( const char * key ) const;
             CFTypeRef operator [] ( const String & key ) const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool      ContainsKey( CFTypeRef key ) const;
             bool      ContainsKey( const char * key ) const;

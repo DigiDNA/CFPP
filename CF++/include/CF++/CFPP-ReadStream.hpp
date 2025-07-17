@@ -48,7 +48,7 @@ namespace CF
             ReadStream( std::nullptr_t );
             ReadStream( ReadStream && value ) noexcept;
             
-            virtual ~ReadStream( void );
+            ~ReadStream( void ) override;
             
             ReadStream & operator = ( ReadStream value );
             ReadStream & operator = ( const AutoPointer & value );
@@ -56,8 +56,8 @@ namespace CF
             ReadStream & operator = ( CFReadStreamRef value );
             ReadStream & operator = ( std::nullptr_t );
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool               Open( void ) const;
             bool               Open( const std::string & path );

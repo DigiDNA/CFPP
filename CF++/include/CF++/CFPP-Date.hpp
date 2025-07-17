@@ -48,7 +48,7 @@ namespace CF
             Date( CFAbsoluteTime value );
             Date( Date && value ) noexcept;
             
-            virtual ~Date( void );
+            ~Date( void ) override;
             
             Date & operator = ( Date value );
             Date & operator = ( const AutoPointer & value );
@@ -106,8 +106,8 @@ namespace CF
             
             operator CFAbsoluteTime () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             CFAbsoluteTime GetValue( void ) const;
             void           SetValue( CFAbsoluteTime value );

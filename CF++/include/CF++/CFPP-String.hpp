@@ -51,7 +51,7 @@ namespace CF
             String( const String & value );
             String( String && value ) noexcept;
             
-            virtual ~String( void );
+            ~String( void ) override;
             
             String & operator = ( String value );
             String & operator = ( const AutoPointer & value );
@@ -86,8 +86,8 @@ namespace CF
             
             operator std::string () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool HasPrefix( const String & value ) const;
             bool HasPrefix( CFStringRef value ) const;

@@ -44,13 +44,13 @@ namespace CF
             Null( CFTypeRef value );
             Null( Null && value ) noexcept;
             
-            virtual ~Null( void );
+            ~Null( void ) override;
             
             Null & operator = ( Null value );
             Null & operator = ( CFTypeRef value );
                         
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             friend void swap( Null & v1, Null & v2 ) noexcept;
             

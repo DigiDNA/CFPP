@@ -53,7 +53,7 @@ namespace CF
             Error( const char * domain, CFIndex code, const Dictionary & userInfo );
             Error( Error && value ) noexcept;
             
-            virtual ~Error( void );
+            ~Error( void ) override;
             
             Error & operator = ( Error value );
             Error & operator = ( const AutoPointer & value );
@@ -61,8 +61,8 @@ namespace CF
             Error & operator = ( CFErrorRef value );
             Error & operator = ( std::nullptr_t );
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             String     GetDomain( void ) const;
             Number     GetCode( void ) const;

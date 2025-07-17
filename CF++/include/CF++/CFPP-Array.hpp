@@ -49,7 +49,7 @@ namespace CF
             Array( std::initializer_list< CFTypeRef > value );
             Array( Array && value ) noexcept;
             
-            virtual ~Array( void );
+            ~Array( void ) override;
             
             Array & operator = ( Array value );
             Array & operator = ( const AutoPointer & value );
@@ -68,8 +68,8 @@ namespace CF
             
             CFTypeRef operator [] ( int index ) const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             CFIndex   GetCount( void ) const;
             bool      ContainsValue( CFTypeRef value ) const;

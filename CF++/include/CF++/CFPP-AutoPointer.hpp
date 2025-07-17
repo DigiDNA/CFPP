@@ -44,13 +44,13 @@ namespace CF
             AutoPointer( CFTypeRef value );
             AutoPointer( AutoPointer && value ) noexcept;
             
-            virtual ~AutoPointer( void );
+            ~AutoPointer( void ) override;
             
             AutoPointer & operator = ( AutoPointer value );
             AutoPointer & operator = ( CFTypeRef value );
                         
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             template< typename T >
             T As( void ) const

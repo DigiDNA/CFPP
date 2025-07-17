@@ -48,7 +48,7 @@ namespace CF
             Boolean( bool value = false );
             Boolean( Boolean && value ) noexcept;
             
-            virtual ~Boolean( void );
+            ~Boolean( void ) override;
             
             Boolean & operator = ( Boolean value );
             Boolean & operator = ( const AutoPointer & value );
@@ -69,8 +69,8 @@ namespace CF
             
             operator bool () const;
             
-            virtual CFTypeID  GetTypeID( void ) const;
-            virtual CFTypeRef GetCFObject( void ) const;
+            CFTypeID  GetTypeID( void ) const override;
+            CFTypeRef GetCFObject( void ) const override;
             
             bool GetValue( void ) const;
             void SetValue( bool value );
