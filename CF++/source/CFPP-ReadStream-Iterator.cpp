@@ -39,20 +39,20 @@ static CFStringRef __cfStreamPropertyFileCurrentOffset = nullptr;
 
 static void __loadCFStreamProperties( void )
 {
-	HMODULE cfModule;
+    HMODULE cfModule;
 
-	if( __hasCFStreamProperties == true )
-	{
-		return;
-	}
+    if( __hasCFStreamProperties == true )
+    {
+        return;
+    }
 
-	cfModule = GetModuleHandle( L"CoreFoundation.dll" );
+    cfModule = GetModuleHandle( L"CoreFoundation.dll" );
 
-	if( cfModule != nullptr )
-	{
-		__hasCFStreamProperties             = true;
-		__cfStreamPropertyFileCurrentOffset = *( ( CFStringRef * )GetProcAddress( cfModule, "kCFStreamPropertyFileCurrentOffset" ) );
-	}
+    if( cfModule != nullptr )
+    {
+        __hasCFStreamProperties             = true;
+        __cfStreamPropertyFileCurrentOffset = *( ( CFStringRef * )GetProcAddress( cfModule, "kCFStreamPropertyFileCurrentOffset" ) );
+    }
 }
 
 #endif
@@ -153,18 +153,18 @@ namespace CF
         {
             this->_data = static_cast< CFDataRef >( nullptr );
 
-			#ifdef _WIN32
+            #ifdef _WIN32
 
-			__loadCFStreamProperties();
+            __loadCFStreamProperties();
 
-		    if( CFReadStreamSetProperty( this->_cfObject, __cfStreamPropertyFileCurrentOffset, CF::Number( this->_bytesToRead * ( this->_i + value ) ) ) )
-			
-			#else
+            if( CFReadStreamSetProperty( this->_cfObject, __cfStreamPropertyFileCurrentOffset, CF::Number( this->_bytesToRead * ( this->_i + value ) ) ) )
             
-			if( CFReadStreamSetProperty( this->_cfObject, kCFStreamPropertyFileCurrentOffset, CF::Number( this->_bytesToRead * ( this->_i + value ) ) ) )
-			
-			#endif
-			{
+            #else
+            
+            if( CFReadStreamSetProperty( this->_cfObject, kCFStreamPropertyFileCurrentOffset, CF::Number( this->_bytesToRead * ( this->_i + value ) ) ) )
+            
+            #endif
+            {
                 this->_i += value;
                 
                 this->_Read();

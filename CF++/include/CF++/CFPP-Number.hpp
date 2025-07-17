@@ -524,18 +524,18 @@ namespace CF
             Number operator >> ( signed short value );
             Number operator >> ( signed int value );
             Number operator >> ( signed long value );
-			Number operator >> ( signed long long value );
+            Number operator >> ( signed long long value );
             Number operator >> ( unsigned char value );
             Number operator >> ( unsigned short value );
             Number operator >> ( unsigned int value );
             Number operator >> ( unsigned long value );
-			Number operator >> ( unsigned long long value );
+            Number operator >> ( unsigned long long value );
             
             operator signed char        () const;
             operator signed short       () const;
             operator signed int         () const;
             operator signed long        () const;
-			operator signed long long   () const;
+            operator signed long long   () const;
             operator unsigned char      () const;
             operator unsigned short     () const;
             operator unsigned int       () const;

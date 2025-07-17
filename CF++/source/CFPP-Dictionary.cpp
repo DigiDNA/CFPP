@@ -37,8 +37,8 @@ static CFDictionaryValueCallBacks __valueCallbacks;
 
 #ifdef _WIN32
 
-static const void *	__CFDictionaryRetainCallBack( CFAllocatorRef allocator, const void * value );
-static const void *	__CFDictionaryRetainCallBack( CFAllocatorRef allocator, const void * value )
+static const void *    __CFDictionaryRetainCallBack( CFAllocatorRef allocator, const void * value );
+static const void *    __CFDictionaryRetainCallBack( CFAllocatorRef allocator, const void * value )
 {
     ( void )allocator;
     

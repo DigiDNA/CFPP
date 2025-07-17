@@ -36,8 +36,8 @@ static CFArrayCallBacks __callbacks;
 
 #ifdef _WIN32
 
-static const void *	__CFArrayRetainCallBack( CFAllocatorRef allocator, const void * value );
-static const void *	__CFArrayRetainCallBack( CFAllocatorRef allocator, const void * value )
+static const void *    __CFArrayRetainCallBack( CFAllocatorRef allocator, const void * value );
+static const void *    __CFArrayRetainCallBack( CFAllocatorRef allocator, const void * value )
 {
     ( void )allocator;
     

@@ -137,25 +137,25 @@ namespace CF
         return this->_value;
     }
 
-	CFTypeID Pair::GetKeyTypeID(void) const
-	{
-		if( this->_key != nullptr )
+    CFTypeID Pair::GetKeyTypeID(void) const
+    {
+        if( this->_key != nullptr )
         {
             return CFGetTypeID( this->_key );
         }
         
-		return 0;
-	}
+        return 0;
+    }
 
-	CFTypeID Pair::GetValueTypeID(void) const
-	{
-		if( this->_value != nullptr )
+    CFTypeID Pair::GetValueTypeID(void) const
+    {
+        if( this->_value != nullptr )
         {
             return CFGetTypeID( this->_value );
         }
         
-		return 0;
-	}
+        return 0;
+    }
             
     void Pair::SetKey( CFTypeRef key )
     {
