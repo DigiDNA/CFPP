@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    Dictionary::Iterator::Iterator( void ):
+    Dictionary::Iterator::Iterator():
         _cfObject( nullptr ),
         _keys( static_cast< CFArrayRef >( nullptr ) ),
         _count( 0 ),
@@ -102,7 +102,7 @@ namespace CF
         swap( this->_keys, value._keys );
     }
     
-    Dictionary::Iterator::~Iterator( void )
+    Dictionary::Iterator::~Iterator()
     {
         if( this->_cfObject != nullptr )
         {
@@ -117,7 +117,7 @@ namespace CF
         return *( this );
     }
     
-    Dictionary::Iterator & Dictionary::Iterator::operator ++( void )
+    Dictionary::Iterator & Dictionary::Iterator::operator ++()
     {
         this->_pos++;
         
@@ -133,7 +133,7 @@ namespace CF
         return it;
     }
     
-    Dictionary::Iterator & Dictionary::Iterator::operator --( void )
+    Dictionary::Iterator & Dictionary::Iterator::operator --()
     {
         this->_pos--;
         
@@ -206,12 +206,12 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    CF::Pair Dictionary::Iterator::operator * ( void ) const
+    CF::Pair Dictionary::Iterator::operator * () const
     {
         return CF::Pair( this->GetKey(), this->GetValue() );
     }
     
-    CFTypeRef Dictionary::Iterator::GetKey( void ) const
+    CFTypeRef Dictionary::Iterator::GetKey() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -236,7 +236,7 @@ namespace CF
         return this->_keys.GetValueAtIndex( this->_pos );
     }
     
-    CFTypeRef Dictionary::Iterator::GetValue( void ) const
+    CFTypeRef Dictionary::Iterator::GetValue() const
     {
         CFTypeRef key;
         

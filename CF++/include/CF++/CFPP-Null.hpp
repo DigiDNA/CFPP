@@ -39,18 +39,18 @@ namespace CF
     {
         public:
             
-            Null( void );
+            Null();
             Null( const Null & value );
             Null( CFTypeRef value );
             Null( Null && value ) noexcept;
             
-            ~Null( void ) override;
+            ~Null() override;
             
             Null & operator = ( Null value );
             Null & operator = ( CFTypeRef value );
                         
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
             friend void swap( Null & v1, Null & v2 ) noexcept;
             

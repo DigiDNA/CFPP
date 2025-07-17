@@ -47,7 +47,7 @@ namespace CF
             
             #endif
             
-            Data( void );
+            Data();
             Data( CFIndex capacity );
             Data( const Data & value );
             Data( const AutoPointer & value );
@@ -60,7 +60,7 @@ namespace CF
             Data( std::initializer_list< Byte > value );
             Data( Data && value ) noexcept;
             
-            ~Data( void ) override;
+            ~Data() override;
             
             Data & operator = ( Data value );
             Data & operator = ( const AutoPointer & value );
@@ -81,14 +81,14 @@ namespace CF
             Data & operator += ( const Data & value );
             Data & operator += ( const std::string & value );
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            CFIndex      GetLength( void ) const;
+            CFIndex      GetLength() const;
             void         SetLength( CFIndex length ) const;
             void         IncreaseLength( CFIndex extraLength ) const;
-            const Byte * GetBytePtr( void ) const;
-            Byte       * GetMutableBytePtr( void ) const;
+            const Byte * GetBytePtr() const;
+            Byte       * GetMutableBytePtr() const;
             void         GetBytes( CFRange range, Byte * bytes ) const;
             void         AppendBytes( const Byte * bytes, CFIndex length ) const;
             void         ReplaceBytes( CFRange range, const Byte * newBytes, CFIndex newLength ) const;
@@ -113,16 +113,16 @@ namespace CF
                     using reference         = Byte &;
                     #endif
                     
-                    Iterator( void );
+                    Iterator();
                     Iterator( const Iterator & value );
                     Iterator( Iterator && value ) noexcept;
                     
-                    virtual ~Iterator( void );
+                    virtual ~Iterator();
                     
                     Iterator & operator = ( Iterator value );
-                    Iterator & operator ++( void );
+                    Iterator & operator ++();
                     Iterator   operator ++( int );
-                    Iterator & operator --( void );
+                    Iterator & operator --();
                     Iterator   operator --( int );
                     
                     Iterator & operator += ( CFIndex value );
@@ -134,7 +134,7 @@ namespace CF
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    Byte operator * ( void ) const;
+                    Byte operator * () const;
                     
                     operator Byte () const;
                     
@@ -152,8 +152,8 @@ namespace CF
                     const Byte * _bp;
             };
             
-            Iterator begin( void ) const;
-            Iterator end( void ) const;
+            Iterator begin() const;
+            Iterator end() const;
             
         private:
             

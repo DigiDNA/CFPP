@@ -37,7 +37,7 @@ namespace CF
     {
         public:
             
-            ReadStream( void );
+            ReadStream();
             ReadStream( const std::string & path );
             ReadStream( const char * path );
             ReadStream( URL url );
@@ -48,7 +48,7 @@ namespace CF
             ReadStream( std::nullptr_t );
             ReadStream( ReadStream && value ) noexcept;
             
-            ~ReadStream( void ) override;
+            ~ReadStream() override;
             
             ReadStream & operator = ( ReadStream value );
             ReadStream & operator = ( const AutoPointer & value );
@@ -56,17 +56,17 @@ namespace CF
             ReadStream & operator = ( CFReadStreamRef value );
             ReadStream & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            bool               Open( void ) const;
+            bool               Open() const;
             bool               Open( const std::string & path );
             bool               Open( const char * path );
             bool               Open( const URL & url );
-            void               Close( void ) const;
-            bool               HasBytesAvailable( void ) const;
-            CFStreamStatus     GetStatus( void ) const;
-            Error              GetError( void ) const;
+            void               Close() const;
+            bool               HasBytesAvailable() const;
+            CFStreamStatus     GetStatus() const;
+            Error              GetError() const;
             CFIndex            Read( Data::Byte * buffer, CFIndex length ) const;
             Data               Read( CFIndex length = 0 ) const;
             const Data::Byte * GetBuffer( CFIndex maxBytesToRead, CFIndex * numBytesRead ) const;
@@ -99,14 +99,14 @@ namespace CF
                     using reference         = Data &;
                     #endif
                     
-                    Iterator( void );
+                    Iterator();
                     Iterator( const Iterator & value );
                     Iterator( Iterator && value ) noexcept;
                     
-                    virtual ~Iterator( void );
+                    virtual ~Iterator();
                     
                     Iterator & operator = ( Iterator value );
-                    Iterator & operator ++( void );
+                    Iterator & operator ++();
                     Iterator   operator ++( int );
                     
                     Iterator & operator += ( CFIndex value );
@@ -116,7 +116,7 @@ namespace CF
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    Data operator * ( void );
+                    Data operator * ();
                     
                     operator Data ();
                     
@@ -128,7 +128,7 @@ namespace CF
                     
                     Iterator( CFReadStreamRef stream, CFIndex bytesToRead, bool end );
                     
-                    void _Read( void );
+                    void _Read();
                     
                     CFReadStreamRef _cfObject;
                     CFIndex         _bytesToRead;
@@ -142,7 +142,7 @@ namespace CF
             #endif
             
             Iterator begin( CFIndex bytesToRead = 0 ) const;
-            Iterator end( void ) const;
+            Iterator end() const;
             
         private:
             

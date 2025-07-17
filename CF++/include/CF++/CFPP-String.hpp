@@ -37,7 +37,7 @@ namespace CF
     {
         public:
             
-            String( void );
+            String();
             String( const AutoPointer & value );
             String( CFTypeRef cfObject );
             String( CFStringRef cfObject );
@@ -51,7 +51,7 @@ namespace CF
             String( const String & value );
             String( String && value ) noexcept;
             
-            ~String( void ) override;
+            ~String() override;
             
             String & operator = ( String value );
             String & operator = ( const AutoPointer & value );
@@ -86,8 +86,8 @@ namespace CF
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
             bool HasPrefix( const String & value ) const;
             bool HasPrefix( CFStringRef value ) const;
@@ -96,7 +96,7 @@ namespace CF
             bool HasSuffix( CFStringRef value ) const;
             bool HasSuffix( const std::string & value ) const;
             
-            CFIndex GetLength( void ) const;
+            CFIndex GetLength() const;
             
             std::string  GetValue( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
             const char * GetCStringValue( CFStringEncoding encoding = kCFStringEncodingUTF8 ) const;
@@ -120,16 +120,16 @@ namespace CF
                     using reference         = char &;
                     #endif
                     
-                    Iterator( void );
+                    Iterator();
                     Iterator( const Iterator & value );
                     Iterator( Iterator && value ) noexcept;
                     
-                    virtual ~Iterator( void );
+                    virtual ~Iterator();
                     
                     Iterator & operator = ( Iterator value );
-                    Iterator & operator ++( void );
+                    Iterator & operator ++();
                     Iterator   operator ++( int );
-                    Iterator & operator --( void );
+                    Iterator & operator --();
                     Iterator   operator --( int );
                     
                     Iterator & operator += ( CFIndex value );
@@ -141,7 +141,7 @@ namespace CF
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    char operator * ( void ) const;
+                    char operator * () const;
                     
                     operator char () const;
                     

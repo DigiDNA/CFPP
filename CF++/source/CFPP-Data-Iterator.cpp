@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    Data::Iterator::Iterator( void ):
+    Data::Iterator::Iterator():
         _cfObject( nullptr ),
         _length( 0 ),
         _pos( 0 ),
@@ -77,7 +77,7 @@ namespace CF
         value._bp       = nullptr;
     }
     
-    Data::Iterator::~Iterator( void )
+    Data::Iterator::~Iterator()
     {
         if( this->_cfObject != nullptr )
         {
@@ -92,7 +92,7 @@ namespace CF
         return *( this );
     }
     
-    Data::Iterator & Data::Iterator::operator ++( void )
+    Data::Iterator & Data::Iterator::operator ++()
     {
         this->_pos++;
         
@@ -108,7 +108,7 @@ namespace CF
         return it;
     }
     
-    Data::Iterator & Data::Iterator::operator --( void )
+    Data::Iterator & Data::Iterator::operator --()
     {
         this->_pos--;
         
@@ -181,7 +181,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    Data::Byte Data::Iterator::operator * ( void ) const
+    Data::Byte Data::Iterator::operator * () const
     {
         if( this->_cfObject == nullptr )
         {

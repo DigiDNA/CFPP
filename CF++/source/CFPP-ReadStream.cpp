@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    ReadStream::ReadStream( void ): _cfObject( nullptr )
+    ReadStream::ReadStream(): _cfObject( nullptr )
     {}
     
     ReadStream::ReadStream( URL url ): _cfObject( nullptr )
@@ -99,7 +99,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    ReadStream::~ReadStream( void )
+    ReadStream::~ReadStream()
     {
         if( this->_cfObject != nullptr )
         {
@@ -136,17 +136,17 @@ namespace CF
         return operator =( ReadStream( nullptr ) );
     }
     
-    CFTypeID ReadStream::GetTypeID( void ) const
+    CFTypeID ReadStream::GetTypeID() const
     {
         return CFReadStreamGetTypeID();
     }
     
-    CFTypeRef ReadStream::GetCFObject( void ) const
+    CFTypeRef ReadStream::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    bool ReadStream::Open( void ) const
+    bool ReadStream::Open() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -180,7 +180,7 @@ namespace CF
         return this->Open();
     }
     
-    void ReadStream::Close( void ) const
+    void ReadStream::Close() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -190,7 +190,7 @@ namespace CF
         CFReadStreamClose( this->_cfObject );
     }
     
-    bool ReadStream::HasBytesAvailable( void ) const
+    bool ReadStream::HasBytesAvailable() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -200,7 +200,7 @@ namespace CF
         return ( CFReadStreamHasBytesAvailable( this->_cfObject ) ) ? true : false;
     }
     
-    CFStreamStatus ReadStream::GetStatus( void ) const
+    CFStreamStatus ReadStream::GetStatus() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -210,7 +210,7 @@ namespace CF
         return CFReadStreamGetStatus( this->_cfObject );
     }
     
-    Error ReadStream::GetError( void ) const
+    Error ReadStream::GetError() const
     {
         AutoPointer e;
         
@@ -358,7 +358,7 @@ namespace CF
         return Iterator( this->_cfObject, bytesToRead, false );
     }
     
-    ReadStream::Iterator ReadStream::end( void ) const
+    ReadStream::Iterator ReadStream::end() const
     {
         return Iterator( this->_cfObject, 0, true );
     }

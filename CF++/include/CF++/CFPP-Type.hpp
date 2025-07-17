@@ -44,10 +44,10 @@ namespace CF
     {
         public:
             
-            virtual ~Type( void );
+            virtual ~Type();
             
-            virtual CFTypeID  GetTypeID( void ) const = 0;
-            virtual CFTypeRef GetCFObject( void ) const = 0;
+            virtual CFTypeID  GetTypeID() const = 0;
+            virtual CFTypeRef GetCFObject() const = 0;
             
             bool operator == ( const Type & value ) const;
             bool operator != ( const Type & value ) const;
@@ -70,25 +70,25 @@ namespace CF
             operator CFReadStreamRef        () const;
             operator CFWriteStreamRef       () const;
             
-            std::string Description( void ) const;
-            CFHashCode  Hash( void ) const;
-            void        Show( void ) const;
-            CFIndex     GetRetainCount( void ) const;
+            std::string Description() const;
+            CFHashCode  Hash() const;
+            void        Show() const;
+            CFIndex     GetRetainCount() const;
             
-            bool IsValid( void ) const;
+            bool IsValid() const;
             bool IsValidPropertyList( PropertyListFormat format ) const;
-            bool IsBoolean( void ) const;
-            bool IsNumber( void ) const;
-            bool IsDate( void ) const;
-            bool IsString( void ) const;
-            bool IsURL( void ) const;
-            bool IsData( void ) const;
-            bool IsArray( void ) const;
-            bool IsDictionary( void ) const;
-            bool IsUUID( void ) const;
-            bool IsError( void ) const;
-            bool IsReadStream( void ) const;
-            bool IsWriteStream( void ) const;
+            bool IsBoolean() const;
+            bool IsNumber() const;
+            bool IsDate() const;
+            bool IsString() const;
+            bool IsURL() const;
+            bool IsData() const;
+            bool IsArray() const;
+            bool IsDictionary() const;
+            bool IsUUID() const;
+            bool IsError() const;
+            bool IsReadStream() const;
+            bool IsWriteStream() const;
             
             friend std::ostream & operator << ( std::ostream & os, const Type & obj );
     };

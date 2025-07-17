@@ -135,7 +135,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    AnyPropertyListType::~AnyPropertyListType( void )
+    AnyPropertyListType::~AnyPropertyListType()
     {
         if( this->_cfObject != nullptr )
         {
@@ -167,12 +167,12 @@ namespace CF
         return operator =( AnyPropertyListType( nullptr, this->_format ) );
     }
     
-    bool AnyPropertyListType::IsValidPropertyList( void ) const
+    bool AnyPropertyListType::IsValidPropertyList() const
     {
         return Type::IsValidPropertyList( this->_format );
     }
     
-    CFTypeID AnyPropertyListType::GetTypeID( void ) const
+    CFTypeID AnyPropertyListType::GetTypeID() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -182,12 +182,12 @@ namespace CF
         return CFGetTypeID( this->_cfObject );
     }
     
-    CFTypeRef AnyPropertyListType::GetCFObject( void ) const
+    CFTypeRef AnyPropertyListType::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    PropertyListFormat AnyPropertyListType::GetFormat( void ) const
+    PropertyListFormat AnyPropertyListType::GetFormat() const
     {
         return this->_format;
     }

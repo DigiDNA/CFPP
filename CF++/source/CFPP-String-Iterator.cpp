@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    String::Iterator::Iterator( void ):
+    String::Iterator::Iterator():
         _cfObject( nullptr ),
         _length( 0 ),
         _pos( 0 ),
@@ -88,7 +88,7 @@ namespace CF
         value._cp       = nullptr;
     }
     
-    String::Iterator::~Iterator( void )
+    String::Iterator::~Iterator()
     {
         if( this->_cfObject != nullptr )
         {
@@ -103,7 +103,7 @@ namespace CF
         return *( this );
     }
     
-    String::Iterator & String::Iterator::operator ++( void )
+    String::Iterator & String::Iterator::operator ++()
     {
         this->_pos++;
         
@@ -119,7 +119,7 @@ namespace CF
         return it;
     }
     
-    String::Iterator & String::Iterator::operator --( void )
+    String::Iterator & String::Iterator::operator --()
     {
         this->_pos--;
         
@@ -192,7 +192,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    char String::Iterator::operator * ( void ) const
+    char String::Iterator::operator * () const
     {
         if( this->_cfObject == nullptr )
         {

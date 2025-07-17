@@ -39,21 +39,21 @@ namespace CF
     {
         public:
             
-            AutoPointer( void );
+            AutoPointer();
             AutoPointer( const AutoPointer & value );
             AutoPointer( CFTypeRef value );
             AutoPointer( AutoPointer && value ) noexcept;
             
-            ~AutoPointer( void ) override;
+            ~AutoPointer() override;
             
             AutoPointer & operator = ( AutoPointer value );
             AutoPointer & operator = ( CFTypeRef value );
                         
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
             template< typename T >
-            T As( void ) const
+            T As() const
             {
                 return static_cast< T >( const_cast< void * >( this->GetCFObject() ) );
             }

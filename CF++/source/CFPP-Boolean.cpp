@@ -38,7 +38,7 @@ static bool         __hasCFBoolean   = false;
 static CFBooleanRef __cfBooleanTrue  = nullptr;
 static CFBooleanRef __cfBooleanFalse = nullptr;
 
-static void __loadCFBoolean( void )
+static void __loadCFBoolean()
 {
     HMODULE cfModule;
 
@@ -176,7 +176,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Boolean::~Boolean( void )
+    Boolean::~Boolean()
     {
         if( this->_cfObject != nullptr )
         {
@@ -272,17 +272,17 @@ namespace CF
         return this->GetValue();
     }
     
-    CFTypeID Boolean::GetTypeID( void ) const
+    CFTypeID Boolean::GetTypeID() const
     {
         return CFBooleanGetTypeID();
     }
     
-    CFTypeRef Boolean::GetCFObject( void ) const
+    CFTypeRef Boolean::GetCFObject() const
     {
         return static_cast< CFTypeRef >( this->_cfObject );
     }
             
-    bool Boolean::GetValue( void ) const
+    bool Boolean::GetValue() const
     {
         if( this->_cfObject == nullptr )
         {

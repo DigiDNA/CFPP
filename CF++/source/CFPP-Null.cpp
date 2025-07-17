@@ -37,7 +37,7 @@
 static bool      __hasCFNull = false;
 static CFNullRef __cfNull    = nullptr;
 
-static void __loadCFNull( void )
+static void __loadCFNull()
 {
     HMODULE cfModule;
 
@@ -59,7 +59,7 @@ static void __loadCFNull( void )
 
 namespace CF
 {
-    Null::Null( void ): _cfObject( nullptr )
+    Null::Null(): _cfObject( nullptr )
     {
         #ifdef _WIN32
         
@@ -91,7 +91,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Null::~Null( void )
+    Null::~Null()
     {}
     
     Null & Null::operator = ( Null value )
@@ -106,12 +106,12 @@ namespace CF
         return operator =( Null( value ) );
     }
     
-    CFTypeID Null::GetTypeID( void ) const
+    CFTypeID Null::GetTypeID() const
     {
         return CFNullGetTypeID();
     }
     
-    CFTypeRef Null::GetCFObject( void ) const
+    CFTypeRef Null::GetCFObject() const
     {
         return this->_cfObject;
     }

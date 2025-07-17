@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    Data::Data( void ): _cfObject( nullptr )
+    Data::Data(): _cfObject( nullptr )
     {
         this->_cfObject = CFDataCreateMutable( static_cast< CFAllocatorRef >( nullptr ), 0 );
     }
@@ -118,7 +118,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Data::~Data( void )
+    Data::~Data()
     {
         if( this->_cfObject != nullptr )
         {
@@ -248,17 +248,17 @@ namespace CF
         return *( this );
     }
     
-    CFTypeID Data::GetTypeID( void ) const
+    CFTypeID Data::GetTypeID() const
     {
         return CFDataGetTypeID();
     }
     
-    CFTypeRef Data::GetCFObject( void ) const
+    CFTypeRef Data::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    CFIndex Data::GetLength( void ) const
+    CFIndex Data::GetLength() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -288,7 +288,7 @@ namespace CF
         CFDataIncreaseLength( this->_cfObject, extraLength );
     }
     
-    const Byte * Data::GetBytePtr( void ) const
+    const Byte * Data::GetBytePtr() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -298,7 +298,7 @@ namespace CF
         return CFDataGetBytePtr( this->_cfObject );
     }
     
-    Byte * Data::GetMutableBytePtr( void ) const
+    Byte * Data::GetMutableBytePtr() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -363,12 +363,12 @@ namespace CF
         return CFDataFind( this->_cfObject, data, range, flags );
     }
     
-    Data::Iterator Data::begin( void ) const
+    Data::Iterator Data::begin() const
     {
         return Iterator( this->_cfObject, this->GetLength() );
     }
     
-    Data::Iterator Data::end( void ) const
+    Data::Iterator Data::end() const
     {
         return Iterator( this->_cfObject, this->GetLength(), this->GetLength() );
     }

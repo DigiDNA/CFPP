@@ -50,19 +50,19 @@ namespace CF
             AnyPropertyListType( std::nullptr_t, PropertyListFormat format );
             AnyPropertyListType( AnyPropertyListType && value ) noexcept;
             
-            ~AnyPropertyListType( void ) override;
+            ~AnyPropertyListType() override;
             
             AnyPropertyListType & operator = ( AnyPropertyListType value );
             AnyPropertyListType & operator = ( const AutoPointer & value );
             AnyPropertyListType & operator = ( CFTypeRef value );
             AnyPropertyListType & operator = ( std::nullptr_t value );
             
-            bool IsValidPropertyList( void ) const;
+            bool IsValidPropertyList() const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            PropertyListFormat GetFormat( void ) const;
+            PropertyListFormat GetFormat() const;
             
             friend void swap( AnyPropertyListType & v1, AnyPropertyListType & v2 ) noexcept;
             

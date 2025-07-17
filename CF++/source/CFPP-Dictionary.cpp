@@ -99,7 +99,7 @@ static CFHashCode __CFDictionaryHashCallBack( const void * value )
     return CFHash( value );
 }
 
-static void __createCallbacks( void )
+static void __createCallbacks()
 {
     if( __hasCallBacks == true  )
     {
@@ -124,7 +124,7 @@ static void __createCallbacks( void )
 
 #else
 
-static void __createCallbacks( void )
+static void __createCallbacks()
 {
     if( __hasCallBacks == true  )
     {
@@ -140,7 +140,7 @@ static void __createCallbacks( void )
 
 namespace CF
 {
-    Dictionary::Dictionary( void ): _cfObject( nullptr )
+    Dictionary::Dictionary(): _cfObject( nullptr )
     {
         __createCallbacks();
         
@@ -248,7 +248,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Dictionary::~Dictionary( void )
+    Dictionary::~Dictionary()
     {
         if( this->_cfObject != nullptr )
         {
@@ -314,12 +314,12 @@ namespace CF
         return this->GetValue( key );
     }
     
-    CFTypeID Dictionary::GetTypeID( void ) const
+    CFTypeID Dictionary::GetTypeID() const
     {
         return CFDictionaryGetTypeID();
     }
     
-    CFTypeRef Dictionary::GetCFObject( void ) const
+    CFTypeRef Dictionary::GetCFObject() const
     {
         return this->_cfObject;
     }
@@ -354,7 +354,7 @@ namespace CF
         return ( CFDictionaryContainsValue( this->_cfObject, value ) ) ? true : false;
     }
     
-    void Dictionary::RemoveAllValues( void ) const
+    void Dictionary::RemoveAllValues() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -364,7 +364,7 @@ namespace CF
         CFDictionaryRemoveAllValues( this->_cfObject );
     }
     
-    CFIndex Dictionary::GetCount( void ) const
+    CFIndex Dictionary::GetCount() const
     {
         return ( this->_cfObject == nullptr ) ? 0 : CFDictionaryGetCount( this->_cfObject );
     }
@@ -514,12 +514,12 @@ namespace CF
         this->SetValue( key, String( value ) );
     }
     
-    Dictionary::Iterator Dictionary::begin( void ) const
+    Dictionary::Iterator Dictionary::begin() const
     {
         return Iterator( this->_cfObject, this->GetCount() );
     }
     
-    Dictionary::Iterator Dictionary::end( void ) const
+    Dictionary::Iterator Dictionary::end() const
     {
         return Iterator( this->_cfObject, this->GetCount(), this->GetCount() );
     }

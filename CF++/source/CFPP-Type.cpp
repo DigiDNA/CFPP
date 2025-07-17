@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    Type::~Type( void )
+    Type::~Type()
     {}
     
     bool Type::operator == ( const Type & value ) const
@@ -140,7 +140,7 @@ namespace CF
         return ( this->IsWriteStream() ) ? static_cast< CFWriteStreamRef >( const_cast< void * >( this->GetCFObject() ) ) : nullptr;
     }
     
-    std::string Type::Description( void ) const
+    std::string Type::Description() const
     {
         CFStringRef  cfDescription;
         std::string  description;
@@ -181,7 +181,7 @@ namespace CF
         return description;
     }
     
-    CFHashCode Type::Hash( void ) const
+    CFHashCode Type::Hash() const
     {
         if( this->GetCFObject() == nullptr )
         {
@@ -191,7 +191,7 @@ namespace CF
         return CFHash( this->GetCFObject() );
     }
     
-    CFIndex Type::GetRetainCount( void ) const
+    CFIndex Type::GetRetainCount() const
     {
         if( this->GetCFObject() == nullptr )
         {
@@ -201,7 +201,7 @@ namespace CF
         return CFGetRetainCount( this->GetCFObject() );
     }
     
-    bool Type::IsValid( void ) const
+    bool Type::IsValid() const
     {
         return ( this->GetCFObject() != nullptr ) ? true : false;
     }
@@ -220,67 +220,67 @@ namespace CF
         return this->IsValid() && CFPropertyListIsValid( this->GetCFObject(), cfFormat );
     }
     
-    bool Type::IsBoolean( void ) const
+    bool Type::IsBoolean() const
     {
         return this->GetTypeID() == CFBooleanGetTypeID();
     }
     
-    bool Type::IsNumber( void ) const
+    bool Type::IsNumber() const
     {
         return this->GetTypeID() == CFNumberGetTypeID();
     }
     
-    bool Type::IsDate( void ) const
+    bool Type::IsDate() const
     {
         return this->GetTypeID() == CFDateGetTypeID();
     }
     
-    bool Type::IsString( void ) const
+    bool Type::IsString() const
     {
         return this->GetTypeID() == CFStringGetTypeID();
     }
     
-    bool Type::IsURL( void ) const
+    bool Type::IsURL() const
     {
         return this->GetTypeID() == CFURLGetTypeID();
     }
     
-    bool Type::IsData( void ) const
+    bool Type::IsData() const
     {
         return this->GetTypeID() == CFDataGetTypeID();
     }
     
-    bool Type::IsArray( void ) const
+    bool Type::IsArray() const
     {
         return this->GetTypeID() == CFArrayGetTypeID();
     }
     
-    bool Type::IsDictionary( void ) const
+    bool Type::IsDictionary() const
     {
         return this->GetTypeID() == CFDictionaryGetTypeID();
     }
     
-    bool Type::IsUUID( void ) const
+    bool Type::IsUUID() const
     {
         return this->GetTypeID() == CFUUIDGetTypeID();
     }
     
-    bool Type::IsError( void ) const
+    bool Type::IsError() const
     {
         return this->GetTypeID() == CFErrorGetTypeID();
     }
     
-    bool Type::IsReadStream( void ) const
+    bool Type::IsReadStream() const
     {
         return this->GetTypeID() == CFReadStreamGetTypeID();
     }
     
-    bool Type::IsWriteStream( void ) const
+    bool Type::IsWriteStream() const
     {
         return this->GetTypeID() == CFWriteStreamGetTypeID();
     }
     
-    void Type::Show( void ) const
+    void Type::Show() const
     {
         std::string className;
         

@@ -86,7 +86,7 @@ namespace CF
         return URL::FileSystemURL( str.GetValue(), isDir );
     }
     
-    URL::URL( void ): _cfObject( nullptr )
+    URL::URL(): _cfObject( nullptr )
     {}
     
     URL::URL( const URL & value ): _cfObject( nullptr )
@@ -175,7 +175,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    URL::~URL( void )
+    URL::~URL()
     {
         if( this->_cfObject != nullptr )
         {
@@ -358,12 +358,12 @@ namespace CF
         return str.GetValue();
     }
     
-    CFTypeID URL::GetTypeID( void ) const
+    CFTypeID URL::GetTypeID() const
     {
         return CFURLGetTypeID();
     }
     
-    CFTypeRef URL::GetCFObject( void ) const
+    CFTypeRef URL::GetCFObject() const
     {
         return this->_cfObject;
     }
@@ -384,7 +384,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetFragment( void ) const
+    String URL::GetFragment() const
     {
         AutoPointer str;
         
@@ -398,7 +398,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetHostName( void ) const
+    String URL::GetHostName() const
     {
         AutoPointer str;
         
@@ -412,7 +412,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetLastPathComponent( void ) const
+    String URL::GetLastPathComponent() const
     {
         AutoPointer str;
         
@@ -426,7 +426,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetNetLocation( void ) const
+    String URL::GetNetLocation() const
     {
         AutoPointer str;
         
@@ -440,7 +440,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetPassword( void ) const
+    String URL::GetPassword() const
     {
         AutoPointer str;
         
@@ -454,7 +454,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetPath( void ) const
+    String URL::GetPath() const
     {
         AutoPointer str;
         
@@ -468,7 +468,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetPathExtension( void ) const
+    String URL::GetPathExtension() const
     {
         AutoPointer str;
         
@@ -482,7 +482,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetQueryString( void ) const
+    String URL::GetQueryString() const
     {
         AutoPointer str;
         
@@ -496,7 +496,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetResourceSpecifier( void ) const
+    String URL::GetResourceSpecifier() const
     {
         AutoPointer str;
         
@@ -510,7 +510,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetScheme( void ) const
+    String URL::GetScheme() const
     {
         AutoPointer str;
         
@@ -524,7 +524,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetStrictPath( void ) const
+    String URL::GetStrictPath() const
     {
         AutoPointer str;
         
@@ -538,7 +538,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    String URL::GetUserName( void ) const
+    String URL::GetUserName() const
     {
         AutoPointer str;
         
@@ -552,7 +552,7 @@ namespace CF
         return str.As< CFStringRef >();
     }
     
-    Number URL::GetPortNumber( void ) const
+    Number URL::GetPortNumber() const
     {
         Number n;
         
@@ -564,7 +564,7 @@ namespace CF
         return n;
     }
     
-    URL URL::GetBaseURL( void ) const
+    URL URL::GetBaseURL() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -574,7 +574,7 @@ namespace CF
         return CFURLGetBaseURL( this->_cfObject );
     }
     
-    bool URL::HasDirectoryPath( void ) const
+    bool URL::HasDirectoryPath() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -661,7 +661,7 @@ namespace CF
         this->AppendPathExtension( static_cast< CFStringRef >( s ) );
     }
     
-    void URL::DeleteLastPathComponent( void )
+    void URL::DeleteLastPathComponent()
     {
         CFURLRef url;
         
@@ -680,7 +680,7 @@ namespace CF
         CFRelease( url );
     }
     
-    void URL::DeletePathExtension( void )
+    void URL::DeletePathExtension()
     {
         CFURLRef url;
         

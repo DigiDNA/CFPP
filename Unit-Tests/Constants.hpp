@@ -32,10 +32,10 @@
 
 #include <CF++.hpp>
 
-CFBooleanRef GetCFBooleanTrue( void );
-CFBooleanRef GetCFBooleanFalse( void );
-CFStringRef  GetCFErrorLocalizedDescriptionKey( void );
-CFStringRef  GetCFErrorLocalizedFailureReasonKey( void );
-CFStringRef  GetCFErrorLocalizedRecoverySuggestionKey( void );
+CFBooleanRef GetCFBooleanTrue();
+CFBooleanRef GetCFBooleanFalse();
+CFStringRef  GetCFErrorLocalizedDescriptionKey();
+CFStringRef  GetCFErrorLocalizedFailureReasonKey();
+CFStringRef  GetCFErrorLocalizedRecoverySuggestionKey();
 
 #endif /* CFPP_TEST_CONSTANTS_HPP */

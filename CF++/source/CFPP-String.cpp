@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    String::String( void ): _cfObject( nullptr )
+    String::String(): _cfObject( nullptr )
     {
         this->SetValue( "" );
     }
@@ -139,7 +139,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    String::~String( void )
+    String::~String()
     {
         if( this->_cfObject != nullptr )
         {
@@ -328,12 +328,12 @@ namespace CF
         return this->GetValue();
     }
     
-    CFTypeID String::GetTypeID( void ) const
+    CFTypeID String::GetTypeID() const
     {
         return CFStringGetTypeID();
     }
     
-    CFTypeRef String::GetCFObject( void ) const
+    CFTypeRef String::GetCFObject() const
     {
         return static_cast< CFTypeRef >( this->_cfObject );
     }
@@ -394,7 +394,7 @@ namespace CF
         return this->HasSuffix( s );
     }
     
-    CFIndex String::GetLength( void ) const
+    CFIndex String::GetLength() const
     {
         if( this->_cfObject == nullptr )
         {

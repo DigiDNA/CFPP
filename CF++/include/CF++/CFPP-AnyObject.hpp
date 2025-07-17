@@ -39,25 +39,25 @@ namespace CF
     {
         public:
             
-            AnyObject( void );
+            AnyObject();
             AnyObject( const AnyObject & value );
             AnyObject( const AutoPointer & value );
             AnyObject( CFTypeRef value );
             AnyObject( std::nullptr_t );
             AnyObject( AnyObject && value ) noexcept;
             
-            ~AnyObject( void ) override;
+            ~AnyObject() override;
             
             AnyObject & operator = ( AnyObject value );
             AnyObject & operator = ( const AutoPointer & value );
             AnyObject & operator = ( CFTypeRef value );
             AnyObject & operator = ( std::nullptr_t );
                         
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
             template< typename T >
-            T As( void ) const
+            T As() const
             {
                 return static_cast< T >( const_cast< void * >( this->GetCFObject() ) );
             }

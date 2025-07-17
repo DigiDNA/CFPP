@@ -37,7 +37,7 @@
 static bool        __hasCFStreamProperties             = false;
 static CFStringRef __cfStreamPropertyFileCurrentOffset = nullptr;
 
-static void __loadCFStreamProperties( void )
+static void __loadCFStreamProperties()
 {
     HMODULE cfModule;
 
@@ -59,7 +59,7 @@ static void __loadCFStreamProperties( void )
 
 namespace CF
 {
-    ReadStream::Iterator::Iterator( void ):
+    ReadStream::Iterator::Iterator():
         _cfObject( nullptr ),
         _bytesToRead( 0 ),
         _i( 0 ),
@@ -113,7 +113,7 @@ namespace CF
         value._data         = static_cast< CFDataRef >( nullptr );
     }
 
-    ReadStream::Iterator::~Iterator( void )
+    ReadStream::Iterator::~Iterator()
     {
         if( this->_cfObject != nullptr )
         {
@@ -128,7 +128,7 @@ namespace CF
         return *( this );
     }
     
-    ReadStream::Iterator & ReadStream::Iterator::operator ++( void )
+    ReadStream::Iterator & ReadStream::Iterator::operator ++()
     {
         this->_data = static_cast< CFDataRef >( nullptr );
         this->_i   += 1;
@@ -218,7 +218,7 @@ namespace CF
         return !( *( this ) == value );
     }
 
-    Data ReadStream::Iterator::operator * ( void )
+    Data ReadStream::Iterator::operator * ()
     {
         return this->_data;
     }
@@ -228,7 +228,7 @@ namespace CF
         return operator *();
     }
     
-    void ReadStream::Iterator::_Read( void )
+    void ReadStream::Iterator::_Read()
     {
         UInt8        * buf;
         CFIndex        i;

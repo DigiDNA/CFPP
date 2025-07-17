@@ -69,7 +69,7 @@ namespace CF
             static URL FileSystemURL( CFTypeRef path, bool isDir = false );
             static URL FileSystemURL( CFStringRef path, bool isDir = false );
             
-            URL( void );
+            URL();
             URL( const URL & value );
             URL( const AutoPointer & value );
             URL( CFTypeRef value );
@@ -83,7 +83,7 @@ namespace CF
             URL( const char * value, const CF::URL & base );
             URL( URL && value ) noexcept;
             
-            ~URL( void ) override;
+            ~URL() override;
             
             URL & operator = ( URL value );
             URL & operator = ( const AutoPointer & value );
@@ -116,33 +116,33 @@ namespace CF
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
             String GetFileSystemPath( PathStyle style = PathStylePOSIX ) const;
-            String GetFragment( void ) const;
-            String GetHostName( void ) const;
-            String GetLastPathComponent( void ) const;
-            String GetNetLocation( void ) const;
-            String GetPassword( void ) const;
-            String GetPath( void ) const;
-            String GetPathExtension( void ) const;
-            String GetQueryString( void ) const;
-            String GetResourceSpecifier( void ) const;
-            String GetScheme( void ) const;
-            String GetStrictPath( void ) const;
-            String GetUserName( void ) const;
-            Number GetPortNumber( void ) const;
-            URL    GetBaseURL( void ) const;
-            bool   HasDirectoryPath( void ) const;
+            String GetFragment() const;
+            String GetHostName() const;
+            String GetLastPathComponent() const;
+            String GetNetLocation() const;
+            String GetPassword() const;
+            String GetPath() const;
+            String GetPathExtension() const;
+            String GetQueryString() const;
+            String GetResourceSpecifier() const;
+            String GetScheme() const;
+            String GetStrictPath() const;
+            String GetUserName() const;
+            Number GetPortNumber() const;
+            URL    GetBaseURL() const;
+            bool   HasDirectoryPath() const;
             void   AppendPathComponent( CFStringRef component, bool isDirectory = false );
             void   AppendPathComponent( const std::string & component, bool isDirectory = false );
             void   AppendPathComponent( const char * component, bool isDirectory = false );
             void   AppendPathExtension( CFStringRef extension );
             void   AppendPathExtension( const std::string & extension );
             void   AppendPathExtension( const char * extension );
-            void   DeleteLastPathComponent( void );
-            void   DeletePathExtension( void );
+            void   DeleteLastPathComponent();
+            void   DeletePathExtension();
             
             friend void swap( URL & v1, URL & v2 ) noexcept;
             

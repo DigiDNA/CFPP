@@ -39,7 +39,7 @@ namespace CF
     {
         public:
             
-            Array( void );
+            Array();
             Array( CFIndex capacity );
             Array( const Array & value );
             Array( const AutoPointer & value );
@@ -49,7 +49,7 @@ namespace CF
             Array( std::initializer_list< CFTypeRef > value );
             Array( Array && value ) noexcept;
             
-            ~Array( void ) override;
+            ~Array() override;
             
             Array & operator = ( Array value );
             Array & operator = ( const AutoPointer & value );
@@ -68,12 +68,12 @@ namespace CF
             
             CFTypeRef operator [] ( int index ) const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            CFIndex   GetCount( void ) const;
+            CFIndex   GetCount() const;
             bool      ContainsValue( CFTypeRef value ) const;
-            void      RemoveAllValues( void ) const;
+            void      RemoveAllValues() const;
             CFTypeRef GetValueAtIndex( CFIndex index ) const;
             void      SetValueAtIndex( CFTypeRef value, CFIndex index ) const;
             void      InsertValueAtIndex( CFTypeRef value, CFIndex index ) const;
@@ -100,16 +100,16 @@ namespace CF
                     using reference         = CFTypeRef &;
                     #endif
                     
-                    Iterator( void );
+                    Iterator();
                     Iterator( const Iterator & value );
                     Iterator( Iterator && value ) noexcept;
                     
-                    virtual ~Iterator( void );
+                    virtual ~Iterator();
                     
                     Iterator & operator = ( Iterator value );
-                    Iterator & operator ++( void );
+                    Iterator & operator ++();
                     Iterator   operator ++( int );
-                    Iterator & operator --( void );
+                    Iterator & operator --();
                     Iterator   operator --( int );
                     
                     Iterator & operator += ( CFIndex value );
@@ -121,12 +121,12 @@ namespace CF
                     bool operator == ( const Iterator & value ) const;
                     bool operator != ( const Iterator & value ) const;
                     
-                    CFTypeRef operator * ( void ) const;
+                    CFTypeRef operator * () const;
                     
                     operator CFTypeRef () const;
                     
-                    CFTypeID  GetTypeID( void ) const;
-                    CFTypeRef GetCFObject( void ) const;
+                    CFTypeID  GetTypeID() const;
+                    CFTypeRef GetCFObject() const;
                     
                     friend void swap( Iterator & v1, Iterator & v2 ) noexcept;
                     
@@ -141,8 +141,8 @@ namespace CF
                     CFIndex    _pos;
             };
             
-            Iterator begin( void ) const;
-            Iterator end( void ) const;
+            Iterator begin() const;
+            Iterator end() const;
             
         protected:
             

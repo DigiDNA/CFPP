@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    UUID::UUID( void ): _cfObject( nullptr )
+    UUID::UUID(): _cfObject( nullptr )
     {
         this->_cfObject = CFUUIDCreate( static_cast< CFAllocatorRef >( nullptr ) );
     }
@@ -108,7 +108,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    UUID::~UUID( void )
+    UUID::~UUID()
     {
         if( this->_cfObject != nullptr )
         {
@@ -210,17 +210,17 @@ namespace CF
         return this->GetString();
     }
     
-    CFTypeID UUID::GetTypeID( void ) const
+    CFTypeID UUID::GetTypeID() const
     {
         return CFUUIDGetTypeID();
     }
     
-    CFTypeRef UUID::GetCFObject( void ) const
+    CFTypeRef UUID::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    String UUID::GetString( void ) const
+    String UUID::GetString() const
     {
         AutoPointer s;
         
@@ -234,12 +234,12 @@ namespace CF
         return s.As< CFStringRef >();
     }
     
-    Data UUID::GetData( void ) const
+    Data UUID::GetData() const
     {
         return Data( static_cast< CFStringRef >( this->GetString() ) );
     }
     
-    Data UUID::GetBytes( void ) const
+    Data UUID::GetBytes() const
     {
         CFUUIDBytes bytes;
         uint8_t     data[ 16 ];

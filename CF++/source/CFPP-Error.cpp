@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    Error::Error( void ): _cfObject( nullptr )
+    Error::Error(): _cfObject( nullptr )
     {}
     
     Error::Error( const Error & value ): _cfObject( nullptr )
@@ -180,7 +180,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Error::~Error( void )
+    Error::~Error()
     {
         if( this->_cfObject != nullptr )
         {
@@ -218,17 +218,17 @@ namespace CF
         return operator =( Error( nullptr ) );
     }
     
-    CFTypeID Error::GetTypeID( void ) const
+    CFTypeID Error::GetTypeID() const
     {
         return CFErrorGetTypeID();
     }
     
-    CFTypeRef Error::GetCFObject( void ) const
+    CFTypeRef Error::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    String Error::GetDomain( void ) const
+    String Error::GetDomain() const
     {
         String      str;
         CFStringRef cfStr;
@@ -244,7 +244,7 @@ namespace CF
         return str;
     }
     
-    Number Error::GetCode( void ) const
+    Number Error::GetCode() const
     {
         Number n;
         
@@ -258,7 +258,7 @@ namespace CF
         return n;
     }
     
-    Dictionary Error::GetUserInfo( void ) const
+    Dictionary Error::GetUserInfo() const
     {
         AutoPointer d;
         
@@ -272,7 +272,7 @@ namespace CF
         return d.As< CFDictionaryRef >();
     }
     
-    String Error::GetDescription( void ) const
+    String Error::GetDescription() const
     {
         AutoPointer s;
         
@@ -286,7 +286,7 @@ namespace CF
         return s.As< CFStringRef >();
     }
     
-    String Error::GetFailureReason( void ) const
+    String Error::GetFailureReason() const
     {
         AutoPointer s;
         
@@ -300,7 +300,7 @@ namespace CF
         return s.As< CFStringRef >();
     }
     
-    String Error::GetRecoverySuggestion( void ) const
+    String Error::GetRecoverySuggestion() const
     {
         AutoPointer s;
         

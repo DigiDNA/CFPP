@@ -36,7 +36,7 @@
 
 namespace CF
 {
-    Number::Number( void ): _cfObject( nullptr )
+    Number::Number(): _cfObject( nullptr )
     {
         this->SetSignedIntValue( 0 );
     }
@@ -574,7 +574,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Number::~Number( void )
+    Number::~Number()
     {
         if( this->_cfObject != nullptr )
         {
@@ -1296,21 +1296,21 @@ namespace CF
         return operator ||( Number( value ) );
     }
     
-    Number & Number::operator ~ ( void )
+    Number & Number::operator ~ ()
     {
         this->SetSignedLongValue( ~( this->GetSignedLongValue() ) );
         
         return *( this );
     }
     
-    Number & Number::operator ! ( void )
+    Number & Number::operator ! ()
     {
         this->SetSignedLongValue( !( this->GetSignedLongValue() ) );
         
         return *( this );
     }
     
-    Number & Number::operator ++ ( void )
+    Number & Number::operator ++ ()
     {
         if( this->IsFloatType() )
         {
@@ -1333,7 +1333,7 @@ namespace CF
         return n;
     }
     
-    Number & Number::operator -- ( void )
+    Number & Number::operator -- ()
     {
         if( this->IsFloatType() )
         {
@@ -2747,17 +2747,17 @@ namespace CF
         return this->GetDoubleValue();
     }
     
-    CFTypeID Number::GetTypeID( void ) const
+    CFTypeID Number::GetTypeID() const
     {
         return CFNumberGetTypeID();
     }
     
-    CFTypeRef Number::GetCFObject( void ) const
+    CFTypeRef Number::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    bool Number::IsFloatType( void ) const
+    bool Number::IsFloatType() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -2767,7 +2767,7 @@ namespace CF
         return ( CFNumberIsFloatType( this->_cfObject ) ) ? true : false;
     }
     
-    signed char Number::GetSignedCharValue( void ) const
+    signed char Number::GetSignedCharValue() const
     {
         signed char value;
         
@@ -2781,7 +2781,7 @@ namespace CF
         return value;
     }
     
-    signed short Number::GetSignedShortValue( void ) const
+    signed short Number::GetSignedShortValue() const
     {
         signed short value;
         
@@ -2795,7 +2795,7 @@ namespace CF
         return value;
     }
     
-    signed int Number::GetSignedIntValue( void ) const
+    signed int Number::GetSignedIntValue() const
     {
         signed int value;
         
@@ -2809,7 +2809,7 @@ namespace CF
         return value;
     }
     
-    signed long Number::GetSignedLongValue( void ) const
+    signed long Number::GetSignedLongValue() const
     {
         signed long value;
         
@@ -2823,7 +2823,7 @@ namespace CF
         return value;
     }
     
-    signed long long Number::GetSignedLongLongValue( void ) const
+    signed long long Number::GetSignedLongLongValue() const
     {
         signed long long value;
         
@@ -2837,32 +2837,32 @@ namespace CF
         return value;
     }
     
-    unsigned char Number::GetUnsignedCharValue( void ) const
+    unsigned char Number::GetUnsignedCharValue() const
     {
         return static_cast< unsigned char >( this->GetSignedCharValue() );
     }
     
-    unsigned short Number::GetUnsignedShortValue( void ) const
+    unsigned short Number::GetUnsignedShortValue() const
     {
         return static_cast< unsigned short >( this->GetSignedShortValue() );
     }
     
-    unsigned int Number::GetUnsignedIntValue( void ) const
+    unsigned int Number::GetUnsignedIntValue() const
     {
         return static_cast< unsigned int >( this->GetSignedIntValue() );
     }
     
-    unsigned long Number::GetUnsignedLongValue( void ) const
+    unsigned long Number::GetUnsignedLongValue() const
     {
         return static_cast< unsigned long >( this->GetSignedLongValue() );
     }
     
-    unsigned long long Number::GetUnsignedLongLongValue( void ) const
+    unsigned long long Number::GetUnsignedLongLongValue() const
     {
         return static_cast< unsigned long long >( this->GetSignedLongLongValue() );
     }
     
-    float Number::GetFloatValue( void ) const
+    float Number::GetFloatValue() const
     {
         float value;
         
@@ -2876,7 +2876,7 @@ namespace CF
         return value;
     }
     
-    double Number::GetDoubleValue( void ) const
+    double Number::GetDoubleValue() const
     {
         double value;
         

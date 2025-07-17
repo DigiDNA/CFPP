@@ -37,7 +37,7 @@ namespace CF
     {
         public:
             
-            UUID( void );
+            UUID();
             UUID( const UUID & value );
             UUID( const AutoPointer & value );
             UUID( CFTypeRef value );
@@ -47,7 +47,7 @@ namespace CF
             UUID( const Data & value );
             UUID( UUID && value ) noexcept;
             
-            ~UUID( void ) override;
+            ~UUID() override;
             
             UUID & operator = ( UUID value );
             UUID & operator = ( const AutoPointer & value );
@@ -71,12 +71,12 @@ namespace CF
             
             operator std::string () const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            String GetString( void ) const;
-            Data   GetData( void )   const;
-            Data   GetBytes( void )  const;
+            String GetString() const;
+            Data   GetData()   const;
+            Data   GetBytes()  const;
             
             friend void swap( UUID & v1, UUID & v2 ) noexcept;
             

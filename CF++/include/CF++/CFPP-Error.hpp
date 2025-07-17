@@ -37,7 +37,7 @@ namespace CF
     {
         public:
             
-            Error( void );
+            Error();
             Error( const Error & value );
             Error( const AutoPointer & value );
             Error( CFTypeRef value );
@@ -53,7 +53,7 @@ namespace CF
             Error( const char * domain, CFIndex code, const Dictionary & userInfo );
             Error( Error && value ) noexcept;
             
-            ~Error( void ) override;
+            ~Error() override;
             
             Error & operator = ( Error value );
             Error & operator = ( const AutoPointer & value );
@@ -61,15 +61,15 @@ namespace CF
             Error & operator = ( CFErrorRef value );
             Error & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            String     GetDomain( void ) const;
-            Number     GetCode( void ) const;
-            Dictionary GetUserInfo( void ) const;
-            String     GetDescription( void ) const;
-            String     GetFailureReason( void ) const;
-            String     GetRecoverySuggestion( void ) const;
+            String     GetDomain() const;
+            Number     GetCode() const;
+            Dictionary GetUserInfo() const;
+            String     GetDescription() const;
+            String     GetFailureReason() const;
+            String     GetRecoverySuggestion() const;
             
             friend void swap( Error & v1, Error & v2 ) noexcept;
             

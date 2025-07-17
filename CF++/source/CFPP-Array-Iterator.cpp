@@ -32,7 +32,7 @@
 
 namespace CF
 {    
-    Array::Iterator::Iterator( void ):
+    Array::Iterator::Iterator():
         _cfObject( nullptr ),
         _count( 0 ),
         _pos( 0 )
@@ -70,7 +70,7 @@ namespace CF
         value._pos      = 0;
     }
     
-    Array::Iterator::~Iterator( void )
+    Array::Iterator::~Iterator()
     {
         if( this->_cfObject != nullptr )
         {
@@ -85,7 +85,7 @@ namespace CF
         return *( this );
     }
     
-    Array::Iterator & Array::Iterator::operator ++( void )
+    Array::Iterator & Array::Iterator::operator ++()
     {
         this->_pos++;
         
@@ -101,7 +101,7 @@ namespace CF
         return it;
     }
     
-    Array::Iterator & Array::Iterator::operator --( void )
+    Array::Iterator & Array::Iterator::operator --()
     {
         this->_pos--;
         
@@ -174,7 +174,7 @@ namespace CF
         return !( *( this ) == value );
     }
     
-    CFTypeRef Array::Iterator::operator * ( void ) const
+    CFTypeRef Array::Iterator::operator * () const
     {
         return this->GetCFObject();
     }
@@ -184,7 +184,7 @@ namespace CF
         return this->GetCFObject();
     }
     
-    CFTypeID Array::Iterator::GetTypeID( void ) const
+    CFTypeID Array::Iterator::GetTypeID() const
     {
         CFTypeRef o;
         
@@ -198,7 +198,7 @@ namespace CF
         return 0;
     }
     
-    CFTypeRef Array::Iterator::GetCFObject( void ) const
+    CFTypeRef Array::Iterator::GetCFObject() const
     {
         if( this->_cfObject == nullptr )
         {

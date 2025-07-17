@@ -112,7 +112,7 @@ TEST( CFPP_Number, CTOR_NullPointer )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_CTOR_AutoPointer_T( void )
+void TMPL_CFPP_Number_CTOR_AutoPointer_T()
 {
     int i =  1;
     T   v = 42;
@@ -160,7 +160,7 @@ TEST( CFPP_Number, CTOR_AutoPointer_T )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_CTOR_CFType_T( void )
+void TMPL_CFPP_Number_CTOR_CFType_T()
 {
     CF::Number n1( static_cast< CFTypeRef >( CF::Number( 42 ).GetCFObject() ), static_cast< T >( 43 ) );
     CF::Number n2( static_cast< CFTypeRef >( nullptr ),                           static_cast< T >( 43 ) );
@@ -200,7 +200,7 @@ TEST( CFPP_Number, CTOR_CFType_T )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_CTOR_CFNumber_T( void )
+void TMPL_CFPP_Number_CTOR_CFNumber_T()
 {
     CF::Number n1( static_cast< CFNumberRef >( CF::Number( 42 ).GetCFObject() ), static_cast< T >( 43 ) );
     CF::Number n2( static_cast< CFNumberRef >( nullptr ),                           static_cast< T >( 43 ) );
@@ -240,7 +240,7 @@ TEST( CFPP_Number, CTOR_CFNumber_T )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_CTOR_T( void )
+void TMPL_CFPP_Number_CTOR_T()
 {
     CF::Number n( static_cast< T >( 42 ) );
     
@@ -404,7 +404,7 @@ TEST( CFPP_Number, OperatorAssignNullPointer )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorAssign_T( void )
+void TMPL_CFPP_Number_OperatorAssign_T()
 {
     CF::Number n;
     
@@ -544,7 +544,7 @@ TEST( CFPP_Number, OperatorEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorEqual_T( void )
+void TMPL_CFPP_Number_OperatorEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -688,7 +688,7 @@ TEST( CFPP_Number, OperatorNotEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorNotEqual_T( void )
+void TMPL_CFPP_Number_OperatorNotEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -841,7 +841,7 @@ TEST( CFPP_Number, OperatorGreaterOrEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorGreaterOrEqual_T( void )
+void TMPL_CFPP_Number_OperatorGreaterOrEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -997,7 +997,7 @@ TEST( CFPP_Number, OperatorLesserOrEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorLesserOrEqual_T( void )
+void TMPL_CFPP_Number_OperatorLesserOrEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -1147,7 +1147,7 @@ TEST( CFPP_Number, OperatorGreaterCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorGreater_T( void )
+void TMPL_CFPP_Number_OperatorGreater_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -1295,7 +1295,7 @@ TEST( CFPP_Number, OperatorLesserCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorLesser_T( void )
+void TMPL_CFPP_Number_OperatorLesser_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -1440,7 +1440,7 @@ TEST( CFPP_Number, OperatorAndCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorAnd_T( void )
+void TMPL_CFPP_Number_OperatorAnd_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -1584,7 +1584,7 @@ TEST( CFPP_Number, OperatorOrCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorOr_T( void )
+void TMPL_CFPP_Number_OperatorOr_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -1842,7 +1842,7 @@ TEST( CFPP_Number, OperatorPlusEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorPlusEqual_T( void )
+void TMPL_CFPP_Number_OperatorPlusEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2006,7 +2006,7 @@ TEST( CFPP_Number, OperatorMinusEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorMinusEqual_T( void )
+void TMPL_CFPP_Number_OperatorMinusEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2170,7 +2170,7 @@ TEST( CFPP_Number, OperatorMultiplyEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorMultiplyEqual_T( void )
+void TMPL_CFPP_Number_OperatorMultiplyEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2278,7 +2278,7 @@ TEST( CFPP_Number, OperatorDivideEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorDivideEqual_T( void )
+void TMPL_CFPP_Number_OperatorDivideEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2446,7 +2446,7 @@ TEST( CFPP_Number, OperatorOrEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorOrEqual_T( void )
+void TMPL_CFPP_Number_OperatorOrEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2606,7 +2606,7 @@ TEST( CFPP_Number, OperatorAndEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorAndEqual_T( void )
+void TMPL_CFPP_Number_OperatorAndEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2710,7 +2710,7 @@ TEST( CFPP_Number, OperatorModEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorModEqual_T( void )
+void TMPL_CFPP_Number_OperatorModEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -2874,7 +2874,7 @@ TEST( CFPP_Number, OperatorXorEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorXorEqual_T( void )
+void TMPL_CFPP_Number_OperatorXorEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3034,7 +3034,7 @@ TEST( CFPP_Number, OperatorLeftShiftEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorLeftShiftEqual_T( void )
+void TMPL_CFPP_Number_OperatorLeftShiftEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3194,7 +3194,7 @@ TEST( CFPP_Number, OperatorRightShiftEqualCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorRightShiftEqual_T( void )
+void TMPL_CFPP_Number_OperatorRightShiftEqual_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3286,7 +3286,7 @@ TEST( CFPP_Number, OperatorPlusCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorPlus_T( void )
+void TMPL_CFPP_Number_OperatorPlus_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3378,7 +3378,7 @@ TEST( CFPP_Number, OperatorMinusCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorMinus_T( void )
+void TMPL_CFPP_Number_OperatorMinus_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3470,7 +3470,7 @@ TEST( CFPP_Number, OperatorMultiplyCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorMultiply_T( void )
+void TMPL_CFPP_Number_OperatorMultiply_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3562,7 +3562,7 @@ TEST( CFPP_Number, OperatorDivideCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorDivide_T( void )
+void TMPL_CFPP_Number_OperatorDivide_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3658,7 +3658,7 @@ TEST( CFPP_Number, OperatorModCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorMod_T( void )
+void TMPL_CFPP_Number_OperatorMod_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3750,7 +3750,7 @@ TEST( CFPP_Number, OperatorBitwiseAndCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorBiwiseAnd_T( void )
+void TMPL_CFPP_Number_OperatorBiwiseAnd_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3838,7 +3838,7 @@ TEST( CFPP_Number, OperatorBitwiseOrCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorBiwiseOr_T( void )
+void TMPL_CFPP_Number_OperatorBiwiseOr_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -3926,7 +3926,7 @@ TEST( CFPP_Number, OperatorXorCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorXor_T( void )
+void TMPL_CFPP_Number_OperatorXor_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -4014,7 +4014,7 @@ TEST( CFPP_Number, OperatorLeftShiftCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorLeftShift_T( void )
+void TMPL_CFPP_Number_OperatorLeftShift_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -4102,7 +4102,7 @@ TEST( CFPP_Number, OperatorRightShiftCFNumber )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_OperatorRightShift_T( void )
+void TMPL_CFPP_Number_OperatorRightShift_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );
@@ -4137,7 +4137,7 @@ TEST( CFPP_Number, OperatorRightShift_T )
 }
 
 template< typename T >
-void TMPL_CFPP_Number_CastTo_T( void )
+void TMPL_CFPP_Number_CastTo_T()
 {
     CF::Number n1;
     CF::Number n2( 42 );

@@ -44,7 +44,7 @@ namespace CF
     {
         public:
 
-            Number( void );
+            Number();
             Number( const AutoPointer & value );
             Number( CFTypeRef cfObject );
             Number( CFNumberRef cfObject );
@@ -100,7 +100,7 @@ namespace CF
             Number( double value );
             Number( Number && value ) noexcept;
             
-            ~Number( void ) override;
+            ~Number() override;
             
             Number & operator = ( Number value );
             Number & operator = ( const AutoPointer & value );
@@ -248,11 +248,11 @@ namespace CF
             bool operator || ( float value ) const;
             bool operator || ( double value ) const;
             
-            Number & operator ~ ( void );
-            Number & operator ! ( void );
-            Number & operator ++ ( void );
+            Number & operator ~ ();
+            Number & operator ! ();
+            Number & operator ++ ();
             Number   operator ++ ( int );
-            Number & operator -- ( void );
+            Number & operator -- ();
             Number   operator -- ( int );
             
             Number & operator += ( const Number & value );
@@ -544,23 +544,23 @@ namespace CF
             operator float              () const;
             operator double             () const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            bool IsFloatType( void ) const;
+            bool IsFloatType() const;
             
-            signed char         GetSignedCharValue( void ) const;
-            signed short        GetSignedShortValue( void ) const;
-            signed int          GetSignedIntValue( void ) const;
-            signed long         GetSignedLongValue( void ) const;
-            signed long long    GetSignedLongLongValue( void ) const;
-            unsigned char       GetUnsignedCharValue( void ) const;
-            unsigned short      GetUnsignedShortValue( void ) const;
-            unsigned int        GetUnsignedIntValue( void ) const;
-            unsigned long       GetUnsignedLongValue( void ) const;
-            unsigned long long  GetUnsignedLongLongValue( void ) const;
-            float               GetFloatValue( void ) const;
-            double              GetDoubleValue( void ) const;
+            signed char         GetSignedCharValue() const;
+            signed short        GetSignedShortValue() const;
+            signed int          GetSignedIntValue() const;
+            signed long         GetSignedLongValue() const;
+            signed long long    GetSignedLongLongValue() const;
+            unsigned char       GetUnsignedCharValue() const;
+            unsigned short      GetUnsignedShortValue() const;
+            unsigned int        GetUnsignedIntValue() const;
+            unsigned long       GetUnsignedLongValue() const;
+            unsigned long long  GetUnsignedLongLongValue() const;
+            float               GetFloatValue() const;
+            double              GetDoubleValue() const;
             
             void SetSignedCharValue( signed char value );
             void SetSignedShortValue( signed short value );

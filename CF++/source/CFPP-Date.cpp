@@ -32,14 +32,14 @@
 
 namespace CF
 {
-    Date Date::CurrentDate( void )
+    Date Date::CurrentDate()
     {
         Date date;
         
         return date;
     }
     
-    Date::Date( void ): _cfObject( nullptr )
+    Date::Date(): _cfObject( nullptr )
     {
         this->SetValue( CFAbsoluteTimeGetCurrent() );
     }
@@ -90,7 +90,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Date::~Date( void )
+    Date::~Date()
     {
         if( this->_cfObject != nullptr )
         {
@@ -329,7 +329,7 @@ namespace CF
         return operator -( Date( value ) );
     }
     
-    Date & Date::operator ++ ( void )
+    Date & Date::operator ++ ()
     {
         this->SetValue( this->GetValue() + 1 );
         
@@ -347,7 +347,7 @@ namespace CF
         return n;
     }
     
-    Date & Date::operator -- ( void )
+    Date & Date::operator -- ()
     {
         this->SetValue( this->GetValue() - 1 );
         
@@ -370,17 +370,17 @@ namespace CF
         return this->GetValue();
     }
     
-    CFTypeID Date::GetTypeID( void ) const
+    CFTypeID Date::GetTypeID() const
     {
         return CFDateGetTypeID();
     }
     
-    CFTypeRef Date::GetCFObject( void ) const
+    CFTypeRef Date::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    CFAbsoluteTime Date::GetValue( void ) const
+    CFAbsoluteTime Date::GetValue() const
     {
         if( this->_cfObject == nullptr )
         {

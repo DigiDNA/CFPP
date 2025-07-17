@@ -37,9 +37,9 @@ namespace CF
     {
         public:
             
-            static Date CurrentDate( void );
+            static Date CurrentDate();
             
-            Date( void );
+            Date();
             Date( const Date & value );
             Date( const AutoPointer & value );
             Date( CFTypeRef value );
@@ -48,7 +48,7 @@ namespace CF
             Date( CFAbsoluteTime value );
             Date( Date && value ) noexcept;
             
-            ~Date( void ) override;
+            ~Date() override;
             
             Date & operator = ( Date value );
             Date & operator = ( const AutoPointer & value );
@@ -99,17 +99,17 @@ namespace CF
             Date operator - ( CFDateRef value );
             Date operator - ( CFAbsoluteTime value );
             
-            Date & operator ++ ( void );
+            Date & operator ++ ();
             Date   operator ++ ( int );
-            Date & operator -- ( void );
+            Date & operator -- ();
             Date   operator -- ( int );
             
             operator CFAbsoluteTime () const;
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            CFAbsoluteTime GetValue( void ) const;
+            CFAbsoluteTime GetValue() const;
             void           SetValue( CFAbsoluteTime value );
             
             friend void swap( Date & v1, Date & v2 ) noexcept;

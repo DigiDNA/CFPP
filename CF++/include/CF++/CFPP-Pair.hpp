@@ -47,14 +47,14 @@ namespace CF
             Pair( const char * key, const char * value );
             Pair( Pair && value ) noexcept;
             
-            virtual ~Pair( void );
+            virtual ~Pair();
             
             Pair & operator = ( Pair value );
             
-            CFTypeRef GetKey( void ) const;
-            CFTypeRef GetValue( void ) const;
-            CFTypeID  GetKeyTypeID( void ) const;
-            CFTypeID  GetValueTypeID( void ) const;
+            CFTypeRef GetKey() const;
+            CFTypeRef GetValue() const;
+            CFTypeID  GetKeyTypeID() const;
+            CFTypeID  GetValueTypeID() const;
             void      SetKey( CFTypeRef key );
             void      SetValue( CFTypeRef value );
             

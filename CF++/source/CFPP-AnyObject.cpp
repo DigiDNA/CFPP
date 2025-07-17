@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    AnyObject::AnyObject( void ): _cfObject( nullptr )
+    AnyObject::AnyObject(): _cfObject( nullptr )
     {}
     
     AnyObject::AnyObject( const AnyObject & value ): _cfObject( value._cfObject )
@@ -68,7 +68,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    AnyObject::~AnyObject( void )
+    AnyObject::~AnyObject()
     {
         if( this->_cfObject != nullptr )
         {
@@ -100,7 +100,7 @@ namespace CF
         return operator =( AnyObject( nullptr ) );
     }
     
-    CFTypeID AnyObject::GetTypeID( void ) const
+    CFTypeID AnyObject::GetTypeID() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -110,7 +110,7 @@ namespace CF
         return CFGetTypeID( this->_cfObject );
     }
     
-    CFTypeRef AnyObject::GetCFObject( void ) const
+    CFTypeRef AnyObject::GetCFObject() const
     {
         return this->_cfObject;
     }

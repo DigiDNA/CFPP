@@ -32,7 +32,7 @@
 #ifndef _WIN32
 
 #define GET_CONST( _type_, _const_, _func_ )    \
- _type_ _func_( void )                          \
+ _type_ _func_()                                \
 {                                               \
     return _const_;                             \
 }
@@ -44,7 +44,7 @@
 static HMODULE mod = nullptr;
 
 #define GET_CONST( _type_, _const_, _func_ )                                            \
- _type_ _func_( void )                                                                  \
+ _type_ _func_()                                                                        \
 {                                                                                       \
     if( mod == nullptr )                                                                \
     {                                                                                   \

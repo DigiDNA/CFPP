@@ -107,7 +107,7 @@ namespace CF
         value._value = nullptr;
     }
     
-    Pair::~Pair( void )
+    Pair::~Pair()
     {
         if( this->_key != nullptr )
         {
@@ -127,12 +127,12 @@ namespace CF
         return *( this );
     }
     
-    CFTypeRef Pair::GetKey( void ) const
+    CFTypeRef Pair::GetKey() const
     {
         return this->_key;
     }
     
-    CFTypeRef Pair::GetValue( void ) const
+    CFTypeRef Pair::GetValue() const
     {
         return this->_value;
     }

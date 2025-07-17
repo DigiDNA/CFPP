@@ -38,7 +38,7 @@ namespace CF
     {
         public:
             
-            Object( void ): _cfObject( nullptr )
+            Object(): _cfObject( nullptr )
             {}
             
             Object( const Object< _T_ > & value ): _cfObject( nullptr )
@@ -71,7 +71,7 @@ namespace CF
                 value._cfObject = nullptr;
             }
             
-            ~Object( void ) override
+            ~Object() override
             {
                 if( this->_cfObject != nullptr )
                 {
@@ -98,7 +98,7 @@ namespace CF
                 return operator =( Object< _T_ >( value ) );
             }
             
-            CFTypeID GetTypeID( void ) const override
+            CFTypeID GetTypeID() const override
             {
                 if( this->_cfObject != nullptr )
                 {
@@ -108,7 +108,7 @@ namespace CF
                 return 0;
             }
             
-            CFTypeRef GetCFObject( void ) const override
+            CFTypeRef GetCFObject() const override
             {
                 return this->_cfObject;
             }

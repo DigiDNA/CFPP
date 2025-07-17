@@ -87,7 +87,7 @@ static Boolean __CFArrayEqualCallBack( const void * value1, const void * value2 
     return CFEqual( value1, value2 );
 }
 
-static void __createCallbacks( void )
+static void __createCallbacks()
 {
     if( __hasCallBacks == true  )
     {
@@ -105,7 +105,7 @@ static void __createCallbacks( void )
 
 #else
 
-static void __createCallbacks( void )
+static void __createCallbacks()
 {
     if( __hasCallBacks == true  )
     {
@@ -120,7 +120,7 @@ static void __createCallbacks( void )
 
 namespace CF
 {
-    Array::Array( void ): _cfObject( nullptr )
+    Array::Array(): _cfObject( nullptr )
     {
         __createCallbacks();
         
@@ -224,7 +224,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    Array::~Array( void )
+    Array::~Array()
     {
         if( this->_cfObject != nullptr )
         {
@@ -305,17 +305,17 @@ namespace CF
         return this->GetValueAtIndex( static_cast< CFIndex >( index ) );
     }
     
-    CFTypeID Array::GetTypeID( void ) const
+    CFTypeID Array::GetTypeID() const
     {
         return CFArrayGetTypeID();
     }
     
-    CFTypeRef Array::GetCFObject( void ) const
+    CFTypeRef Array::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    CFIndex Array::GetCount( void ) const
+    CFIndex Array::GetCount() const
     {
         return ( this->_cfObject == nullptr ) ? 0 : CFArrayGetCount( this->_cfObject );
     }
@@ -335,7 +335,7 @@ namespace CF
         ) ) ? true : false;
     }
     
-    void Array::RemoveAllValues( void ) const
+    void Array::RemoveAllValues() const
     {
         if( this->_cfObject != nullptr )
         {
@@ -421,12 +421,12 @@ namespace CF
         CFArrayExchangeValuesAtIndices( this->_cfObject, index1, index2 );
     }
     
-    Array::Iterator Array::begin( void ) const
+    Array::Iterator Array::begin() const
     {
         return Iterator( this->_cfObject, this->GetCount() );
     }
     
-    Array::Iterator Array::end( void ) const
+    Array::Iterator Array::end() const
     {
         return Iterator( this->_cfObject, this->GetCount(), this->GetCount() );
     }

@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    WriteStream::WriteStream( void ): _cfObject( nullptr )
+    WriteStream::WriteStream(): _cfObject( nullptr )
     {}
     
     WriteStream::WriteStream( URL url ): _cfObject( nullptr )
@@ -99,7 +99,7 @@ namespace CF
         value._cfObject = nullptr;
     }
     
-    WriteStream::~WriteStream( void )
+    WriteStream::~WriteStream()
     {
         if( this->_cfObject != nullptr )
         {
@@ -136,17 +136,17 @@ namespace CF
         return operator =( WriteStream( nullptr ) );
     }
     
-    CFTypeID WriteStream::GetTypeID( void ) const
+    CFTypeID WriteStream::GetTypeID() const
     {
         return CFWriteStreamGetTypeID();
     }
     
-    CFTypeRef WriteStream::GetCFObject( void ) const
+    CFTypeRef WriteStream::GetCFObject() const
     {
         return this->_cfObject;
     }
     
-    bool WriteStream::Open( void ) const
+    bool WriteStream::Open() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -180,7 +180,7 @@ namespace CF
         return this->Open();
     }
     
-    void WriteStream::Close( void ) const
+    void WriteStream::Close() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -190,7 +190,7 @@ namespace CF
         CFWriteStreamClose( this->_cfObject );
     }
     
-    bool WriteStream::CanAcceptBytes( void ) const
+    bool WriteStream::CanAcceptBytes() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -200,7 +200,7 @@ namespace CF
         return ( CFWriteStreamCanAcceptBytes( this->_cfObject ) ) ? true : false;
     }
     
-    CFStreamStatus WriteStream::GetStatus( void ) const
+    CFStreamStatus WriteStream::GetStatus() const
     {
         if( this->_cfObject == nullptr )
         {
@@ -210,7 +210,7 @@ namespace CF
         return CFWriteStreamGetStatus( this->_cfObject );
     }
     
-    Error WriteStream::GetError( void ) const
+    Error WriteStream::GetError() const
     {
         AutoPointer e;
         

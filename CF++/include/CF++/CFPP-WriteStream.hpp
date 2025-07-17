@@ -37,7 +37,7 @@ namespace CF
     {
         public:
             
-            WriteStream( void );
+            WriteStream();
             WriteStream( const std::string & path );
             WriteStream( const char * path );
             WriteStream( URL url );
@@ -48,7 +48,7 @@ namespace CF
             WriteStream( std::nullptr_t );
             WriteStream( WriteStream && value ) noexcept;
             
-            ~WriteStream( void ) override;
+            ~WriteStream() override;
             
             WriteStream & operator = ( WriteStream value );
             WriteStream & operator = ( const AutoPointer & value );
@@ -56,17 +56,17 @@ namespace CF
             WriteStream & operator = ( CFWriteStreamRef value );
             WriteStream & operator = ( std::nullptr_t );
             
-            CFTypeID  GetTypeID( void ) const override;
-            CFTypeRef GetCFObject( void ) const override;
+            CFTypeID  GetTypeID() const override;
+            CFTypeRef GetCFObject() const override;
             
-            bool               Open( void ) const;
+            bool               Open() const;
             bool               Open( const std::string & path );
             bool               Open( const char * path );
             bool               Open( const URL & url );
-            void               Close( void ) const;
-            bool               CanAcceptBytes( void ) const;
-            CFStreamStatus     GetStatus( void ) const;
-            Error              GetError( void ) const;
+            void               Close() const;
+            bool               CanAcceptBytes() const;
+            CFStreamStatus     GetStatus() const;
+            Error              GetError() const;
             CFIndex            Write( const Data::Byte * buffer, CFIndex length ) const;
             CFIndex            Write( const Data & data ) const;
             bool               WriteAll( const Data::Byte * buffer, CFIndex length ) const;
