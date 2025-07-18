@@ -56,7 +56,7 @@ namespace CF
     {
         if( value.IsValid() && value.GetTypeID() == this->GetTypeID() )
         {
-            this->_cfObject = static_cast< CFDateRef >( const_cast< void * >( CFRetain( value ) ) );
+            this->_cfObject = static_cast< CFDateRef >( CFRetain( value ) );
         }
     }
     
