@@ -33,10 +33,14 @@
 
 namespace CF
 {
+    class RunLoop;
+    
     class CFPP_EXPORT RunLoopSource: public Type
     {
         public:
             
+            RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule = nullptr, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel = nullptr );
+            RunLoopSource( CFIndex order, CFRunLoopSourceContext * context );
             RunLoopSource( const RunLoopSource & value );
             RunLoopSource( const AutoPointer & value );
             RunLoopSource( CFTypeRef cfObject );
@@ -52,6 +56,13 @@ namespace CF
             
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;
+            
+            bool    IsSourceValid()                                const;
+            CFIndex GetOrder()                                     const;
+            void    GetContext( CFRunLoopSourceContext * context ) const;
+            
+            void Invalidate();
+            void Signal();
             
             friend void swap( RunLoopSource & v1, RunLoopSource & v2 ) noexcept;
             

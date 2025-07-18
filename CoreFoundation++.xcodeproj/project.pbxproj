@@ -101,6 +101,13 @@
 		058EDCC92E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		058EDCCA2E2A62F500C8C2E3 /* CFPP-RunLoop.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		058EDCCB2E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCEF2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */; };
+		058EDCF02E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */; };
+		058EDCF12E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */; };
+		058EDCF22E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */; };
+		058EDCF42E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCF32E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCF52E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCF32E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCF72E2A926600C8C2E3 /* Test-CFPP-RunLoopSourceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCF62E2A925C00C8C2E3 /* Test-CFPP-RunLoopSourceInfo.cpp */; };
 		059DBCB81B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		059DBCB91B14DC500014D9A1 /* CFPP-WriteStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB51B14DB460014D9A1 /* CFPP-WriteStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		059DBCBA1B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -335,6 +342,9 @@
 		058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoopObserver.cpp"; sourceTree = "<group>"; };
 		058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoop.hpp"; sourceTree = "<group>"; };
 		058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoopObserver.hpp"; sourceTree = "<group>"; };
+		058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoopSourceInfo.cpp"; sourceTree = "<group>"; };
+		058EDCF32E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoopSourceInfo.hpp"; sourceTree = "<group>"; };
+		058EDCF62E2A925C00C8C2E3 /* Test-CFPP-RunLoopSourceInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Test-CFPP-RunLoopSourceInfo.cpp"; sourceTree = "<group>"; };
 		05905D9E223685D200C5F7E1 /* CFPP-Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-Object.hpp"; sourceTree = "<group>"; };
 		05905DA22236974100C5F7E1 /* Test-CFPP-Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Test-CFPP-Object.cpp"; sourceTree = "<group>"; };
 		059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-ReadStream.hpp"; sourceTree = "<group>"; };
@@ -457,6 +467,7 @@
 				054702A61B1D8FA00036259D /* Test-CFPP-ReadStream.cpp */,
 				052B1AD41B45C99E00B97CB9 /* Test-CFPP-String-Iterator.cpp */,
 				054702A71B1D8FA00036259D /* Test-CFPP-String.cpp */,
+				058EDCF62E2A925C00C8C2E3 /* Test-CFPP-RunLoopSourceInfo.cpp */,
 				054702A81B1D8FA00036259D /* Test-CFPP-Type.cpp */,
 				054702A91B1D8FA00036259D /* Test-CFPP-URL.cpp */,
 				054702AA1B1D8FA00036259D /* Test-CFPP-UUID.cpp */,
@@ -653,6 +664,7 @@
 				058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */,
 				058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */,
 				058EDCB42E2A624800C8C2E3 /* CFPP-RunLoopSource.hpp */,
+				058EDCF32E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp */,
 				058EDCAA2E2951EB00C8C2E3 /* CFPP-RunLoopTimer.hpp */,
 				05BDE01418CDB2450028F339 /* CFPP-String.hpp */,
 				05BDE01518CDB2450028F339 /* CFPP-Type.hpp */,
@@ -687,6 +699,7 @@
 				058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */,
 				058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */,
 				058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */,
+				058EDCEE2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp */,
 				058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */,
 				05BDE02218CDB2450028F339 /* CFPP-String.cpp */,
 				054D7D331B46CC1D006AFF67 /* CFPP-String-Iterator.cpp */,
@@ -728,6 +741,7 @@
 				05BDE06818CDB2600028F339 /* CFPP-Data.hpp in Headers */,
 				05BDE06918CDB2600028F339 /* CFPP-Date.hpp in Headers */,
 				05BDE06718CDB2600028F339 /* CFPP-Boolean.hpp in Headers */,
+				058EDCF52E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp in Headers */,
 				05BDE07018CDB2600028F339 /* CF++.hpp in Headers */,
 				05DD0F02213EB1760050069A /* CFPP-AnyPropertyListType.hpp in Headers */,
 				056C58A91B17A3B700C6214A /* CFPP-PropertyListType-Definition.hpp in Headers */,
@@ -756,6 +770,7 @@
 				058EDCCB2E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */,
 				05BDE05F18CDB25F0028F339 /* CFPP-Dictionary.hpp in Headers */,
 				059DBCBA1B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */,
+				058EDCF42E2A890000C8C2E3 /* CFPP-RunLoopSourceInfo.hpp in Headers */,
 				05DD0EFC213EB1740050069A /* CFPP-AnyObject.hpp in Headers */,
 				058EDCAB2E2951F300C8C2E3 /* CFPP-RunLoopTimer.hpp in Headers */,
 				05DD0EFD213EB1740050069A /* CFPP-Null.hpp in Headers */,
@@ -982,6 +997,7 @@
 				0544CC7A22749FE3004A2499 /* Test-CFPP-Date.cpp in Sources */,
 				0544CC7922749FD2004A2499 /* Test-CFPP-Data.cpp in Sources */,
 				0544CC7422749F8C004A2499 /* Test-CFPP-Array-Iterator.cpp in Sources */,
+				058EDCF72E2A926600C8C2E3 /* Test-CFPP-RunLoopSourceInfo.cpp in Sources */,
 				0544CC852274A04D004A2499 /* Test-CFPP-String-Iterator.cpp in Sources */,
 				0544CC842274A04D004A2499 /* Test-CFPP-ReadStream.cpp in Sources */,
 				05356FDC20692B56002178E3 /* Constants.cpp in Sources */,
@@ -1021,6 +1037,7 @@
 				05BDE02D18CDB2540028F339 /* CFPP-Number.cpp in Sources */,
 				0534BD18204F05F0008AF9D2 /* CFPP-PropertyListBase.cpp in Sources */,
 				05A3A76E18CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCF22E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */,
 				058EDCB02E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1056,6 +1073,7 @@
 				054D7D3E1B46CC25006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05BDE03718CDB2540028F339 /* CFPP-Number.cpp in Sources */,
 				05A3A76F18CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCF02E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */,
 				058EDCB22E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1091,6 +1109,7 @@
 				054D7D421B46CC26006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05A3A77018CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
 				05632F9218ED5E4900EB76D2 /* CFPP-UUID.cpp in Sources */,
+				058EDCEF2E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */,
 				058EDCAF2E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1126,6 +1145,7 @@
 				054D7D461B46CC26006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05BDE04B18CDB2550028F339 /* CFPP-Number.cpp in Sources */,
 				05A3A77118CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCF12E2A884C00C8C2E3 /* CFPP-RunLoopSourceInfo.cpp in Sources */,
 				058EDCB12E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

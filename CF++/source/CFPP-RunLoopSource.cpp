@@ -32,6 +32,28 @@
 
 namespace CF
 {
+    RunLoopSource::RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel )
+    {
+        CFRunLoopSourceContext context = RunLoopSourceInfo::CreateContext( perform, schedule, cancel );
+        
+        this->_cfObject = CFRunLoopSourceCreate
+        (
+            static_cast< CFAllocatorRef >( nullptr ),
+            order,
+            &context
+        );
+    }
+    
+    RunLoopSource::RunLoopSource( CFIndex order, CFRunLoopSourceContext * context )
+    {
+        this->_cfObject = CFRunLoopSourceCreate
+        (
+            static_cast< CFAllocatorRef >( nullptr ),
+            order,
+            context
+        );
+    }
+    
     RunLoopSource::RunLoopSource( const RunLoopSource & value ): _cfObject( nullptr )
     {
         if( value._cfObject != nullptr )
@@ -110,6 +132,56 @@ namespace CF
     CFTypeRef RunLoopSource::GetCFObject() const
     {
         return static_cast< CFTypeRef >( this->_cfObject );
+    }
+    
+    bool RunLoopSource::IsSourceValid() const
+    {
+        if( this->_cfObject == nullptr )
+        {
+            return false;
+        }
+        
+        return CFRunLoopSourceIsValid( this->_cfObject );
+    }
+    
+    CFIndex RunLoopSource::GetOrder() const
+    {
+        if( this->_cfObject == nullptr )
+        {
+            return 0;
+        }
+        
+        return CFRunLoopSourceGetOrder( this->_cfObject );
+    }
+    
+    void RunLoopSource::GetContext( CFRunLoopSourceContext * context ) const
+    {
+        if( this->_cfObject == nullptr )
+        {
+            return;
+        }
+        
+        CFRunLoopSourceGetContext( this->_cfObject, context );
+    }
+    
+    void RunLoopSource::Invalidate()
+    {
+        if( this->_cfObject == nullptr )
+        {
+            return;
+        }
+        
+        CFRunLoopSourceInvalidate( this->_cfObject );
+    }
+    
+    void RunLoopSource::Signal()
+    {
+        if( this->_cfObject == nullptr )
+        {
+            return;
+        }
+        
+        CFRunLoopSourceSignal( this->_cfObject );
     }
     
     void swap( RunLoopSource & v1, RunLoopSource & v2 ) noexcept
