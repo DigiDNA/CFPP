@@ -77,6 +77,30 @@
 		056C5A0C1B19346D00C6214A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C87FD18C8B3B4006260B3 /* CoreFoundation.framework */; };
 		056C885218C8C5F4006260B3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C87FD18C8B3B4006260B3 /* CoreFoundation.framework */; };
 		056C88A518C8C890006260B3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056C87FD18C8B3B4006260B3 /* CoreFoundation.framework */; };
+		058EDCAB2E2951F300C8C2E3 /* CFPP-RunLoopTimer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCAA2E2951EB00C8C2E3 /* CFPP-RunLoopTimer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCAC2E2951F300C8C2E3 /* CFPP-RunLoopTimer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCAA2E2951EB00C8C2E3 /* CFPP-RunLoopTimer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCAF2E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */; };
+		058EDCB02E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */; };
+		058EDCB12E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */; };
+		058EDCB22E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */; };
+		058EDCB52E2A625100C8C2E3 /* CFPP-RunLoopSource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCB42E2A624800C8C2E3 /* CFPP-RunLoopSource.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCB62E2A625100C8C2E3 /* CFPP-RunLoopSource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCB42E2A624800C8C2E3 /* CFPP-RunLoopSource.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCB82E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */; };
+		058EDCB92E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */; };
+		058EDCBA2E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */; };
+		058EDCBB2E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */; };
+		058EDCBE2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */; };
+		058EDCBF2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */; };
+		058EDCC02E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */; };
+		058EDCC12E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */; };
+		058EDCC22E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */; };
+		058EDCC32E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */; };
+		058EDCC42E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */; };
+		058EDCC52E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */; };
+		058EDCC82E2A62F500C8C2E3 /* CFPP-RunLoop.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCC92E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCCA2E2A62F500C8C2E3 /* CFPP-RunLoop.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		058EDCCB2E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		059DBCB81B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		059DBCB91B14DC500014D9A1 /* CFPP-WriteStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB51B14DB460014D9A1 /* CFPP-WriteStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		059DBCBA1B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -303,6 +327,14 @@
 		0579A9982006A6F000400B61 /* Preprocessing.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Preprocessing.xcconfig; sourceTree = "<group>"; };
 		0579A99B2006A6F000400B61 /* ccache-config.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "ccache-config.sh"; sourceTree = "<group>"; };
 		0579A99C2006A6F000400B61 /* ccache.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ccache.sh; sourceTree = "<group>"; };
+		058EDCAA2E2951EB00C8C2E3 /* CFPP-RunLoopTimer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoopTimer.hpp"; sourceTree = "<group>"; };
+		058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoopTimer.cpp"; sourceTree = "<group>"; };
+		058EDCB42E2A624800C8C2E3 /* CFPP-RunLoopSource.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoopSource.hpp"; sourceTree = "<group>"; };
+		058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoopSource.cpp"; sourceTree = "<group>"; };
+		058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoop.cpp"; sourceTree = "<group>"; };
+		058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CFPP-RunLoopObserver.cpp"; sourceTree = "<group>"; };
+		058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoop.hpp"; sourceTree = "<group>"; };
+		058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-RunLoopObserver.hpp"; sourceTree = "<group>"; };
 		05905D9E223685D200C5F7E1 /* CFPP-Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-Object.hpp"; sourceTree = "<group>"; };
 		05905DA22236974100C5F7E1 /* Test-CFPP-Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Test-CFPP-Object.cpp"; sourceTree = "<group>"; };
 		059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CFPP-ReadStream.hpp"; sourceTree = "<group>"; };
@@ -615,9 +647,13 @@
 				05905D9E223685D200C5F7E1 /* CFPP-Object.hpp */,
 				05BDE01318CDB2450028F339 /* CFPP-Pair.hpp */,
 				0534BD12204F05E9008AF9D2 /* CFPP-PropertyListBase.hpp */,
-				05EFF0E8191BB66A00F187F5 /* CFPP-PropertyListType-Definition.hpp */,
 				05EFF0DF191BA9CE00F187F5 /* CFPP-PropertyListType.hpp */,
+				05EFF0E8191BB66A00F187F5 /* CFPP-PropertyListType-Definition.hpp */,
 				059DBCB41B14DB460014D9A1 /* CFPP-ReadStream.hpp */,
+				058EDCC62E2A62F500C8C2E3 /* CFPP-RunLoop.hpp */,
+				058EDCC72E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp */,
+				058EDCB42E2A624800C8C2E3 /* CFPP-RunLoopSource.hpp */,
+				058EDCAA2E2951EB00C8C2E3 /* CFPP-RunLoopTimer.hpp */,
 				05BDE01418CDB2450028F339 /* CFPP-String.hpp */,
 				05BDE01518CDB2450028F339 /* CFPP-Type.hpp */,
 				05BDE01618CDB2450028F339 /* CFPP-URL.hpp */,
@@ -632,24 +668,28 @@
 			children = (
 				05DD0EDE213EB1270050069A /* CFPP-AnyObject.cpp */,
 				0534BD22204F1846008AF9D2 /* CFPP-AnyPropertyListType.cpp */,
-				054D7D301B46CC1D006AFF67 /* CFPP-Array-Iterator.cpp */,
 				05BDE01B18CDB2450028F339 /* CFPP-Array.cpp */,
+				054D7D301B46CC1D006AFF67 /* CFPP-Array-Iterator.cpp */,
 				056C585B1B1707EE00C6214A /* CFPP-AutoPointer.cpp */,
 				05BDE01C18CDB2450028F339 /* CFPP-Boolean.cpp */,
-				054D7D311B46CC1D006AFF67 /* CFPP-Data-Iterator.cpp */,
 				05BDE01D18CDB2450028F339 /* CFPP-Data.cpp */,
+				054D7D311B46CC1D006AFF67 /* CFPP-Data-Iterator.cpp */,
 				05BDE01E18CDB2450028F339 /* CFPP-Date.cpp */,
-				054D7D321B46CC1D006AFF67 /* CFPP-Dictionary-Iterator.cpp */,
 				05BDE01F18CDB2450028F339 /* CFPP-Dictionary.cpp */,
+				054D7D321B46CC1D006AFF67 /* CFPP-Dictionary-Iterator.cpp */,
 				05A3A76D18CF00DF00F7E0BC /* CFPP-Error.cpp */,
 				05DD0EDA213EB1270050069A /* CFPP-Null.cpp */,
 				05BDE02018CDB2450028F339 /* CFPP-Number.cpp */,
 				05BDE02118CDB2450028F339 /* CFPP-Pair.cpp */,
 				0534BD17204F05F0008AF9D2 /* CFPP-PropertyListBase.cpp */,
-				05A604161B5D509E00C71A24 /* CFPP-ReadStream-Iterator.cpp */,
 				059DBCB61B14DB640014D9A1 /* CFPP-ReadStream.cpp */,
-				054D7D331B46CC1D006AFF67 /* CFPP-String-Iterator.cpp */,
+				05A604161B5D509E00C71A24 /* CFPP-ReadStream-Iterator.cpp */,
+				058EDCBC2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp */,
+				058EDCBD2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp */,
+				058EDCB72E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp */,
+				058EDCAE2E2952AD00C8C2E3 /* CFPP-RunLoopTimer.cpp */,
 				05BDE02218CDB2450028F339 /* CFPP-String.cpp */,
+				054D7D331B46CC1D006AFF67 /* CFPP-String-Iterator.cpp */,
 				05BDE02318CDB2450028F339 /* CFPP-Type.cpp */,
 				05BDE02418CDB2450028F339 /* CFPP-URL.cpp */,
 				05632F8F18ED5E4900EB76D2 /* CFPP-UUID.cpp */,
@@ -673,12 +713,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058EDCAC2E2951F300C8C2E3 /* CFPP-RunLoopTimer.hpp in Headers */,
 				05BDE06E18CDB2600028F339 /* CFPP-Type.hpp in Headers */,
 				05BDE06F18CDB2600028F339 /* CFPP-URL.hpp in Headers */,
 				05BDE06D18CDB2600028F339 /* CFPP-String.hpp in Headers */,
 				05A3A77618CF00EC00F7E0BC /* CFPP-Error.hpp in Headers */,
 				056C58601B1708DC00C6214A /* CFPP-AutoPointer.hpp in Headers */,
 				05BDE06A18CDB2600028F339 /* CFPP-Dictionary.hpp in Headers */,
+				058EDCC82E2A62F500C8C2E3 /* CFPP-RunLoop.hpp in Headers */,
+				058EDCC92E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */,
 				059DBCB81B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */,
 				05DD0F00213EB1760050069A /* CFPP-AnyObject.hpp in Headers */,
 				05DD0F01213EB1760050069A /* CFPP-Null.hpp in Headers */,
@@ -690,6 +733,7 @@
 				056C58A91B17A3B700C6214A /* CFPP-PropertyListType-Definition.hpp in Headers */,
 				05DD0F03213EB1760050069A /* CFPP-PropertyListBase.hpp in Headers */,
 				05632F8D18ED5CAA00EB76D2 /* CFPP-UUID.hpp in Headers */,
+				058EDCB52E2A625100C8C2E3 /* CFPP-RunLoopSource.hpp in Headers */,
 				05BDE06C18CDB2600028F339 /* CFPP-Pair.hpp in Headers */,
 				059DBCB91B14DC500014D9A1 /* CFPP-WriteStream.hpp in Headers */,
 				05BDE06B18CDB2600028F339 /* CFPP-Number.hpp in Headers */,
@@ -708,9 +752,12 @@
 				05BDE05D18CDB25F0028F339 /* CFPP-Data.hpp in Headers */,
 				05BDE05E18CDB25F0028F339 /* CFPP-Date.hpp in Headers */,
 				056C58611B1708DD00C6214A /* CFPP-AutoPointer.hpp in Headers */,
+				058EDCCA2E2A62F500C8C2E3 /* CFPP-RunLoop.hpp in Headers */,
+				058EDCCB2E2A62F500C8C2E3 /* CFPP-RunLoopObserver.hpp in Headers */,
 				05BDE05F18CDB25F0028F339 /* CFPP-Dictionary.hpp in Headers */,
 				059DBCBA1B14DC500014D9A1 /* CFPP-ReadStream.hpp in Headers */,
 				05DD0EFC213EB1740050069A /* CFPP-AnyObject.hpp in Headers */,
+				058EDCAB2E2951F300C8C2E3 /* CFPP-RunLoopTimer.hpp in Headers */,
 				05DD0EFD213EB1740050069A /* CFPP-Null.hpp in Headers */,
 				05BDE06018CDB25F0028F339 /* CFPP-Number.hpp in Headers */,
 				05BDE06118CDB25F0028F339 /* CFPP-Pair.hpp in Headers */,
@@ -723,6 +770,7 @@
 				059DBCBB1B14DC500014D9A1 /* CFPP-WriteStream.hpp in Headers */,
 				05BDE06418CDB25F0028F339 /* CFPP-URL.hpp in Headers */,
 				05A3A77518CF00EB00F7E0BC /* CFPP-Error.hpp in Headers */,
+				058EDCB62E2A625100C8C2E3 /* CFPP-RunLoopSource.hpp in Headers */,
 				05632F8E18ED5CAA00EB76D2 /* CFPP-UUID.hpp in Headers */,
 				05BDE06518CDB25F0028F339 /* CF++.hpp in Headers */,
 			);
@@ -839,10 +887,12 @@
 					};
 					056C884918C8C547006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
+						LastSwiftMigration = 1630;
 						ProvisioningStyle = Automatic;
 					};
 					056C885E18C8C76B006260B3 = {
 						DevelopmentTeam = 326Y53CJMD;
+						LastSwiftMigration = 1630;
 						ProvisioningStyle = Automatic;
 					};
 					056C88A918C8C8AC006260B3 = {
@@ -951,9 +1001,12 @@
 				05BDE03018CDB2540028F339 /* CFPP-Type.cpp in Sources */,
 				054D7D341B46CC1D006AFF67 /* CFPP-Array-Iterator.cpp in Sources */,
 				05BDE03118CDB2540028F339 /* CFPP-URL.cpp in Sources */,
+				058EDCB92E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */,
 				05BDE02818CDB2540028F339 /* CFPP-Array.cpp in Sources */,
 				05BDE02C18CDB2540028F339 /* CFPP-Dictionary.cpp in Sources */,
 				059DBCC31B14DC5C0014D9A1 /* CFPP-WriteStream.cpp in Sources */,
+				058EDCC42E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */,
+				058EDCC52E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */,
 				05BDE02B18CDB2540028F339 /* CFPP-Date.cpp in Sources */,
 				05DD0EDF213EB1270050069A /* CFPP-Null.cpp in Sources */,
 				0534BD23204F1846008AF9D2 /* CFPP-AnyPropertyListType.cpp in Sources */,
@@ -968,6 +1021,7 @@
 				05BDE02D18CDB2540028F339 /* CFPP-Number.cpp in Sources */,
 				0534BD18204F05F0008AF9D2 /* CFPP-PropertyListBase.cpp in Sources */,
 				05A3A76E18CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCB02E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,9 +1036,12 @@
 				05BDE03A18CDB2540028F339 /* CFPP-Type.cpp in Sources */,
 				0534BD2B204F1FAD008AF9D2 /* CFPP-PropertyListBase.cpp in Sources */,
 				054D7D3B1B46CC25006AFF67 /* CFPP-Array-Iterator.cpp in Sources */,
+				058EDCB82E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */,
 				05BDE03B18CDB2540028F339 /* CFPP-URL.cpp in Sources */,
 				05BDE03218CDB2540028F339 /* CFPP-Array.cpp in Sources */,
 				05BDE03618CDB2540028F339 /* CFPP-Dictionary.cpp in Sources */,
+				058EDCBE2E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */,
+				058EDCBF2E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */,
 				059DBCBD1B14DC5B0014D9A1 /* CFPP-WriteStream.cpp in Sources */,
 				05DD0EE0213EB1270050069A /* CFPP-Null.cpp in Sources */,
 				0534BD28204F1FA6008AF9D2 /* CFPP-AnyPropertyListType.cpp in Sources */,
@@ -999,6 +1056,7 @@
 				054D7D3E1B46CC25006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05BDE03718CDB2540028F339 /* CFPP-Number.cpp in Sources */,
 				05A3A76F18CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCB22E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,9 +1071,12 @@
 				05BDE03D18CDB2540028F339 /* CFPP-Boolean.cpp in Sources */,
 				0534BD2C204F1FAD008AF9D2 /* CFPP-PropertyListBase.cpp in Sources */,
 				054D7D3F1B46CC26006AFF67 /* CFPP-Array-Iterator.cpp in Sources */,
+				058EDCBA2E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */,
 				05BDE03E18CDB2540028F339 /* CFPP-Data.cpp in Sources */,
 				05BDE03F18CDB2540028F339 /* CFPP-Date.cpp in Sources */,
 				05BDE04018CDB2540028F339 /* CFPP-Dictionary.cpp in Sources */,
+				058EDCC02E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */,
+				058EDCC12E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */,
 				059DBCBF1B14DC5B0014D9A1 /* CFPP-WriteStream.cpp in Sources */,
 				05DD0EE1213EB1270050069A /* CFPP-Null.cpp in Sources */,
 				0534BD29204F1FA7008AF9D2 /* CFPP-AnyPropertyListType.cpp in Sources */,
@@ -1030,6 +1091,7 @@
 				054D7D421B46CC26006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05A3A77018CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
 				05632F9218ED5E4900EB76D2 /* CFPP-UUID.cpp in Sources */,
+				058EDCAF2E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,9 +1106,12 @@
 				05BDE04E18CDB2550028F339 /* CFPP-Type.cpp in Sources */,
 				0534BD2D204F1FAE008AF9D2 /* CFPP-PropertyListBase.cpp in Sources */,
 				054D7D431B46CC26006AFF67 /* CFPP-Array-Iterator.cpp in Sources */,
+				058EDCBB2E2A627D00C8C2E3 /* CFPP-RunLoopSource.cpp in Sources */,
 				05BDE04F18CDB2550028F339 /* CFPP-URL.cpp in Sources */,
 				05BDE04618CDB2550028F339 /* CFPP-Array.cpp in Sources */,
 				05BDE04A18CDB2550028F339 /* CFPP-Dictionary.cpp in Sources */,
+				058EDCC22E2A62E200C8C2E3 /* CFPP-RunLoop.cpp in Sources */,
+				058EDCC32E2A62E200C8C2E3 /* CFPP-RunLoopObserver.cpp in Sources */,
 				059DBCC11B14DC5C0014D9A1 /* CFPP-WriteStream.cpp in Sources */,
 				05DD0EE2213EB1270050069A /* CFPP-Null.cpp in Sources */,
 				0534BD2A204F1FA9008AF9D2 /* CFPP-AnyPropertyListType.cpp in Sources */,
@@ -1061,6 +1126,7 @@
 				054D7D461B46CC26006AFF67 /* CFPP-String-Iterator.cpp in Sources */,
 				05BDE04B18CDB2550028F339 /* CFPP-Number.cpp in Sources */,
 				05A3A77118CF00DF00F7E0BC /* CFPP-Error.cpp in Sources */,
+				058EDCB12E2952B500C8C2E3 /* CFPP-RunLoopTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,28 +1227,37 @@
 		056C884C18C8C547006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "CF++";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		056C884D18C8C547006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "CF++";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
 		056C888418C8C76C006260B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "CF++/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.CFPP";
 				PRODUCT_NAME = "CF++";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1190,12 +1265,15 @@
 		056C888518C8C76C006260B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "CF++/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.CFPP";
 				PRODUCT_NAME = "CF++";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

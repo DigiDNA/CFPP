@@ -79,6 +79,10 @@
 #include <CF++/CFPP-WriteStream.hpp>
 #include <CF++/CFPP-PropertyListType-Definition.hpp>
 #include <CF++/CFPP-Object.hpp>
+#include <CF++/CFPP-RunLoopObserver.hpp>
+#include <CF++/CFPP-RunLoopSource.hpp>
+#include <CF++/CFPP-RunLoopTimer.hpp>
+#include <CF++/CFPP-RunLoop.hpp>
 
 #ifdef _WIN32
 #pragma warning( pop )
