@@ -133,6 +133,19 @@ TEST( CFPP_Data, CTOR_STDInitializerList )
     ASSERT_TRUE( d[ 3 ] == 0xEF );
 }
 
+TEST( CFPP_Data, CTOR_STDVector )
+{
+    CF::Data d( std::vector< CF::Data::Byte > { 0xDE, 0xAD, 0xBE, 0xEF } );
+    
+    ASSERT_TRUE( d.IsValid() );
+    ASSERT_TRUE( d.GetLength() == 4 );
+    
+    ASSERT_TRUE( d[ 0 ] == 0xDE );
+    ASSERT_TRUE( d[ 1 ] == 0xAD );
+    ASSERT_TRUE( d[ 2 ] == 0xBE );
+    ASSERT_TRUE( d[ 3 ] == 0xEF );
+}
+
 TEST( CFPP_Data, CCTOR )
 {
     CF::Data d1;
@@ -291,6 +304,32 @@ TEST( CFPP_Data, OperatorAssignSTDString )
     
     ASSERT_TRUE( d1.GetLength() >  0 );
     ASSERT_TRUE( d2.GetLength() == 0 );
+}
+
+TEST( CFPP_Data, OperatorAssignSTDVector )
+{
+    CF::Data d1( { 0xFF } );
+    CF::Data d2( { 0xFF } );
+    
+    ASSERT_TRUE( d1.IsValid() );
+    ASSERT_TRUE( d2.IsValid() );
+    
+    ASSERT_EQ( d1.GetLength(), 1 );
+    ASSERT_EQ( d2.GetLength(), 1 );
+    
+    d1 = std::vector< CF::Data::Byte >( { 0xDE, 0xAD, 0xBE, 0xEF } );
+    d2 = std::vector< CF::Data::Byte >( {} );
+    
+    ASSERT_TRUE( d1.IsValid() );
+    ASSERT_TRUE( d2.IsValid() );
+    
+    ASSERT_EQ( d1.GetLength(), 4 );
+    ASSERT_EQ( d2.GetLength(), 0 );
+    
+    ASSERT_TRUE( d1[ 0 ] == 0xDE );
+    ASSERT_TRUE( d1[ 1 ] == 0xAD );
+    ASSERT_TRUE( d1[ 2 ] == 0xBE );
+    ASSERT_TRUE( d1[ 3 ] == 0xEF );
 }
 
 TEST( CFPP_Data, Referencing )
@@ -476,6 +515,35 @@ TEST( CFPP_Data, OperatorPlusEqualSTDString )
     
     ASSERT_TRUE( d1[ 0 ] == 'h' );
     ASSERT_TRUE( d2[ 4 ] == 'h' );
+}
+
+TEST( CFPP_Data, OperatorPlusEqualSTDVector )
+{
+    CF::Data d1( { 0xFF } );
+    CF::Data d2( { 0xFF } );
+    
+    ASSERT_TRUE( d1.IsValid() );
+    ASSERT_TRUE( d2.IsValid() );
+    
+    ASSERT_EQ( d1.GetLength(), 1 );
+    ASSERT_EQ( d2.GetLength(), 1 );
+    
+    d1 += std::vector< CF::Data::Byte >( { 0xDE, 0xAD, 0xBE, 0xEF } );
+    d2 += std::vector< CF::Data::Byte >( {} );
+    
+    ASSERT_TRUE( d1.IsValid() );
+    ASSERT_TRUE( d2.IsValid() );
+    
+    ASSERT_EQ( d1.GetLength(), 5 );
+    ASSERT_EQ( d2.GetLength(), 1 );
+    
+    ASSERT_TRUE( d1[ 0 ] == 0xFF );
+    ASSERT_TRUE( d1[ 1 ] == 0xDE );
+    ASSERT_TRUE( d1[ 2 ] == 0xAD );
+    ASSERT_TRUE( d1[ 3 ] == 0xBE );
+    ASSERT_TRUE( d1[ 4 ] == 0xEF );
+    
+    ASSERT_TRUE( d2[ 0 ] == 0xFF );
 }
 
 TEST( CFPP_Data, GetTypeID )

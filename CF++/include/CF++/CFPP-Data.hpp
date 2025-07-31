@@ -31,6 +31,8 @@
 #ifndef CFPP_DATA_HPP
 #define CFPP_DATA_HPP
 
+#include <vector>
+
 namespace CF
 {
     class CFPP_EXPORT Data: public PropertyListType< Data >
@@ -60,6 +62,7 @@ namespace CF
             Data( const std::string & value );
             Data( const Byte * value, CFIndex length );
             Data( std::initializer_list< Byte > value );
+            Data( const std::vector< Byte > & value );
             Data( Data && value ) noexcept;
             
             ~Data() override;
@@ -71,6 +74,7 @@ namespace CF
             Data & operator =( CFStringRef value );
             Data & operator =( std::nullptr_t );
             Data & operator =( const std::string & value );
+            Data & operator =( const std::vector< Byte > & value );
             
             operator const Byte * () const;
             operator std::string  () const;
@@ -82,6 +86,7 @@ namespace CF
             Data & operator += ( CFDataRef value );
             Data & operator += ( const Data & value );
             Data & operator += ( const std::string & value );
+            Data & operator += ( const std::vector< Byte > & value );
             
             CFTypeID  GetTypeID()   const override;
             CFTypeRef GetCFObject() const override;

@@ -118,7 +118,15 @@ namespace CF
         }
     }
     
-    Data::Data( std::initializer_list< Byte > value ): Data( static_cast< CFIndex >( value.size() ) )
+    Data::Data( std::initializer_list< Byte > value ): Data()
+    {
+        for( Byte b: value )
+        {
+            CFDataAppendBytes( this->_cfObject, &b, 1 );
+        }
+    }
+    
+    Data::Data( const std::vector< Byte > & value ): Data()
     {
         for( Byte b: value )
         {
@@ -175,6 +183,11 @@ namespace CF
     }
     
     Data & Data::operator =( const std::string & value )
+    {
+        return operator =( Data( value ) );
+    }
+    
+    Data & Data::operator =( const std::vector< Byte > & value )
     {
         return operator =( Data( value ) );
     }
@@ -257,6 +270,16 @@ namespace CF
         if( this->_cfObject != nullptr )
         {
             CFDataAppendBytes( this->_cfObject, reinterpret_cast< const UInt8 * >( value.c_str() ), static_cast< CFIndex >( value.length() ) );
+        }
+        
+        return *( this );
+    }
+    
+    Data & Data::operator += ( const std::vector< Byte > & value )
+    {
+        if( this->_cfObject != nullptr )
+        {
+            CFDataAppendBytes( this->_cfObject, value.data(), static_cast< CFIndex >( value.size() ) );
         }
         
         return *( this );
