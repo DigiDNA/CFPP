@@ -47,6 +47,8 @@ namespace CF
             
             #endif
             
+            static Data Referencing( CFMutableDataRef cfObject );
+            
             Data();
             Data( CFIndex capacity );
             Data( const Data & value );

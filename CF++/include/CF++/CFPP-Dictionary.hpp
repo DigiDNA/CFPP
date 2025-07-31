@@ -39,6 +39,8 @@ namespace CF
     {
         public:
             
+            static Dictionary Referencing( CFMutableDictionaryRef cfObject );
+            
             Dictionary();
             Dictionary( CFIndex capacity );
             Dictionary( const Dictionary & value );

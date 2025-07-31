@@ -140,6 +140,20 @@ static void __createCallbacks()
 
 namespace CF
 {
+    Dictionary Dictionary::Referencing( CFMutableDictionaryRef cfObject )
+    {
+        if( cfObject == nullptr )
+        {
+            return nullptr;
+        }
+        
+        CF::Dictionary dict( nullptr );
+        
+        dict._cfObject = static_cast< CFMutableDictionaryRef >( const_cast< void * >( CFRetain( cfObject ) ) );
+        
+        return dict;
+    }
+    
     Dictionary::Dictionary(): _cfObject( nullptr )
     {
         __createCallbacks();

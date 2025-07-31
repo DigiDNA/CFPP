@@ -32,6 +32,20 @@
 
 namespace CF
 {
+    Data Data::Referencing( CFMutableDataRef cfObject )
+    {
+        if( cfObject == nullptr )
+        {
+            return nullptr;
+        }
+        
+        CF::Data data( nullptr );
+        
+        data._cfObject = static_cast< CFMutableDataRef >( const_cast< void * >( CFRetain( cfObject ) ) );
+        
+        return data;
+    }
+    
     Data::Data(): _cfObject( nullptr )
     {
         this->_cfObject = CFDataCreateMutable( static_cast< CFAllocatorRef >( nullptr ), 0 );

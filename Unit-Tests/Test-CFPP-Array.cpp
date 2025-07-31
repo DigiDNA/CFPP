@@ -241,6 +241,23 @@ TEST( CFPP_Array, OperatorAssignNullPointer )
     ASSERT_FALSE( a.IsValid() );
 }
 
+TEST( CFPP_Array, Referencing )
+{
+    CF::Array a1;
+    
+    {
+        CF::Array a2 = CF::Array::Referencing( a1 );
+        
+        ASSERT_EQ( a1.GetCFObject(), a2.GetCFObject() );
+        
+        a1 << CF::String( "foo" );
+        
+        ASSERT_EQ( a1.GetCFObject(), a2.GetCFObject() );
+    }
+    
+    ASSERT_EQ( CF::String( a1[ 0 ] ), "foo" );
+}
+
 TEST( CFPP_Array, OperatorPlusEqualArray )
 {
     CF::Array a1;

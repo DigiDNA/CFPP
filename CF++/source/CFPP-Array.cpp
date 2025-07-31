@@ -120,6 +120,20 @@ static void __createCallbacks()
 
 namespace CF
 {
+    Array Array::Referencing( CFMutableArrayRef cfObject )
+    {
+        if( cfObject == nullptr )
+        {
+            return nullptr;
+        }
+        
+        CF::Array array( nullptr );
+        
+        array._cfObject = static_cast< CFMutableArrayRef >( const_cast< void * >( CFRetain( cfObject ) ) );
+        
+        return array;
+    }
+    
     Array::Array(): _cfObject( nullptr )
     {
         __createCallbacks();

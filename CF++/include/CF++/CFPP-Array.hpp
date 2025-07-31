@@ -39,6 +39,8 @@ namespace CF
     {
         public:
             
+            static Array Referencing( CFMutableArrayRef cfObject );
+            
             Array();
             Array( CFIndex capacity );
             Array( const Array & value );

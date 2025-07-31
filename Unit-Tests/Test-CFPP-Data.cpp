@@ -293,6 +293,23 @@ TEST( CFPP_Data, OperatorAssignSTDString )
     ASSERT_TRUE( d2.GetLength() == 0 );
 }
 
+TEST( CFPP_Data, Referencing )
+{
+    CF::Data d1;
+    
+    {
+        CF::Data d2 = CF::Data::Referencing( d1 );
+        
+        ASSERT_EQ( d1.GetCFObject(), d2.GetCFObject() );
+        
+        d1 += 42;
+        
+        ASSERT_EQ( d1.GetCFObject(), d2.GetCFObject() );
+    }
+    
+    ASSERT_EQ( d1[ 0 ], 42 );
+}
+
 TEST( CFPP_Data, CastToBytePtr )
 {
     CF::Data d1;

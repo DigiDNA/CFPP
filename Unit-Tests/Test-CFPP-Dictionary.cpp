@@ -232,6 +232,23 @@ TEST( CFPP_Dictionary, OperatorAssignNullPointer )
     ASSERT_FALSE( d.IsValid() );
 }
 
+TEST( CFPP_Dictionary, Referencing )
+{
+    CF::Dictionary d1;
+    
+    {
+        CF::Dictionary d2 = CF::Dictionary::Referencing( d1 );
+        
+        ASSERT_EQ( d1.GetCFObject(), d2.GetCFObject() );
+        
+        d1 << CF::Pair( CF::String( "foo" ), CF::String( "hello, world" ) );
+        
+        ASSERT_EQ( d1.GetCFObject(), d2.GetCFObject() );
+    }
+    
+    ASSERT_EQ( CF::String( d1[ "foo" ] ), "hello, world" );
+}
+
 TEST( CFPP_Dictionary, OperatorPlusEqual )
 {
     CF::Dictionary d1;
