@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    CFRunLoopSourceContext RunLoopSourceInfo::CreateContext( const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel )
+    CFRunLoopSourceContext RunLoopSourceInfo::CreateContext( const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule, const std::function< void( RunLoop &, CFStringRef ) > & cancel )
     {
         CFRunLoopSourceContext context;
         
@@ -48,7 +48,7 @@ namespace CF
         return context;
     }
     
-    RunLoopSourceInfo::RunLoopSourceInfo( const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel ):
+    RunLoopSourceInfo::RunLoopSourceInfo( const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule, const std::function< void( RunLoop &, CFStringRef ) > & cancel ):
         _rc(       0 ),
         _perform(  perform ),
         _schedule( schedule ),
@@ -73,7 +73,7 @@ namespace CF
         }
     }
     
-    void RunLoopSourceInfo::_Schedule( void * info, CFRunLoopRef rl, CFRunLoopMode mode )
+    void RunLoopSourceInfo::_Schedule( void * info, CFRunLoopRef rl, CFStringRef mode )
     {
         if( info == nullptr )
         {
@@ -89,7 +89,7 @@ namespace CF
         }
     }
     
-    void RunLoopSourceInfo::_Cancel( void * info, CFRunLoopRef rl, CFRunLoopMode mode )
+    void RunLoopSourceInfo::_Cancel( void * info, CFRunLoopRef rl, CFStringRef mode )
     {
         if( info == nullptr )
         {

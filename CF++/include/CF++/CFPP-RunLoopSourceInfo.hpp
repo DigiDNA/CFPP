@@ -31,6 +31,8 @@
 #ifndef CFPP_RUN_LOOP_SOURCE_INFO_HPP
 #define CFPP_RUN_LOOP_SOURCE_INFO_HPP
 
+#include <functional>
+
 namespace CF
 {
     class RunLoop;
@@ -39,28 +41,28 @@ namespace CF
     {
         public:
             
-            static CFRunLoopSourceContext CreateContext( const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel );
+            static CFRunLoopSourceContext CreateContext( const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule, const std::function< void( RunLoop &, CFStringRef ) > & cancel );
             
             RunLoopSourceInfo( const RunLoopSourceInfo & )              = delete;
             RunLoopSourceInfo & operator =( const RunLoopSourceInfo & ) = delete;
             
         private:
             
-            RunLoopSourceInfo( const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel );
+            RunLoopSourceInfo( const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule, const std::function< void( RunLoop &, CFStringRef ) > & cancel );
             
             virtual ~RunLoopSourceInfo();
             
             static void _Perform(  void * info );
-            static void _Schedule( void * info, CFRunLoopRef rl, CFRunLoopMode mode );
-            static void _Cancel(   void * info, CFRunLoopRef rl, CFRunLoopMode mode );
+            static void _Schedule( void * info, CFRunLoopRef rl, CFStringRef mode );
+            static void _Cancel(   void * info, CFRunLoopRef rl, CFStringRef mode );
             
             static const void * _Retain( const void * info );
             static void         _Release( const void * info );
             
-            size_t                                            _rc;
-            std::function< void() >                           _perform;
-            std::function< void( RunLoop &, CFRunLoopMode ) > _schedule;
-            std::function< void( RunLoop &, CFRunLoopMode ) > _cancel;
+            size_t                                          _rc;
+            std::function< void() >                         _perform;
+            std::function< void( RunLoop &, CFStringRef ) > _schedule;
+            std::function< void( RunLoop &, CFStringRef ) > _cancel;
     };
 }
 

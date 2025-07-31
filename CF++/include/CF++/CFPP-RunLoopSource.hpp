@@ -31,6 +31,8 @@
 #ifndef CFPP_RUN_LOOP_SOURCE_HPP
 #define CFPP_RUN_LOOP_SOURCE_HPP
 
+#include <functional>
+
 namespace CF
 {
     class RunLoop;
@@ -39,7 +41,7 @@ namespace CF
     {
         public:
             
-            RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule = nullptr, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel = nullptr );
+            RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule = nullptr, const std::function< void( RunLoop &, CFStringRef ) > & cancel = nullptr );
             RunLoopSource( CFIndex order, CFRunLoopSourceContext * context );
             RunLoopSource( const RunLoopSource & value );
             RunLoopSource( const AutoPointer & value );

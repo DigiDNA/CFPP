@@ -76,7 +76,7 @@ TEST( CFPP_RunLoopSourceInfo, Schedule )
     CFRunLoopSourceContext c2 = CF::RunLoopSourceInfo::CreateContext
     (
         nullptr,
-        [ & ]( CF::RunLoop &, CFRunLoopMode )
+        [ & ]( CF::RunLoop &, CFStringRef )
         {
             x += 1;
         },
@@ -102,7 +102,7 @@ TEST( CFPP_RunLoopSourceInfo, Cancel )
     (
         nullptr,
         nullptr,
-        [ & ]( CF::RunLoop &, CFRunLoopMode )
+        [ & ]( CF::RunLoop &, CFStringRef )
         {
             x += 1;
         }

@@ -32,7 +32,7 @@
 
 namespace CF
 {
-    RunLoopSource::RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFRunLoopMode ) > & schedule, const std::function< void( RunLoop &, CFRunLoopMode ) > & cancel )
+    RunLoopSource::RunLoopSource( CFIndex order, const std::function< void() > & perform, const std::function< void( RunLoop &, CFStringRef ) > & schedule, const std::function< void( RunLoop &, CFStringRef ) > & cancel )
     {
         CFRunLoopSourceContext context = RunLoopSourceInfo::CreateContext( perform, schedule, cancel );
         
