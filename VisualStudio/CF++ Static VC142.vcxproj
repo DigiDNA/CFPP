@@ -36,6 +36,11 @@
     <ClInclude Include="..\CF++\include\CF++\CFPP-PropertyListType-Definition.hpp" />
     <ClInclude Include="..\CF++\include\CF++\CFPP-PropertyListType.hpp" />
     <ClInclude Include="..\CF++\include\CF++\CFPP-ReadStream.hpp" />
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoop.hpp" />
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopObserver.hpp" />
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopSource.hpp" />
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopSourceInfo.hpp" />
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopTimer.hpp" />
     <ClInclude Include="..\CF++\include\CF++\CFPP-String.hpp" />
     <ClInclude Include="..\CF++\include\CF++\CFPP-Type.hpp" />
     <ClInclude Include="..\CF++\include\CF++\CFPP-URL.hpp" />
@@ -61,6 +66,11 @@
     <ClCompile Include="..\CF++\source\CFPP-PropertyListBase.cpp" />
     <ClCompile Include="..\CF++\source\CFPP-ReadStream-Iterator.cpp" />
     <ClCompile Include="..\CF++\source\CFPP-ReadStream.cpp" />
+    <ClCompile Include="..\CF++\source\CFPP-RunLoop.cpp" />
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopObserver.cpp" />
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopSource.cpp" />
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopSourceInfo.cpp" />
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopTimer.cpp" />
     <ClCompile Include="..\CF++\source\CFPP-String-Iterator.cpp" />
     <ClCompile Include="..\CF++\source\CFPP-String.cpp" />
     <ClCompile Include="..\CF++\source\CFPP-Type.cpp" />

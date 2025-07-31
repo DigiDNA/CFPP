@@ -77,6 +77,21 @@
     <ClInclude Include="..\CF++\include\CF++\CFPP-AnyObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoop.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopObserver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopSource.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopSourceInfo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CF++\include\CF++\CFPP-RunLoopTimer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\CF++\source\CFPP-Array-Iterator.cpp">
@@ -149,6 +164,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\CF++\source\CFPP-AnyObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CF++\source\CFPP-RunLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopSourceInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CF++\source\CFPP-RunLoopTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
